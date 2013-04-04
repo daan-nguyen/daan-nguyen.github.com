@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Test</title>
+  <link rel="stylesheet" href="stylesheets/main.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/conditionizr.js/2.2.0/conditionizr.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="js/conditionizr.load.js"></script>
+</head>
+<body>
+
+  <div id="container">
+    <header id="main-header">
+      <img src="//placehold.it/1600x1000" />
+    </header>
+
+    <div id="main-content">
+      <h2>Hey this says something</h2>
+      <p>This is a piece of text blah blah</p>
+    </div>
+
+    <footer id="main-footer">
+
+    </footer>
+  </div>
+
+  <script>
+    document.write('<script src=' +
+    ('__proto__' in {} ? '//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js' : '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js') +
+    '><\/script>');
+  </script>
+  
+</body>
+</html>
