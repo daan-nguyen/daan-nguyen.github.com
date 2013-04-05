@@ -69,7 +69,13 @@ $experimental-support-for-khtml:false;
 }
 
 #main-content {
-  @include grid-row(nest-collapse);
+  @include grid-row;
+  max-width: remCalc(500px);
+
+  @include respond(small) { max-width: remCalc(700px); }
+  @include respond(medium) { max-width: remCalc(800px); }
+  @include respond(large) { max-width: remCalc(900px); }
+  padding: 0 remCalc(10px);
 }
 
 #main-footer {

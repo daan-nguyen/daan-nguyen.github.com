@@ -1,10 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat+Subrayada);
 
-body {
-	font-size: remCalc(14px);
-	line-height: remCalc(21px);
+h1 {
+  font-family: 'Montserrat Subrayada';
 }
 
-h1 {
-	font-family: 'Montserrat Subrayada';
+h2 {
+  @include respond(small) { 
+    font-size: remCalc(26px);
+  }
+  @include respond(medium) { 
+    font-size: remCalc(32px);
+  }
+}
+
+p {
+  line-height: 1.5em;
+  @include respond(small) {
+    font-size: remCalc(20px);
+  }
+  @include respond(medium) {
+    font-size: remCalc(24px);
+
+  }
 }

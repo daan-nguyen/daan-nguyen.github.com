@@ -1720,14 +1720,38 @@ th.hide-for-touch {
 }
 
 /* line 3, ../sass/partials/_typography.scss */
-body {
-  font-size: 0.875rem;
-  line-height: 1.3125rem;
-}
-
-/* line 8, ../sass/partials/_typography.scss */
 h1 {
   font-family: 'Montserrat Subrayada';
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 7, ../sass/partials/_typography.scss */
+  h2 {
+    font-size: 1.625rem;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 7, ../sass/partials/_typography.scss */
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* line 16, ../sass/partials/_typography.scss */
+p {
+  line-height: 1.5em;
+}
+@media only screen and (min-width: 48em) {
+  /* line 16, ../sass/partials/_typography.scss */
+  p {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 16, ../sass/partials/_typography.scss */
+  p {
+    font-size: 1.5rem;
+  }
 }
 
 /* line 43, ../sass/screen.scss */
@@ -1797,10 +1821,15 @@ h1 {
 
 /* line 71, ../sass/screen.scss */
 #main-content {
-  width: auto;
-  margin: 0;
-  max-width: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
   *zoom: 1;
+  max-width: 31.25rem;
+  padding: 0 0.625rem;
 }
 /* line 184, ../sass/foundation/_foundation-global.scss */
 #main-content:before, #main-content:after {
@@ -1811,8 +1840,26 @@ h1 {
 #main-content:after {
   clear: both;
 }
+@media only screen and (min-width: 48em) {
+  /* line 71, ../sass/screen.scss */
+  #main-content {
+    max-width: 43.75rem;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 71, ../sass/screen.scss */
+  #main-content {
+    max-width: 50rem;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 71, ../sass/screen.scss */
+  #main-content {
+    max-width: 56.25rem;
+  }
+}
 
-/* line 75, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 #main-footer {
   width: auto;
   margin: 0;
