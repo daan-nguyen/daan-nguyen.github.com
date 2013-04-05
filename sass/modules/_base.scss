@@ -1,3 +1,19 @@
-@charset "UTF-8";
+// responsive mixin
+@mixin respond($size) {
+  @if $size == large {
+    @media #{$large} { @content; }
+  }
+  @else if $size == medium {
+    @media #{$medium} { @content; }
+  }
+  @else if $size == small {
+    @media #{$small} { @content; }
+  }
+  @else if $size == portrait {
+    @media #{$portrait} { @content; }
+  }
+  @else if $size == landscape {
+    @media #{$medium} { @content; }
+  }
 
-// foundation variable overrides
+}
