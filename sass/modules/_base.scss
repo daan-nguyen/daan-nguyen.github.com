@@ -1,3 +1,23 @@
+// vars
+$bg-color: #fff;
+$link-color: #e20000;
+
+// override foundation base font colour
+$body-font-color: #333;
+
+// override foundation em based breakpoints
+// this is to ensure compatiability with old ie via respond.js
+$small-screen: 768px !default;
+$medium-screen: 1280px !default;
+$large-screen: 1440px !default;
+
+$screen: "only screen" !default;
+$small: "only screen and (min-width:"#{$small-screen}")" !default;
+$medium: "only screen and (min-width:"#{$medium-screen}")" !default;
+$large: "only screen and (min-width:"#{$large-screen}")" !default;
+$landscape: "only screen and (orientation: landscape)" !default;
+$portrait: "only screen and (orientation: portrait)" !default;
+
 // responsive mixin
 // http://css-tricks.com/media-queries-sass-3-2-and-codekit/
 @mixin respond($size) {

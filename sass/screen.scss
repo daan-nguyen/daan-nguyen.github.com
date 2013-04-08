@@ -21,7 +21,7 @@ $experimental-support-for-khtml:false;
 // foundation 4 components
 @import "foundation/components/global"; // base global
 @import "foundation/components/grid";
-@import "foundation/components/visibility";
+//@import "foundation/components/visibility";
 
 // custom partials
 @import "partials/typography";
@@ -49,6 +49,9 @@ $experimental-support-for-khtml:false;
   @include grid-row(nest-collapse);
   max-width: 100%;
   position: relative;
+
+  opacity: 0;
+  @include single-transition(opacity, 2s);
   
   img {
     width: 100%;
@@ -57,30 +60,51 @@ $experimental-support-for-khtml:false;
   h1 {
     text-align: center;
     position: absolute;
+    bottom: 0;
     left: remCalc(10px);
     right: remCalc(10px);
-    bottom: 0;
-
-	font-size: remCalc(40px);
-    @include respond(small) { font-size: remCalc(100px); }
-    @include respond(medium) { font-size: remCalc(150px); }
-    //@include respond(large) { font-size: remCalc(130px); }
   }
 }
 
 #main-content {
-  @include grid-row;
-  max-width: remCalc(500px);
+  @include grid-row(nest-collapse);
+  max-width: 100%;
 
-  @include respond(small) { max-width: remCalc(700px); }
-  @include respond(medium) { max-width: remCalc(800px); }
-  @include respond(large) { max-width: remCalc(900px); }
-  padding: 0 remCalc(10px);
+  section {
+    @include grid-row;
+
+    opacity: 0;
+    @include single-transition(opacity, 2s);
+
+    // text content width
+    // nb: remove the remcalc for these to create ie compatiable version css
+    // to work with respond.js
+    max-width: remCalc(450px);
+    @include respond(small) { max-width: remCalc(600px); }
+    @include respond(medium) { max-width: remCalc(700px); }
+    @include respond(large) { max-width: remCalc(900px); }
+     
+    padding: 0 remCalc(15px);
+  }
+
 }
 
 #main-footer {
   @include grid-row(nest-collapse);
-  max-width: 100%;
-  background: green;
-  height: 100px;
+  width: 100%;
+  position: relative;
+
+  margin-top: 3em;
+
+  color: #ccc;
+  background: #333; 
+  height: 300px;
+
+  h1 {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    left: remCalc(10px);
+    right: remCalc(10px);
+  }
 }
