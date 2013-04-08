@@ -30,5 +30,5 @@
 		});
 	});
 
-	$('#main-header h1').fitText(1.0, {minFontSize: '40px', maxFontSize: '140px'});
+	$('#main-header h1').fitText(1.0, {minFontSize: '40px', maxFontSize: '180px'});
 })();

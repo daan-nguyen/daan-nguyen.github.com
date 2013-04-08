@@ -28,10 +28,10 @@ a {
   @include transition-property(color);
   @include transition-duration(0.7s);
 
-  color: $link-color;
+  color: $link-colour;
   text-decoration: none;
 
   &:hover {
-    color: darken($link-color, 15%);
+    color: darken($link-colour, 15%);
   }
 }
