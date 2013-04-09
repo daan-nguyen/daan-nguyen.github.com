@@ -7,6 +7,7 @@
 
   // bind fittext to header
   $('#main-header h1').fitText(1.0, {minFontSize: '40px', maxFontSize: '180px'});
+  $('#main-header h2').fitText();
 
   // banner img load loop
   my.bannerLoader = function() {

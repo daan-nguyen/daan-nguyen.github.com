@@ -47,7 +47,7 @@ $experimental-support-for-khtml:false;
 
 #container {
   @include grid-row;
-  max-width: 100%; // overrides grid max width
+  background: #fff;
 }
 
 #main-header {
@@ -56,7 +56,7 @@ $experimental-support-for-khtml:false;
   position: relative;
 
   opacity: 0;
-  @include single-transition(opacity, 3s);
+  @include single-transition(opacity, 2.5s);
   
   img {
     height: auto;
@@ -64,19 +64,24 @@ $experimental-support-for-khtml:false;
   }
   
   h1,h2 {
-    text-align: center;
+    text-align: right;
     position: absolute;
     bottom: 0;
-    left: remCalc(10px);
+    //left: remCalc(10px);
     right: remCalc(10px);
+    width: 100%;
 
     color: #fff;
 
     opacity: 0;
-    @include single-transition(opacity, 1s);
+    @include single-transition(opacity, 1.5s);
   }
 
   h2 {
+    width: 50%;
+    bottom: -0.75em;
+    font-size: 2em;
+    @include respond(medium) { font-size: 2.5em;}
     color: #FF9C38;
   }
 
@@ -113,7 +118,7 @@ $experimental-support-for-khtml:false;
   margin-top: 3em;
 
   color: #ccc;
-  background: #333; 
+  background: #444; 
   height: 300px;
 
   h1 {

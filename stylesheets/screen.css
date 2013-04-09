@@ -1792,7 +1792,7 @@ a:hover {
   margin-bottom: 0;
   max-width: 62.5em;
   *zoom: 1;
-  max-width: 100%;
+  background: #fff;
 }
 /* line 184, ../sass/foundation/_foundation-global.scss */
 #container:before, #container:after {
@@ -1813,9 +1813,9 @@ a:hover {
   max-width: 100%;
   position: relative;
   opacity: 0;
-  -webkit-transition: opacity 3s ease-out;
-  -moz-transition: opacity 3s ease-out;
-  transition: opacity 3s ease-out;
+  -webkit-transition: opacity 2.5s ease-out;
+  -moz-transition: opacity 2.5s ease-out;
+  transition: opacity 2.5s ease-out;
 }
 /* line 184, ../sass/foundation/_foundation-global.scss */
 #main-header:before, #main-header:after {
@@ -1833,23 +1833,32 @@ a:hover {
 }
 /* line 66, ../sass/screen.scss */
 #main-header h1, #main-header h2 {
-  text-align: center;
+  text-align: right;
   position: absolute;
   bottom: 0;
-  left: 0.625rem;
   right: 0.625rem;
+  width: 100%;
   color: #fff;
   opacity: 0;
-  -webkit-transition: opacity 1s ease-out;
-  -moz-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
+  -webkit-transition: opacity 1.5s ease-out;
+  -moz-transition: opacity 1.5s ease-out;
+  transition: opacity 1.5s ease-out;
 }
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #main-header h2 {
+  width: 50%;
+  bottom: -0.75em;
+  font-size: 2em;
   color: #FF9C38;
 }
+@media only screen and (min-width: 80em) {
+  /* line 80, ../sass/screen.scss */
+  #main-header h2 {
+    font-size: 2.5em;
+  }
+}
 
-/* line 85, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 #main-content {
   width: auto;
   margin: 0;
@@ -1866,7 +1875,7 @@ a:hover {
 #main-content:after {
   clear: both;
 }
-/* line 89, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 #main-content section {
   width: 100%;
   margin-left: auto;
@@ -1892,25 +1901,25 @@ a:hover {
   clear: both;
 }
 @media only screen and (min-width: 48em) {
-  /* line 89, ../sass/screen.scss */
+  /* line 94, ../sass/screen.scss */
   #main-content section {
     max-width: 37.5rem;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 89, ../sass/screen.scss */
+  /* line 94, ../sass/screen.scss */
   #main-content section {
     max-width: 46.875rem;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 89, ../sass/screen.scss */
+  /* line 94, ../sass/screen.scss */
   #main-content section {
     max-width: 56.25rem;
   }
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 #main-footer {
   width: auto;
   margin: 0;
@@ -1920,7 +1929,7 @@ a:hover {
   position: relative;
   margin-top: 3em;
   color: #ccc;
-  background: #333;
+  background: #444;
   height: 300px;
 }
 /* line 184, ../sass/foundation/_foundation-global.scss */
@@ -1932,7 +1941,7 @@ a:hover {
 #main-footer:after {
   clear: both;
 }
-/* line 119, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 #main-footer h1 {
   position: absolute;
   top: 0;
