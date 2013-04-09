@@ -1,7 +1,4 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+// http://colorschemedesigner.com/#3y31.o-IfX2RA
 
 @charset "UTF-8";
 
@@ -21,7 +18,7 @@ $experimental-support-for-khtml:false;
 // foundation 4 components
 @import "foundation/components/global"; // base global
 @import "foundation/components/grid";
-//@import "foundation/components/visibility";
+@import "foundation/components/visibility";
 
 // custom partials
 @import "partials/typography";
@@ -40,6 +37,14 @@ $experimental-support-for-khtml:false;
 
 // use:   @media #{$small} {
 
+.not-visible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
 #container {
   @include grid-row;
   max-width: 100%; // overrides grid max width
@@ -51,21 +56,30 @@ $experimental-support-for-khtml:false;
   position: relative;
 
   opacity: 0;
-  @include single-transition(opacity, 2s);
+  @include single-transition(opacity, 3s);
   
   img {
+    height: auto;
     width: 100%;
   }
   
-  h1 {
+  h1,h2 {
     text-align: center;
     position: absolute;
     bottom: 0;
     left: remCalc(10px);
     right: remCalc(10px);
 
-    color: $bg-colour;
+    color: #fff;
+
+    opacity: 0;
+    @include single-transition(opacity, 1s);
   }
+
+  h2 {
+    color: #FF9C38;
+  }
+
 }
 
 #main-content {
@@ -83,7 +97,7 @@ $experimental-support-for-khtml:false;
     // to work with respond.js
     max-width: remCalc(450px);
     @include respond(small) { max-width: remCalc(600px); }
-    @include respond(medium) { max-width: remCalc(700px); }
+    @include respond(medium) { max-width: remCalc(750px); }
     @include respond(large) { max-width: remCalc(900px); }
      
     padding: 0 remCalc(15px);
