@@ -15,14 +15,16 @@
 
       setTimeout(function(){
         $('#main-header').css('opacity','1');
-        if ($win.scrollTop() === 0) {
 
+        // init full intro if pos at top
+        if ($win.scrollTop() === 0) {
           $('html,body').animate({scrollTop: $headerImg.offset().top + $headerImg.height() - $win.innerHeight()}, 2000,
             'swing', function() {
-              $('#main-header h1,#main-header h2').css('opacity', '1');
+              $('#main-header h1, #main-header h2').css('opacity', '1');
             });
         } else {
-          $('#main-header h1,#main-header h2').css('opacity', '1');
+          $('#main-header h1, #main-header h2').css('opacity', '1');
+          checkSectionHeaders();
         }
       }, 300);
 
@@ -31,14 +33,24 @@
     }
   };
 
+  // scroll event checker
   $win.scroll(function() {
+    checkSectionHeaders();
+  });
+
+  $win.resize(function() {
+    checkSectionHeaders();
+  })
+
+  // checks if section is in view to scroll in header.
+  var checkSectionHeaders = function() {
     var winHeight = $(this).height(),
         winScroll = $(this).scrollTop();
 
     $('#main-content section').each(function() {
       var $t = $(this),
           $h = $('header', $t),
-          p = $t.offset().top + $t.height()/5,
+          p = $t.offset().top + $t.height()/4, //trigger point for trans
           hpos = $t.height() - $h.width() * 1.5;
 
           console.log('section: ' + $t.height() + ' head: ' + $h.width());
@@ -48,7 +60,7 @@
         $('header h2', $t).css('opacity', '1');
       }
     });
-  });
+  };
 
 })(window);
 
