@@ -49,14 +49,13 @@
 
     $('#main-content section').each(function() {
       var $t = $(this),
-          $h = $('header', $t),
-          $a = $('article', $t),
-          p = $t.offset().top + $t.height()/4, //trigger point for trans
-          hpos = $a.innerHeight() - $h.width() - 8;
-
-          console.log('section: ' + $t.height() + ' head: ' + $h.width());
+          p = $t.offset().top + $t.height()/4; //trigger point for trans
 
       if (p < winHeight + winScroll) {
+        var $h = $('header', $t),
+            $a = $('article', $t),
+            hpos = $a.innerHeight() - $h.width() - 8;
+
         $('header',$t).css('bottom', hpos +'px');
         $('header h2', $t).css('opacity', '1');
       }
