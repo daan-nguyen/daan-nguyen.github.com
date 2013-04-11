@@ -691,598 +691,6 @@ select {
 }
 
 /* Grid HTML Classes */
-/* line 106, ../sass/foundation/components/_grid.scss */
-.row {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 62.5em;
-  *zoom: 1;
-}
-/* line 184, ../sass/foundation/_foundation-global.scss */
-.row:before, .row:after {
-  content: " ";
-  display: table;
-}
-/* line 185, ../sass/foundation/_foundation-global.scss */
-.row:after {
-  clear: both;
-}
-/* line 110, ../sass/foundation/components/_grid.scss */
-.row .column,
-.row .columns {
-  position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 100%;
-  float: left;
-}
-/* line 114, ../sass/foundation/components/_grid.scss */
-.row.collapse .column,
-.row.collapse .columns {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  float: left;
-}
-/* line 117, ../sass/foundation/components/_grid.scss */
-.row .row {
-  width: auto;
-  margin-left: -0.9375em;
-  margin-right: -0.9375em;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: none;
-  *zoom: 1;
-}
-/* line 184, ../sass/foundation/_foundation-global.scss */
-.row .row:before, .row .row:after {
-  content: " ";
-  display: table;
-}
-/* line 185, ../sass/foundation/_foundation-global.scss */
-.row .row:after {
-  clear: both;
-}
-/* line 118, ../sass/foundation/components/_grid.scss */
-.row .row.collapse {
-  width: auto;
-  margin: 0;
-  max-width: none;
-  *zoom: 1;
-}
-/* line 184, ../sass/foundation/_foundation-global.scss */
-.row .row.collapse:before, .row .row.collapse:after {
-  content: " ";
-  display: table;
-}
-/* line 185, ../sass/foundation/_foundation-global.scss */
-.row .row.collapse:after {
-  clear: both;
-}
-
-@media only screen {
-  /* line 125, ../sass/foundation/components/_grid.scss */
-  .row .column,
-  .row .columns {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    float: left;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-1 {
-    position: relative;
-    width: 8.33333%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-2 {
-    position: relative;
-    width: 16.66667%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-3 {
-    position: relative;
-    width: 25%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-4 {
-    position: relative;
-    width: 33.33333%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-5 {
-    position: relative;
-    width: 41.66667%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-6 {
-    position: relative;
-    width: 50%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-7 {
-    position: relative;
-    width: 58.33333%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-8 {
-    position: relative;
-    width: 66.66667%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-9 {
-    position: relative;
-    width: 75%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-10 {
-    position: relative;
-    width: 83.33333%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-11 {
-    position: relative;
-    width: 91.66667%;
-  }
-
-  /* line 128, ../sass/foundation/components/_grid.scss */
-  .row .small-12 {
-    position: relative;
-    width: 100%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-1 {
-    position: relative;
-    margin-left: 8.33333%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-2 {
-    position: relative;
-    margin-left: 16.66667%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-3 {
-    position: relative;
-    margin-left: 25%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-4 {
-    position: relative;
-    margin-left: 33.33333%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-5 {
-    position: relative;
-    margin-left: 41.66667%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-6 {
-    position: relative;
-    margin-left: 50%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-7 {
-    position: relative;
-    margin-left: 58.33333%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-8 {
-    position: relative;
-    margin-left: 66.66667%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-9 {
-    position: relative;
-    margin-left: 75%;
-  }
-
-  /* line 132, ../sass/foundation/components/_grid.scss */
-  .row .small-offset-10 {
-    position: relative;
-    margin-left: 83.33333%;
-  }
-
-  /* line 135, ../sass/foundation/components/_grid.scss */
-  [class*="column"] + [class*="column"]:last-child {
-    float: right;
-  }
-
-  /* line 136, ../sass/foundation/components/_grid.scss */
-  [class*="column"] + [class*="column"].end {
-    float: left;
-  }
-
-  /* line 139, ../sass/foundation/components/_grid.scss */
-  .column.small-centered,
-  .columns.small-centered {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important;
-  }
-}
-/* Styles for screens that are atleast 768px; */
-@media only screen and (min-width: 48em) {
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-1 {
-    position: relative;
-    width: 8.33333%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-2 {
-    position: relative;
-    width: 16.66667%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-3 {
-    position: relative;
-    width: 25%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-4 {
-    position: relative;
-    width: 33.33333%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-5 {
-    position: relative;
-    width: 41.66667%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-6 {
-    position: relative;
-    width: 50%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-7 {
-    position: relative;
-    width: 58.33333%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-8 {
-    position: relative;
-    width: 66.66667%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-9 {
-    position: relative;
-    width: 75%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-10 {
-    position: relative;
-    width: 83.33333%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-11 {
-    position: relative;
-    width: 91.66667%;
-  }
-
-  /* line 146, ../sass/foundation/components/_grid.scss */
-  .row .large-12 {
-    position: relative;
-    width: 100%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-1 {
-    position: relative;
-    margin-left: 8.33333%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-2 {
-    position: relative;
-    margin-left: 16.66667%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-3 {
-    position: relative;
-    margin-left: 25%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-4 {
-    position: relative;
-    margin-left: 33.33333%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-5 {
-    position: relative;
-    margin-left: 41.66667%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-6 {
-    position: relative;
-    margin-left: 50%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-7 {
-    position: relative;
-    margin-left: 58.33333%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-8 {
-    position: relative;
-    margin-left: 66.66667%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-9 {
-    position: relative;
-    margin-left: 75%;
-  }
-
-  /* line 150, ../sass/foundation/components/_grid.scss */
-  .row .large-offset-10 {
-    position: relative;
-    margin-left: 83.33333%;
-  }
-
-  /* line 154, ../sass/foundation/components/_grid.scss */
-  .push-2 {
-    position: relative;
-    left: 16.66667%;
-    right: auto;
-  }
-
-  /* line 155, ../sass/foundation/components/_grid.scss */
-  .pull-2 {
-    position: relative;
-    right: 16.66667%;
-    left: auto;
-  }
-
-  /* line 154, ../sass/foundation/components/_grid.scss */
-  .push-3 {
-    position: relative;
-    left: 25%;
-    right: auto;
-  }
-
-  /* line 155, ../sass/foundation/components/_grid.scss */
-  .pull-3 {
-    position: relative;
-    right: 25%;
-    left: auto;
-  }
-
-  /* line 154, ../sass/foundation/components/_grid.scss */
-  .push-4 {
-    position: relative;
-    left: 33.33333%;
-    right: auto;
-  }
-
-  /* line 155, ../sass/foundation/components/_grid.scss */
-  .pull-4 {
-    position: relative;
-    right: 33.33333%;
-    left: auto;
-  }
-
-  /* line 154, ../sass/foundation/components/_grid.scss */
-  .push-5 {
-    position: relative;
-    left: 41.66667%;
-    right: auto;
-  }
-
-  /* line 155, ../sass/foundation/components/_grid.scss */
-  .pull-5 {
-    position: relative;
-    right: 41.66667%;
-    left: auto;
-  }
-
-  /* line 154, ../sass/foundation/components/_grid.scss */
-  .push-6 {
-    position: relative;
-    left: 50%;
-    right: auto;
-  }
-
-  /* line 155, ../sass/foundation/components/_grid.scss */
-  .pull-6 {
-    position: relative;
-    right: 50%;
-    left: auto;
-  }
-
-  /* line 154, ../sass/foundation/components/_grid.scss */
-  .push-7 {
-    position: relative;
-    left: 58.33333%;
-    right: auto;
-  }
-
-  /* line 155, ../sass/foundation/components/_grid.scss */
-  .pull-7 {
-    position: relative;
-    right: 58.33333%;
-    left: auto;
-  }
-
-  /* line 154, ../sass/foundation/components/_grid.scss */
-  .push-8 {
-    position: relative;
-    left: 66.66667%;
-    right: auto;
-  }
-
-  /* line 155, ../sass/foundation/components/_grid.scss */
-  .pull-8 {
-    position: relative;
-    right: 66.66667%;
-    left: auto;
-  }
-
-  /* line 154, ../sass/foundation/components/_grid.scss */
-  .push-9 {
-    position: relative;
-    left: 75%;
-    right: auto;
-  }
-
-  /* line 155, ../sass/foundation/components/_grid.scss */
-  .pull-9 {
-    position: relative;
-    right: 75%;
-    left: auto;
-  }
-
-  /* line 154, ../sass/foundation/components/_grid.scss */
-  .push-10 {
-    position: relative;
-    left: 83.33333%;
-    right: auto;
-  }
-
-  /* line 155, ../sass/foundation/components/_grid.scss */
-  .pull-10 {
-    position: relative;
-    right: 83.33333%;
-    left: auto;
-  }
-
-  /* line 159, ../sass/foundation/components/_grid.scss */
-  .small-push-2 {
-    left: inherit;
-  }
-
-  /* line 160, ../sass/foundation/components/_grid.scss */
-  .small-pull-2 {
-    right: inherit;
-  }
-
-  /* line 159, ../sass/foundation/components/_grid.scss */
-  .small-push-3 {
-    left: inherit;
-  }
-
-  /* line 160, ../sass/foundation/components/_grid.scss */
-  .small-pull-3 {
-    right: inherit;
-  }
-
-  /* line 159, ../sass/foundation/components/_grid.scss */
-  .small-push-4 {
-    left: inherit;
-  }
-
-  /* line 160, ../sass/foundation/components/_grid.scss */
-  .small-pull-4 {
-    right: inherit;
-  }
-
-  /* line 159, ../sass/foundation/components/_grid.scss */
-  .small-push-5 {
-    left: inherit;
-  }
-
-  /* line 160, ../sass/foundation/components/_grid.scss */
-  .small-pull-5 {
-    right: inherit;
-  }
-
-  /* line 159, ../sass/foundation/components/_grid.scss */
-  .small-push-6 {
-    left: inherit;
-  }
-
-  /* line 160, ../sass/foundation/components/_grid.scss */
-  .small-pull-6 {
-    right: inherit;
-  }
-
-  /* line 159, ../sass/foundation/components/_grid.scss */
-  .small-push-7 {
-    left: inherit;
-  }
-
-  /* line 160, ../sass/foundation/components/_grid.scss */
-  .small-pull-7 {
-    right: inherit;
-  }
-
-  /* line 159, ../sass/foundation/components/_grid.scss */
-  .small-push-8 {
-    left: inherit;
-  }
-
-  /* line 160, ../sass/foundation/components/_grid.scss */
-  .small-pull-8 {
-    right: inherit;
-  }
-
-  /* line 159, ../sass/foundation/components/_grid.scss */
-  .small-push-9 {
-    left: inherit;
-  }
-
-  /* line 160, ../sass/foundation/components/_grid.scss */
-  .small-pull-9 {
-    right: inherit;
-  }
-
-  /* line 159, ../sass/foundation/components/_grid.scss */
-  .small-push-10 {
-    left: inherit;
-  }
-
-  /* line 160, ../sass/foundation/components/_grid.scss */
-  .small-pull-10 {
-    right: inherit;
-  }
-
-  /* line 164, ../sass/foundation/components/_grid.scss */
-  .column.large-centered,
-  .columns.large-centered {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important;
-  }
-}
 /* Foundation Visibility HTML Classes */
 /* line 9, ../sass/foundation/components/_visibility.scss */
 .show-for-small,
@@ -1717,47 +1125,47 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 5, ../sass/partials/_typography.scss */
+/* line 9, ../sass/partials/_typography.scss */
 body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 @media only screen and (min-width: 48em) {
-  /* line 5, ../sass/partials/_typography.scss */
+  /* line 9, ../sass/partials/_typography.scss */
   body {
     font-size: 1.375rem;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 5, ../sass/partials/_typography.scss */
+  /* line 9, ../sass/partials/_typography.scss */
   body {
     font-size: 1.75rem;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 5, ../sass/partials/_typography.scss */
+  /* line 9, ../sass/partials/_typography.scss */
   body {
     font-size: 2rem;
   }
 }
 
-/* line 14, ../sass/partials/_typography.scss */
+/* line 18, ../sass/partials/_typography.scss */
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
 }
 
-/* line 19, ../sass/partials/_typography.scss */
+/* line 23, ../sass/partials/_typography.scss */
 h2 {
   font-family: "Bree Serif", serif;
   font-weight: 400;
 }
 
-/* line 24, ../sass/partials/_typography.scss */
+/* line 28, ../sass/partials/_typography.scss */
 p {
   line-height: 1.5em;
 }
 
-/* line 28, ../sass/partials/_typography.scss */
+/* line 32, ../sass/partials/_typography.scss */
 a {
   -webkit-transition-property: color;
   -moz-transition-property: color;
@@ -1768,22 +1176,12 @@ a {
   color: #ff9c38;
   text-decoration: none;
 }
-/* line 35, ../sass/partials/_typography.scss */
+/* line 39, ../sass/partials/_typography.scss */
 a:hover {
   color: #ffc285;
 }
 
 /* line 40, ../sass/screen.scss */
-.not-visible {
-  opacity: 0;
-}
-
-/* line 44, ../sass/screen.scss */
-.visible {
-  opacity: 1;
-}
-
-/* line 48, ../sass/screen.scss */
 #container {
   width: 100%;
   margin-left: auto;
@@ -1804,7 +1202,7 @@ a:hover {
   clear: both;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 #main-header {
   width: auto;
   margin: 0;
@@ -1812,6 +1210,7 @@ a:hover {
   *zoom: 1;
   max-width: 100%;
   position: relative;
+  z-index: 1;
   opacity: 0;
   -webkit-transition: opacity 2.5s ease-out;
   -moz-transition: opacity 2.5s ease-out;
@@ -1826,12 +1225,11 @@ a:hover {
 #main-header:after {
   clear: both;
 }
-/* line 61, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 #main-header img {
-  height: auto;
   width: 100%;
 }
-/* line 66, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 #main-header h1, #main-header h2 {
   text-align: right;
   position: absolute;
@@ -1844,7 +1242,7 @@ a:hover {
   -moz-transition: opacity 1.5s ease-out;
   transition: opacity 1.5s ease-out;
 }
-/* line 80, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #main-header h2 {
   width: 50%;
   bottom: -0.75em;
@@ -1852,13 +1250,101 @@ a:hover {
   color: #FF9C38;
 }
 @media only screen and (min-width: 80em) {
-  /* line 80, ../sass/screen.scss */
+  /* line 75, ../sass/screen.scss */
   #main-header h2 {
     font-size: 2.5em;
   }
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
+nav {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  border-bottom: 1px dotted #333333;
+  margin: 0;
+  height: 40px;
+  -webkit-transition: top 0.3s cubic-bezier(0.07, 0.79, 0.42, 1.12);
+  -moz-transition: top 0.3s cubic-bezier(0.07, 0.79, 0.42, 1.12);
+  transition: top 0.3s cubic-bezier(0.07, 0.79, 0.42, 1.12);
+}
+@media only screen and (min-width: 48em) {
+  /* line 85, ../sass/screen.scss */
+  nav {
+    height: 37px;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 85, ../sass/screen.scss */
+  nav {
+    height: 45px;
+    border-bottom: 2px dotted #333333;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 85, ../sass/screen.scss */
+  nav {
+    height: 50px;
+  }
+}
+/* line 101, ../sass/screen.scss */
+nav.show-nav {
+  top: 0px;
+  position: fixed;
+  z-index: 1;
+}
+/* line 105, ../sass/screen.scss */
+nav.show-nav ul {
+  display: block;
+}
+@media only screen and (min-width: 48em) {
+  /* line 110, ../sass/screen.scss */
+  nav.hide-nav {
+    top: -38px;
+    margin-bottom: -37px;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 110, ../sass/screen.scss */
+  nav.hide-nav {
+    top: -46px;
+    margin-bottom: -45px;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 110, ../sass/screen.scss */
+  nav.hide-nav {
+    top: -52px;
+    margin-bottom: -50px;
+  }
+}
+/* line 115, ../sass/screen.scss */
+nav.hide-nav ul {
+  display: none;
+}
+/* line 120, ../sass/screen.scss */
+nav ul {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+/* line 126, ../sass/screen.scss */
+nav ul li {
+  display: inline-block;
+  padding: 7px 15px;
+  font-family: "Bree Serif", serif;
+  font-size: 1em;
+  border-left: 1px dotted #333333;
+}
+@media only screen and (min-width: 80em) {
+  /* line 126, ../sass/screen.scss */
+  nav ul li {
+    border-left: 2px dotted #333333;
+  }
+}
+
+/* line 138, ../sass/screen.scss */
 #main-content {
   width: auto;
   margin: 0;
@@ -1875,7 +1361,7 @@ a:hover {
 #main-content:after {
   clear: both;
 }
-/* line 94, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 #main-content section {
   width: 100%;
   margin-left: auto;
@@ -1898,32 +1384,33 @@ a:hover {
   clear: both;
 }
 @media only screen and (min-width: 48em) {
-  /* line 94, ../sass/screen.scss */
+  /* line 142, ../sass/screen.scss */
   #main-content section {
     max-width: 40.625rem;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 94, ../sass/screen.scss */
+  /* line 142, ../sass/screen.scss */
   #main-content section {
     max-width: 50rem;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 94, ../sass/screen.scss */
+  /* line 142, ../sass/screen.scss */
   #main-content section {
     max-width: 59.375rem;
   }
 }
-/* line 108, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 #main-content section:last-of-type {
   border-bottom: 0;
 }
-/* line 112, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 #main-content section header {
   height: auto;
   position: absolute;
   bottom: 0;
+  color: #777;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -1936,7 +1423,7 @@ a:hover {
   -moz-transition: bottom 1s ease-out;
   transition: bottom 1s ease-out;
 }
-/* line 121, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 #main-content section header h2 {
   line-height: 1em;
   text-align: cener;
@@ -1946,19 +1433,25 @@ a:hover {
   -moz-transition: opacity 1.5s ease-out;
   transition: opacity 1.5s ease-out;
 }
-/* line 133, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 #main-content section article {
   margin-left: 2.5em;
 }
-/* line 138, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 #main-content .divider {
   height: 1px;
   margin: 0 auto;
   width: 60%;
-  border-top: 1px dotted #777777;
+  border-top: 1px dotted #333333;
+}
+@media only screen and (min-width: 80em) {
+  /* line 186, ../sass/screen.scss */
+  #main-content .divider {
+    border-top: 2px dotted #333333;
+  }
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 #main-footer {
   width: auto;
   margin: 0;
@@ -1968,7 +1461,7 @@ a:hover {
   position: relative;
   margin-top: 3em;
   color: #ccc;
-  background: #444;
+  background: #777;
   height: 300px;
 }
 /* line 184, ../sass/foundation/_foundation-global.scss */
@@ -1980,7 +1473,7 @@ a:hover {
 #main-footer:after {
   clear: both;
 }
-/* line 158, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 #main-footer h1 {
   position: absolute;
   top: 0;

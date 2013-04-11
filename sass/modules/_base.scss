@@ -1,9 +1,19 @@
 // vars
 $bg-colour: #fff;
 $link-colour: #FF9C38;
+$border-colour: #333;
+
+$border-dotted-small: 1px dotted $border-colour;
+$border-dotted-large: 2px dotted $border-colour;
 
 // override foundation base font colour
 $body-font-color: #333;
+
+// nav heights
+$mobile-nav-height: 40px;
+$small-nav-height: 37px;
+$med-nav-height: 45px;
+$large-nav-height: 50px;
 
 // disable html classes for grid
 $include-html-grid-classes: false;

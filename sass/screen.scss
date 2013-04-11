@@ -37,30 +37,25 @@ $experimental-support-for-khtml:false;
 
 // use:   @media #{$small} {
 
-.not-visible {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
-}
-
 #container {
   @include grid-row;
   background: #fff;
 }
 
 #main-header {
+  $nav-img-offset: 2px;
+
   @include grid-row(nest-collapse);
   max-width: 100%;
   position: relative;
+  z-index: 1;
 
   opacity: 0;
   @include single-transition(opacity, 2.5s);
 
   img {
-    height: auto;
     width: 100%;
+    //margin-bottom: -$nav-img-offset; //clears whitespace
   }
 
   h1,h2 {
@@ -87,6 +82,59 @@ $experimental-support-for-khtml:false;
 
 }
 
+nav {
+
+  width: 100%;
+  background: #fff;
+  position: relative;
+  border-bottom: $border-dotted-small;
+  margin: 0;
+
+  height: $mobile-nav-height;
+  @include respond(small) { height: $small-nav-height; }
+  @include respond(medium) { height: $med-nav-height; border-bottom: $border-dotted-large; }
+  @include respond(large) { height: $large-nav-height; }
+
+  // cubic bezier made at http://matthewlein.com/ceaser/
+  @include single-transition(top, 0.3s, cubic-bezier(0.070, 0.790, 0.420, 1.120));
+
+  &.show-nav {
+    top: 0px;
+    position: fixed;
+    z-index: 1;
+    ul {
+      display: block;
+    }
+  }
+
+  &.hide-nav {
+    @include respond(small) { top: -($small-nav-height + 1px); margin-bottom: -$small-nav-height}
+    @include respond(medium) { top: -($med-nav-height + 1px); margin-bottom: -$med-nav-height}
+    @include respond(large) { top: -($large-nav-height + 2px); margin-bottom: -$large-nav-height}
+
+    ul {
+      display: none;
+    }
+  }
+
+  ul {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 7px 15px;
+      font-family: $sub-header-font;
+      font-size: 1em;
+
+      border-left: $border-dotted-small;
+      @include respond(medium) { border-left: $border-dotted-large; }
+    }
+  }
+}
+
 #main-content {
   @include grid-row(nest-collapse);
   max-width: 100%;
@@ -95,7 +143,6 @@ $experimental-support-for-khtml:false;
     @include grid-row;
     position: relative;
     padding: 0 remCalc(15px);
-    //border-bottom: 1px dotted #333;
 
     // text content width
     // nb: remove the remcalc for these to create ie compatiable version css
@@ -113,6 +160,7 @@ $experimental-support-for-khtml:false;
       height: auto;
       position: absolute;
       bottom: 0;
+      color: #777;
 
       @include transform-origin(0, 0);
       @include transform2d(rotate(-90deg));
@@ -139,7 +187,8 @@ $experimental-support-for-khtml:false;
     height: 1px;
     margin: 0 auto;
     width: 60%;
-    border-top: 1px dotted #777;
+    border-top: $border-dotted-small;
+    @include respond(medium) { border-top: $border-dotted-large; }
   }
 
 }
@@ -152,7 +201,7 @@ $experimental-support-for-khtml:false;
   margin-top: 3em;
 
   color: #ccc;
-  background: #444;
+  background: #777;
   height: 300px;
 
   h1 {
