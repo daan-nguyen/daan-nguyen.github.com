@@ -5,6 +5,9 @@ $link-colour: #FF9C38;
 // override foundation base font colour
 $body-font-color: #333;
 
+// disable html classes for grid
+$include-html-grid-classes: false;
+
 // override foundation em based breakpoints
 // this is to ensure compatiability with old ie via respond.js
 $small-screen: 768px !default;
