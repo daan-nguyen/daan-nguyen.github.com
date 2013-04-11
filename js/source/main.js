@@ -33,6 +33,12 @@
     }
   };
 
+  // mobile menu button
+  $('#mobile-menu').click(function() {
+    $(this).toggleClass('show-mobile-menu');
+    $('nav').toggleClass('show-mobile-menu');
+  });
+
   // scroll event checker
   $win.scroll(function() {
     checkSectionHeaders();

@@ -31,7 +31,7 @@ p {
 
 a {
   @include transition-property(color);
-  @include transition-duration(0.7s);
+  @include transition-duration(0.3s);
 
   color: $link-colour;
   text-decoration: none;

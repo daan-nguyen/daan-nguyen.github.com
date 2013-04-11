@@ -22,6 +22,7 @@ $experimental-support-for-khtml:false;
 
 // custom partials
 @import "partials/typography";
+@import "partials/iconography";
 
 // Media Queries Reference
 // $small-screen: emCalc(768px) !default;
@@ -83,53 +84,111 @@ $experimental-support-for-khtml:false;
 }
 
 nav {
-
+  height: $mobile-nav-height;
   width: 100%;
   background: #fff;
-  position: relative;
+  position: absolute;
   border-bottom: $border-dotted-small;
   margin: 0;
+  font-family: $sub-header-font;
+  font-size: 2em;
 
-  height: $mobile-nav-height;
-  @include respond(small) { height: $small-nav-height; }
-  @include respond(medium) { height: $med-nav-height; border-bottom: $border-dotted-large; }
+
+  @include respond(small) {
+    font-size: 1em;
+    height: $small-nav-height;
+  }
+  @include respond(medium) {
+    height: $med-nav-height;
+    border-bottom: $border-dotted-large;
+  }
   @include respond(large) { height: $large-nav-height; }
 
   // cubic bezier made at http://matthewlein.com/ceaser/
-  @include single-transition(top, 0.3s, cubic-bezier(0.070, 0.790, 0.420, 1.120));
+  @include single-transition(top, 0.3s, ease-in);
 
   &.show-nav {
-    top: 0px;
+    top: -$mobile-nav-height + 55px;
+    @include respond(small) { top: 0px; }
+
     position: fixed;
     z-index: 1;
+
+    &.show-mobile-menu {
+      top: 0;
+    }
+
     ul {
       display: block;
     }
   }
 
   &.hide-nav {
-    @include respond(small) { top: -($small-nav-height + 1px); margin-bottom: -$small-nav-height}
-    @include respond(medium) { top: -($med-nav-height + 1px); margin-bottom: -$med-nav-height}
-    @include respond(large) { top: -($large-nav-height + 2px); margin-bottom: -$large-nav-height}
+    top: -($mobile-nav-height);
+    margin-bottom: -($mobile-nav-height);
+
+    @include respond(small) {
+      top: -($small-nav-height);
+      margin-bottom: -$small-nav-height
+    }
+    @include respond(medium) {
+      top: -($med-nav-height);
+      margin-bottom: -$med-nav-height
+    }
+    @include respond(large) {
+      top: -($large-nav-height);
+      margin-bottom: -$large-nav-height
+    }
 
     ul {
       display: none;
     }
   }
 
+  div {
+    float: left;
+    padding: 7px 15px;
+    width: 100%;
+    border-top: $border-dotted-small;
+    @include respond(small) {
+      width: auto;
+      border-top: 0;
+    }
+
+    #mobile-menu {
+      font-size: 2.5em;
+      height: remCalc(42px);
+      float: right;
+      cursor: pointer;
+
+      @include single-transition(all, 1s);
+      &.show-mobile-menu {
+        @include transform2d(rotate(-405deg));
+      }
+      i {
+        margin-top: remCalc(-31px);
+      }
+    }
+  }
+
   ul {
-    position: absolute;
-    right: 0;
+    float: right;
     margin: 0;
     padding: 0;
+    width: 100%;
+
+    @include respond(small) { width: auto; }
 
     li {
-      display: inline-block;
       padding: 7px 15px;
-      font-family: $sub-header-font;
-      font-size: 1em;
+      display: block;
+      //border-bottom: $border-dotted-small;
 
-      border-left: $border-dotted-small;
+      @include respond(small) {
+        display: inline-block;
+        border-left: $border-dotted-small;
+        border-bottom: 0;
+      }
       @include respond(medium) { border-left: $border-dotted-large; }
     }
   }
@@ -186,7 +245,7 @@ nav {
   .divider {
     height: 1px;
     margin: 0 auto;
-    width: 60%;
+    width: 70%;
     border-top: $border-dotted-small;
     @include respond(medium) { border-top: $border-dotted-large; }
   }
