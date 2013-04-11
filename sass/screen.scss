@@ -95,15 +95,19 @@ $experimental-support-for-khtml:false;
     @include grid-row;
     position: relative;
     padding: 0 remCalc(15px);
-    border-bottom: 1px dotted #333;
+    //border-bottom: 1px dotted #333;
 
     // text content width
     // nb: remove the remcalc for these to create ie compatiable version css
     // to work with respond.js
-    max-width: remCalc(450px);
-    @include respond(small) { max-width: remCalc(600px); }
-    @include respond(medium) { max-width: remCalc(750px); }
-    @include respond(large) { max-width: remCalc(900px); }
+    max-width: remCalc(500px);
+    @include respond(small) { max-width: remCalc(650px); }
+    @include respond(medium) { max-width: remCalc(800px); }
+    @include respond(large) { max-width: remCalc(950px); }
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
 
     header {
       height: auto;
@@ -129,6 +133,13 @@ $experimental-support-for-khtml:false;
     article {
       margin-left: 2.5em;
     }
+  }
+
+  .divider {
+    height: 1px;
+    margin: 0 auto;
+    width: 60%;
+    border-top: 1px dotted #777;
   }
 
 }

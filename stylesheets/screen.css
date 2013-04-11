@@ -1886,8 +1886,7 @@ a:hover {
   *zoom: 1;
   position: relative;
   padding: 0 0.9375rem;
-  border-bottom: 1px dotted #333333;
-  max-width: 28.125rem;
+  max-width: 31.25rem;
 }
 /* line 184, ../sass/foundation/_foundation-global.scss */
 #main-content section:before, #main-content section:after {
@@ -1901,22 +1900,26 @@ a:hover {
 @media only screen and (min-width: 48em) {
   /* line 94, ../sass/screen.scss */
   #main-content section {
-    max-width: 37.5rem;
+    max-width: 40.625rem;
   }
 }
 @media only screen and (min-width: 80em) {
   /* line 94, ../sass/screen.scss */
   #main-content section {
-    max-width: 46.875rem;
+    max-width: 50rem;
   }
 }
 @media only screen and (min-width: 90em) {
   /* line 94, ../sass/screen.scss */
   #main-content section {
-    max-width: 56.25rem;
+    max-width: 59.375rem;
   }
 }
 /* line 108, ../sass/screen.scss */
+#main-content section:last-of-type {
+  border-bottom: 0;
+}
+/* line 112, ../sass/screen.scss */
 #main-content section header {
   height: auto;
   position: absolute;
@@ -1933,7 +1936,7 @@ a:hover {
   -moz-transition: bottom 1s ease-out;
   transition: bottom 1s ease-out;
 }
-/* line 117, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 #main-content section header h2 {
   line-height: 1em;
   text-align: cener;
@@ -1943,12 +1946,19 @@ a:hover {
   -moz-transition: opacity 1.5s ease-out;
   transition: opacity 1.5s ease-out;
 }
-/* line 129, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 #main-content section article {
   margin-left: 2.5em;
 }
+/* line 138, ../sass/screen.scss */
+#main-content .divider {
+  height: 1px;
+  margin: 0 auto;
+  width: 60%;
+  border-top: 1px dotted #777777;
+}
 
-/* line 136, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 #main-footer {
   width: auto;
   margin: 0;
@@ -1970,7 +1980,7 @@ a:hover {
 #main-footer:after {
   clear: both;
 }
-/* line 147, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 #main-footer h1 {
   position: absolute;
   top: 0;
