@@ -1884,12 +1884,10 @@ a:hover {
   margin-bottom: 0;
   max-width: 62.5em;
   *zoom: 1;
-  opacity: 0;
-  -webkit-transition: opacity 2s ease-out;
-  -moz-transition: opacity 2s ease-out;
-  transition: opacity 2s ease-out;
-  max-width: 28.125rem;
+  position: relative;
   padding: 0 0.9375rem;
+  border-bottom: 1px dotted #333333;
+  max-width: 28.125rem;
 }
 /* line 184, ../sass/foundation/_foundation-global.scss */
 #main-content section:before, #main-content section:after {
@@ -1918,8 +1916,39 @@ a:hover {
     max-width: 56.25rem;
   }
 }
+/* line 108, ../sass/screen.scss */
+#main-content section header {
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: bottom 1s ease-out;
+  -moz-transition: bottom 1s ease-out;
+  transition: bottom 1s ease-out;
+}
+/* line 117, ../sass/screen.scss */
+#main-content section header h2 {
+  line-height: 1em;
+  text-align: cener;
+  margin: 0;
+  opacity: 0;
+  -webkit-transition: opacity 1.5s ease-out;
+  -moz-transition: opacity 1.5s ease-out;
+  transition: opacity 1.5s ease-out;
+}
+/* line 129, ../sass/screen.scss */
+#main-content section article {
+  margin-left: 2.5em;
+}
 
-/* line 113, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 #main-footer {
   width: auto;
   margin: 0;
@@ -1941,7 +1970,7 @@ a:hover {
 #main-footer:after {
   clear: both;
 }
-/* line 124, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 #main-footer h1 {
   position: absolute;
   top: 0;

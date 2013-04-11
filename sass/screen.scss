@@ -57,12 +57,12 @@ $experimental-support-for-khtml:false;
 
   opacity: 0;
   @include single-transition(opacity, 2.5s);
-  
+
   img {
     height: auto;
     width: 100%;
   }
-  
+
   h1,h2 {
     text-align: right;
     position: absolute;
@@ -93,9 +93,9 @@ $experimental-support-for-khtml:false;
 
   section {
     @include grid-row;
-
-    opacity: 0;
-    @include single-transition(opacity, 2s);
+    position: relative;
+    padding: 0 remCalc(15px);
+    border-bottom: 1px dotted #333;
 
     // text content width
     // nb: remove the remcalc for these to create ie compatiable version css
@@ -104,8 +104,31 @@ $experimental-support-for-khtml:false;
     @include respond(small) { max-width: remCalc(600px); }
     @include respond(medium) { max-width: remCalc(750px); }
     @include respond(large) { max-width: remCalc(900px); }
-     
-    padding: 0 remCalc(15px);
+
+    header {
+      height: auto;
+      position: absolute;
+      bottom: 0;
+
+      @include transform-origin(0, 0);
+      @include transform2d(rotate(-90deg));
+      @include single-transition(bottom, 1s);
+
+      h2 {
+        //@include transform2d(rotate(-90deg));
+        line-height: 1em;
+        text-align: cener;
+        margin: 0;
+        opacity: 0;
+
+        @include single-transition(opacity, 1.5s);
+      }
+
+    }
+
+    article {
+      margin-left: 2.5em;
+    }
   }
 
 }
@@ -118,7 +141,7 @@ $experimental-support-for-khtml:false;
   margin-top: 3em;
 
   color: #ccc;
-  background: #444; 
+  background: #444;
   height: 300px;
 
   h1 {
