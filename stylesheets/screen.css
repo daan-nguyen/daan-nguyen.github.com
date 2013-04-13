@@ -1584,3 +1584,8 @@ nav ul li a {
   left: 0.625rem;
   right: 0.625rem;
 }
+
+/* line 285, ../sass/screen.scss */
+.win #mobile-menu i {
+  margin-top: -2.4375rem;
+}

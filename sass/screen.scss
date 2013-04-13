@@ -277,3 +277,12 @@ nav {
     right: remCalc(10px);
   }
 }
+
+// minor position adjustment to cater for windows browsers,
+// must be font height issue. Though i dunno why i care since this is a
+// desktop issue on a mobile width
+.win {
+  #mobile-menu i {
+    margin-top: remCalc(-39px);
+  }
+}
