@@ -1300,20 +1300,20 @@ nav {
   /* line 84, ../sass/screen.scss */
   nav {
     font-size: 1em;
-    height: 37px;
+    height: 36px;
   }
 }
 @media only screen and (min-width: 80em) {
   /* line 84, ../sass/screen.scss */
   nav {
-    height: 45px;
+    height: 44px;
     border-bottom: 2px dotted #333333;
   }
 }
 @media only screen and (min-width: 90em) {
   /* line 84, ../sass/screen.scss */
   nav {
-    height: 50px;
+    height: 49px;
   }
 }
 /* line 108, ../sass/screen.scss */
@@ -1348,22 +1348,22 @@ nav.hide-nav {
 @media only screen and (min-width: 48em) {
   /* line 128, ../sass/screen.scss */
   nav.hide-nav {
-    top: -37px;
-    margin-bottom: -37px;
+    top: -36px;
+    margin-bottom: -36px;
   }
 }
 @media only screen and (min-width: 80em) {
   /* line 128, ../sass/screen.scss */
   nav.hide-nav {
-    top: -45px;
-    margin-bottom: -45px;
+    top: -44px;
+    margin-bottom: -44px;
   }
 }
 @media only screen and (min-width: 90em) {
   /* line 128, ../sass/screen.scss */
   nav.hide-nav {
-    top: -50px;
-    margin-bottom: -50px;
+    top: -49px;
+    margin-bottom: -49px;
   }
 }
 /* line 145, ../sass/screen.scss */
