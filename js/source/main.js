@@ -11,8 +11,6 @@
 
   // banner img load loop
   my.bannerLoader = function() {
-    var $html = $('html');
-
     if ($headerImg.get(0).complete) { //check for complete before starting transition
 
       $('#main-header').css('opacity','1');
@@ -57,7 +55,7 @@
 
     $('#main-content section').each(function() {
       var $t = $(this),
-          p = $t.offset().top + $t.height()/4; //trigger point for trans
+          p = $t.offset().top + $t.height()/5; //trigger point for trans
 
       if (p < winHeight + winScroll) {
         var $h = $('header', $t),
@@ -71,18 +69,15 @@
   };
 
   var checkNav = function() {
-    var winHeight = $(window).height(),
-        winScroll = $(window).scrollTop(),
+    var winScroll = $(window).scrollTop(),
         $n = $('nav'),
-        $h = $('#main-header'),
+        $h = $('#main-header h1'),
         $s = $('.spaceholder', $h);
 
     if ($h.offset().top + $h.height() < winScroll) {
       $n.addClass('show-nav').removeClass('hide-nav');
       $s.show();
     } else {
-      //$('nav').height() - $('nav').css('border-bottom-width').replace(/[^-\d\.]/g, '')
-      //var p = -1 * ($n.outerHeight() - $n.css('border-bottom-width').replace(/[^-\d\.]/g, ''));
       $n.addClass('hide-nav').removeClass('show-nav');
       $s.hide();
     }
