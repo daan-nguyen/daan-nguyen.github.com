@@ -1287,11 +1287,12 @@ nav {
   height: 240px;
   width: 100%;
   background: #fff;
-  position: absolute;
+  position: fixed;
   border-bottom: 1px dotted #333333;
   margin: 0;
   font-family: "Bree Serif", serif;
   font-size: 2em;
+  z-index: 1;
   -webkit-transition: top 0.3s ease-in;
   -moz-transition: top 0.3s ease-in;
   transition: top 0.3s ease-in;
@@ -1316,61 +1317,55 @@ nav {
     height: 49px;
   }
 }
-/* line 108, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 nav a {
   border-bottom: 0;
 }
-/* line 112, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 nav.show-nav {
   top: -185px;
-  position: fixed;
-  z-index: 1;
 }
 @media only screen and (min-width: 48em) {
-  /* line 112, ../sass/screen.scss */
+  /* line 113, ../sass/screen.scss */
   nav.show-nav {
     top: 0px;
   }
 }
-/* line 119, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 nav.show-nav.show-mobile-menu {
   top: 0;
 }
-/* line 123, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 nav.show-nav ul {
   display: block;
 }
-/* line 128, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 nav.hide-nav {
   top: -240px;
   margin-bottom: -240px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 128, ../sass/screen.scss */
+  /* line 126, ../sass/screen.scss */
   nav.hide-nav {
     top: -36px;
     margin-bottom: -36px;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 128, ../sass/screen.scss */
+  /* line 126, ../sass/screen.scss */
   nav.hide-nav {
     top: -44px;
     margin-bottom: -44px;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 128, ../sass/screen.scss */
+  /* line 126, ../sass/screen.scss */
   nav.hide-nav {
     top: -49px;
     margin-bottom: -49px;
   }
 }
 /* line 145, ../sass/screen.scss */
-nav.hide-nav ul {
-  display: none;
-}
-/* line 150, ../sass/screen.scss */
 nav div {
   float: left;
   padding: 7px 15px;
@@ -1378,13 +1373,13 @@ nav div {
   border-top: 1px dotted #333333;
 }
 @media only screen and (min-width: 48em) {
-  /* line 150, ../sass/screen.scss */
+  /* line 145, ../sass/screen.scss */
   nav div {
     width: auto;
     border-top: 0;
   }
 }
-/* line 160, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 nav div #mobile-menu {
   font-size: 2.5em;
   height: 2.625rem;
@@ -1394,18 +1389,18 @@ nav div #mobile-menu {
   -moz-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
-/* line 167, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 nav div #mobile-menu.show-mobile-menu {
   -webkit-transform: rotate(-405deg);
   -moz-transform: rotate(-405deg);
   -ms-transform: rotate(-405deg);
   transform: rotate(-405deg);
 }
-/* line 170, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 nav div #mobile-menu i {
   margin-top: -1.9375rem;
 }
-/* line 176, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 nav ul {
   float: right;
   margin: 0;
@@ -1413,41 +1408,41 @@ nav ul {
   width: 100%;
 }
 @media only screen and (min-width: 48em) {
-  /* line 176, ../sass/screen.scss */
+  /* line 171, ../sass/screen.scss */
   nav ul {
     width: auto;
   }
 }
-/* line 184, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 nav ul li {
   display: block;
 }
 @media only screen and (min-width: 48em) {
-  /* line 184, ../sass/screen.scss */
+  /* line 179, ../sass/screen.scss */
   nav ul li {
     display: inline-block;
   }
 }
-/* line 189, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 nav ul li a {
   padding: 7px 15px;
   display: block;
 }
 @media only screen and (min-width: 48em) {
-  /* line 189, ../sass/screen.scss */
+  /* line 184, ../sass/screen.scss */
   nav ul li a {
     border-left: 1px dotted #333333;
     border-bottom: 0;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 189, ../sass/screen.scss */
+  /* line 184, ../sass/screen.scss */
   nav ul li a {
     border-left: 2px dotted #333333;
   }
 }
 
-/* line 203, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 #main-content {
   width: auto;
   margin: 0;
@@ -1464,12 +1459,12 @@ nav ul li a {
 #main-content:after {
   clear: both;
 }
-/* line 207, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 #main-content .leading {
   font-family: "Bree Serif", serif;
   font-size: 1.2em;
 }
-/* line 212, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 #main-content section {
   width: 100%;
   margin-left: auto;
@@ -1492,28 +1487,28 @@ nav ul li a {
   clear: both;
 }
 @media only screen and (min-width: 48em) {
-  /* line 212, ../sass/screen.scss */
+  /* line 207, ../sass/screen.scss */
   #main-content section {
     max-width: 37.5rem;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 212, ../sass/screen.scss */
+  /* line 207, ../sass/screen.scss */
   #main-content section {
     max-width: 46.875rem;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 212, ../sass/screen.scss */
+  /* line 207, ../sass/screen.scss */
   #main-content section {
     max-width: 56.25rem;
   }
 }
-/* line 225, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 #main-content section:last-of-type {
   border-bottom: 0;
 }
-/* line 229, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 #main-content section header {
   height: auto;
   position: absolute;
@@ -1531,7 +1526,7 @@ nav ul li a {
   -moz-transition: bottom 1s ease-out;
   transition: bottom 1s ease-out;
 }
-/* line 239, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 #main-content section header h2 {
   line-height: 1em;
   text-align: cener;
@@ -1541,11 +1536,11 @@ nav ul li a {
   -moz-transition: opacity 1.5s ease-out;
   transition: opacity 1.5s ease-out;
 }
-/* line 251, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 #main-content section article {
   margin-left: 2.5em;
 }
-/* line 256, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 #main-content .divider {
   height: 1px;
   margin: 0 auto;
@@ -1553,13 +1548,13 @@ nav ul li a {
   border-top: 1px dotted #333333;
 }
 @media only screen and (min-width: 80em) {
-  /* line 256, ../sass/screen.scss */
+  /* line 251, ../sass/screen.scss */
   #main-content .divider {
     border-top: 2px dotted #333333;
   }
 }
 
-/* line 266, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 #main-footer {
   width: auto;
   margin: 0;
@@ -1581,7 +1576,7 @@ nav ul li a {
 #main-footer:after {
   clear: both;
 }
-/* line 277, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 #main-footer h1 {
   position: absolute;
   top: 0;
