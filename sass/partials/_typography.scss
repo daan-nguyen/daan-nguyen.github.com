@@ -10,9 +10,9 @@ body {
   font-family: $body-font;
 
   // default font-size is 16px = 1rem;
-  @include respond(small) { font-size: remCalc(22px); }
-  @include respond(medium) { font-size: remCalc(28px); }
-  @include respond(large) { font-size: remCalc(32px); }
+  @include respond(small) { font-size: remCalc(20px); }
+  @include respond(medium) { font-size: remCalc(26px); }
+  @include respond(large) { font-size: remCalc(30px); }
 }
 
 h1 {
@@ -35,6 +35,8 @@ a {
 
   color: $link-colour;
   text-decoration: none;
+  border-bottom: $border-dotted-small;
+  @include respond(medium) { border-bottom: $border-dotted-large; }
 
   &:hover {
     color: lighten($link-colour, 15%);
