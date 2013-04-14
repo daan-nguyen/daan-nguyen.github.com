@@ -1609,14 +1609,15 @@ section .icon {
   color: #fff;
   font-size: 1em;
   text-align: center;
+  height: 7em;
 }
 
-/* line 261, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 .retina #main-footer {
   background: url(../images/shattered_@2X.png);
 }
 
-/* line 270, ../sass/screen.scss */
+/* line 271, ../sass/screen.scss */
 .win #mobile-menu i {
   margin-top: -2.4375rem;
 }
