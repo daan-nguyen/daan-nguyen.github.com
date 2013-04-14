@@ -32,6 +32,7 @@
   };
 
   $('nav ul li a').click(function(e) {
+    e.preventDefault();
     var $o = $($(e.target).attr('href')),
         pxOffset = 20;
 
