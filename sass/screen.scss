@@ -273,6 +273,13 @@ nav {
   }
 }
 
+// retina
+.retina {
+  #main-footer {
+    background: url(../images/shattered_@2X.png);
+  }
+}
+
 // minor position adjustment to cater for windows browsers,
 // must be font height issue. Though i dunno why i care since this is a
 // desktop issue on a mobile width

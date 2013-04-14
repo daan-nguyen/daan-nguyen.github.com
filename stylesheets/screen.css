@@ -1595,7 +1595,12 @@ nav ul li a {
   right: 0.625rem;
 }
 
-/* line 280, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
+.retina #main-footer {
+  background: url(../images/shattered_@2X.png);
+}
+
+/* line 287, ../sass/screen.scss */
 .win #mobile-menu i {
   margin-top: -2.4375rem;
 }
