@@ -31,10 +31,23 @@
     }
   };
 
+  $('nav ul li a').click(function(e) {
+    var $o = $($(e.target).attr('href')),
+        pxOffset = 20;
+
+    if ($('nav').hasClass('show-mobile-menu')) {
+      pxOffset = 40;
+      toggleMobileMenu();
+    }
+
+    $('html,body').animate({scrollTop: $o.offset().top - pxOffset}, 500);
+
+
+  });
+
   // mobile menu button
   $('#mobile-menu').click(function() {
-    $(this).toggleClass('show-mobile-menu');
-    $('nav').toggleClass('show-mobile-menu');
+    toggleMobileMenu();
   });
 
   // scroll event checker
@@ -47,6 +60,11 @@
     checkSectionHeaders();
     checkNav();
   });
+
+  var toggleMobileMenu = function() {
+    $('#mobile-menu').toggleClass('show-mobile-menu');
+    $('nav').toggleClass('show-mobile-menu');
+  };
 
   // checks if section is in view to scroll in header.
   var checkSectionHeaders = function() {

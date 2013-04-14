@@ -34,7 +34,6 @@ $experimental-support-for-khtml:false;
   max-width: 100%;
   position: relative;
   z-index: 1;
-  background: url(../images/grey.png);
 
   opacity: 0;
   @include single-transition(opacity, 2.5s);
@@ -257,20 +256,9 @@ nav {
   @include grid-row(nest-collapse);
   width: 100%;
   position: relative;
-
-  margin-top: 3em;
-
-  color: #ccc;
+  margin-top: 2em;
+  color: #fff;
   background: url(../images/shattered.png);
-  height: 300px;
-
-  h1 {
-    position: absolute;
-    top: 0;
-    text-align: center;
-    left: remCalc(10px);
-    right: remCalc(10px);
-  }
 }
 
 // retina

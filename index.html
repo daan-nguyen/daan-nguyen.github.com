@@ -17,16 +17,16 @@
     </header>
     <nav class="hide-nav">
       <ul>
-        <li><a href="#">Introduction</a></li>
-        <li><a href="#">Experience &amp; Skills</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#experience">Experience &amp; Skills</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <div>Dan Nguyen<a id="mobile-menu"><i class="icon-circle-plus show-for-small"></i></a></div>
     </nav>
 
     <div id="main-content">
-      <section>
+      <section id="introduction">
         <header>
           <h2>Introduction</h2>
         </header>
@@ -42,7 +42,7 @@
         <div class="divider"></div>
       </section>
 
-      <section>
+      <section id="experience">
         <header>
           <h2>Experience &amp; Skills</h2>
         </header>
@@ -58,7 +58,7 @@
         <div class="divider"></div>
       </section>
 
-      <section>
+      <section id="about">
         <header>
           <h2>Myself</h2>
         </header>
@@ -78,25 +78,24 @@
         </header>
         <article>
           <p>Built from scratch, I used <a href="http://foundation.zurb.com/">Foundation CSS</a> as a jumping point due the fact I find it to be lighter than <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>, but also being available in <a href="">sass</a> I was able to only include the base elements necessary.</p>
+
           <p>A number of useful bits and bobs found in modern templates are also used, such as the ubiquitous <a href="http://jquery.com">jQuery</a>, <a href="http://modernizr.com">modernizr</a>, <a href="http://conditionizr.com">conditionizr</a>, <a href="http://fittextjs.com">fitText</a>, <a href="https://github.com/JohnAlbin/normalize.css-with-sass-or-compass">normalize.css</a>, <a href="http://www.google.com/fonts/">Google Web Fonts</a> (Roboto, Bree Serif, Open Sans) & <a href="http://www.entypo.com/">entypo</a> for icons.</p>
+
           <p>The site will use CSS3 transitions where available and fall back to jQuery based animation when it's not. Cross browser compatible, it's responsive with a focus on ensuring readability at various viewport sizes. Also, as I've hosted on <a href="http://github.com">GitHub</a>, the source can be found in my <a href="https://github.com/daan-nguyen/daan-nguyen.github.com">repo</a>.</p>
+
           <p>And finally all this was built in my favourite editor, <a href="http://www.sublimetext.com/">Sublime</a>. <a href="http://incident57.com/codekit/">CodeKit</a> was also very useful to handle build functions. It also auto-refreshes on changes, which although minor is pretty amazingly useful.</p>
         </article>
-
       </section>
-
 
     </div>
 
     <footer id="main-footer">
-
+      <p>Dan Nguyen 2013.</p>
     </footer>
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-  <script src="js/source/jquery.fittext.js"></script>
-  <script src="js/source/main.js"></script>
+  <script src="js/main.min.js"></script>
 
 </body>
 </html>

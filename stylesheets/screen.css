@@ -1241,7 +1241,6 @@ i.icon-circle-plus:before {
   max-width: 100%;
   position: relative;
   z-index: 1;
-  background: url(../images/grey.png);
   opacity: 0;
   -webkit-transition: opacity 2.5s ease-out;
   -moz-transition: opacity 2.5s ease-out;
@@ -1263,18 +1262,18 @@ i.icon-circle-plus:before {
 #main-header:after {
   clear: both;
 }
-/* line 50, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 #main-header #main-banner img {
   width: 100%;
   border-bottom: 2px solid #333333;
 }
 @media only screen and (min-width: 80em) {
-  /* line 50, ../sass/screen.scss */
+  /* line 49, ../sass/screen.scss */
   #main-header #main-banner img {
     border-bottom: 4px solid #333333;
   }
 }
-/* line 57, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 #main-header h1, #main-header h2 {
   text-align: right;
   position: absolute;
@@ -1289,7 +1288,7 @@ i.icon-circle-plus:before {
   transition: opacity 1.5s ease-out;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 nav {
   height: 240px;
   width: 100%;
@@ -1305,30 +1304,30 @@ nav {
   transition: top 0.3s ease-in;
 }
 @media only screen and (min-width: 48em) {
-  /* line 79, ../sass/screen.scss */
+  /* line 78, ../sass/screen.scss */
   nav {
     font-size: 1em;
     height: 36px;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 79, ../sass/screen.scss */
+  /* line 78, ../sass/screen.scss */
   nav {
     height: 44px;
     border-bottom: 2px dotted #333333;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 79, ../sass/screen.scss */
+  /* line 78, ../sass/screen.scss */
   nav {
     height: 49px;
   }
 }
-/* line 103, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 nav a {
   border-bottom: 0;
 }
-/* line 107, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 nav.show-nav {
   -webkit-box-shadow: 0px 0px 5px #333333;
   -moz-box-shadow: 0px 0px 5px #333333;
@@ -1336,46 +1335,46 @@ nav.show-nav {
   top: -185px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 107, ../sass/screen.scss */
+  /* line 106, ../sass/screen.scss */
   nav.show-nav {
     top: 0px;
   }
 }
-/* line 112, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 nav.show-nav.show-mobile-menu {
   top: 0;
 }
-/* line 116, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 nav.show-nav ul {
   display: block;
 }
-/* line 121, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 nav.hide-nav {
   top: -240px;
   margin-bottom: -240px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 121, ../sass/screen.scss */
+  /* line 120, ../sass/screen.scss */
   nav.hide-nav {
     top: -36px;
     margin-bottom: -36px;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 121, ../sass/screen.scss */
+  /* line 120, ../sass/screen.scss */
   nav.hide-nav {
     top: -44px;
     margin-bottom: -44px;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 121, ../sass/screen.scss */
+  /* line 120, ../sass/screen.scss */
   nav.hide-nav {
     top: -49px;
     margin-bottom: -49px;
   }
 }
-/* line 140, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 nav div {
   float: left;
   padding: 7px 15px;
@@ -1383,13 +1382,13 @@ nav div {
   border-top: 1px dotted #333333;
 }
 @media only screen and (min-width: 48em) {
-  /* line 140, ../sass/screen.scss */
+  /* line 139, ../sass/screen.scss */
   nav div {
     width: auto;
     border-top: 0;
   }
 }
-/* line 150, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 nav div #mobile-menu {
   font-size: 2.5em;
   height: 2.625rem;
@@ -1399,18 +1398,18 @@ nav div #mobile-menu {
   -moz-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
-/* line 157, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 nav div #mobile-menu.show-mobile-menu {
   -webkit-transform: rotate(-405deg);
   -moz-transform: rotate(-405deg);
   -ms-transform: rotate(-405deg);
   transform: rotate(-405deg);
 }
-/* line 160, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 nav div #mobile-menu i {
   margin-top: -1.9375rem;
 }
-/* line 166, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 nav ul {
   float: right;
   margin: 0;
@@ -1418,41 +1417,41 @@ nav ul {
   width: 100%;
 }
 @media only screen and (min-width: 48em) {
-  /* line 166, ../sass/screen.scss */
+  /* line 165, ../sass/screen.scss */
   nav ul {
     width: auto;
   }
 }
-/* line 174, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 nav ul li {
   display: block;
 }
 @media only screen and (min-width: 48em) {
-  /* line 174, ../sass/screen.scss */
+  /* line 173, ../sass/screen.scss */
   nav ul li {
     display: inline-block;
   }
 }
-/* line 179, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 nav ul li a {
   padding: 7px 15px;
   display: block;
 }
 @media only screen and (min-width: 48em) {
-  /* line 179, ../sass/screen.scss */
+  /* line 178, ../sass/screen.scss */
   nav ul li a {
     border-left: 1px dotted #333333;
     border-bottom: 0;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 179, ../sass/screen.scss */
+  /* line 178, ../sass/screen.scss */
   nav ul li a {
     border-left: 2px dotted #333333;
   }
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 #main-content {
   width: auto;
   margin: 0;
@@ -1469,12 +1468,12 @@ nav ul li a {
 #main-content:after {
   clear: both;
 }
-/* line 197, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 #main-content .leading {
   font-family: "Bree Serif", serif;
   font-size: 1.2em;
 }
-/* line 202, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 #main-content section {
   width: 100%;
   margin-left: auto;
@@ -1497,28 +1496,28 @@ nav ul li a {
   clear: both;
 }
 @media only screen and (min-width: 48em) {
-  /* line 202, ../sass/screen.scss */
+  /* line 201, ../sass/screen.scss */
   #main-content section {
     max-width: 37.5rem;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 202, ../sass/screen.scss */
+  /* line 201, ../sass/screen.scss */
   #main-content section {
     max-width: 46.875rem;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 202, ../sass/screen.scss */
+  /* line 201, ../sass/screen.scss */
   #main-content section {
     max-width: 56.25rem;
   }
 }
-/* line 215, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 #main-content section:last-of-type {
   border-bottom: 0;
 }
-/* line 219, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 #main-content section header {
   height: auto;
   position: absolute;
@@ -1536,7 +1535,7 @@ nav ul li a {
   -moz-transition: bottom 1s ease-out;
   transition: bottom 1s ease-out;
 }
-/* line 229, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 #main-content section header h2 {
   line-height: 1em;
   text-align: cener;
@@ -1546,11 +1545,11 @@ nav ul li a {
   -moz-transition: opacity 1.5s ease-out;
   transition: opacity 1.5s ease-out;
 }
-/* line 241, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 #main-content section article {
   margin-left: 2.5em;
 }
-/* line 246, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 #main-content .divider {
   height: 1px;
   margin: 0 auto;
@@ -1558,13 +1557,13 @@ nav ul li a {
   border-top: 1px dotted #333333;
 }
 @media only screen and (min-width: 80em) {
-  /* line 246, ../sass/screen.scss */
+  /* line 245, ../sass/screen.scss */
   #main-content .divider {
     border-top: 2px dotted #333333;
   }
 }
 
-/* line 256, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 #main-footer {
   width: auto;
   margin: 0;
@@ -1572,10 +1571,9 @@ nav ul li a {
   *zoom: 1;
   width: 100%;
   position: relative;
-  margin-top: 3em;
-  color: #ccc;
+  margin-top: 2em;
+  color: #fff;
   background: url(../images/shattered.png);
-  height: 300px;
 }
 /* line 184, ../sass/foundation/_foundation-global.scss */
 #main-footer:before, #main-footer:after {
@@ -1586,21 +1584,13 @@ nav ul li a {
 #main-footer:after {
   clear: both;
 }
-/* line 267, ../sass/screen.scss */
-#main-footer h1 {
-  position: absolute;
-  top: 0;
-  text-align: center;
-  left: 0.625rem;
-  right: 0.625rem;
-}
 
-/* line 278, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .retina #main-footer {
   background: url(../images/shattered_@2X.png);
 }
 
-/* line 287, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 .win #mobile-menu i {
   margin-top: -2.4375rem;
 }
