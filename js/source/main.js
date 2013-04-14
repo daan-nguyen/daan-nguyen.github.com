@@ -17,8 +17,8 @@
 
       // init full intro if pos at top
       if ($win.scrollTop() === 0) {
-        $('html,body').animate({scrollTop: $headerImg.offset().top + $headerImg.height() - $win.innerHeight()}, 2000,
-          'swing', function() {
+        $('html,body').animate({scrollTop: $headerImg.offset().top + $headerImg.height() - $win.innerHeight()},
+          1000, 'swing', function() {
             $('#main-header h1').css('opacity', '1');
           });
       } else {
@@ -31,7 +31,7 @@
     }
   };
 
-  $('nav ul li a').click(function(e) {
+  $('nav ul li a.nav-link').click(function(e) {
     e.preventDefault();
     var $o = $($(e.target).attr('href')),
         pxOffset = 20;
