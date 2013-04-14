@@ -28,7 +28,7 @@ h2 {
 p {
   line-height: 1.5em;
 
-  .leading {
+  &.leading {
     font-family: $sub-header-font;
     font-size: 1.2em;
   }

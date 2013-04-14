@@ -139,6 +139,11 @@ nav {
       border-top: 0;
     }
 
+    .icon {
+      font-size: 1.5em;
+      line-height: 1rem;
+    }
+
     #mobile-menu {
       font-size: 2.5em;
       height: remCalc(42px);
@@ -224,6 +229,9 @@ section {
   article {
     margin-left: 2.5em;
   }
+  .icon {
+    font-size: 1.3em;
+  }
 }
 
 .divider {
@@ -238,8 +246,10 @@ section {
   @extend %base-row;
   position: relative;
   margin-top: 2em;
-  color: #fff;
   background: url(../images/shattered.png);
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
 }
 
 // retina
