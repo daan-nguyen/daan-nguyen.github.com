@@ -129,6 +129,11 @@ nav {
 
   }
 
+  .icon {
+    font-size: 1.5em;
+    line-height: 0.8rem;
+  }
+
   div {
     float: left;
     padding: 7px 15px;
@@ -139,10 +144,7 @@ nav {
       border-top: 0;
     }
 
-    .icon {
-      font-size: 1.5em;
-      line-height: 1rem;
-    }
+
 
     #mobile-menu {
       font-size: 2.5em;
