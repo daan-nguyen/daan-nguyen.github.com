@@ -6,8 +6,8 @@ $border-colour: #333;
 $border-dotted-small: 1px dotted $border-colour;
 $border-dotted-large: 2px dotted $border-colour;
 
-$border-solid-small: 1px solid $border-colour;
-$border-solid-large: 2px solid $border-colour;
+$border-solid-small: 2px solid $border-colour;
+$border-solid-large: 4px solid $border-colour;
 
 // override foundation base font colour
 $body-font-color: #333;
