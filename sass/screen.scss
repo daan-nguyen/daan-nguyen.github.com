@@ -102,7 +102,7 @@ nav {
 
   &.show-nav {
     @include single-box-shadow;
-    top: -$mobile-nav-height + 55px;
+    top: -$mobile-nav-height + remCalc(53px);
     @include respond(small) { top: 0px; }
 
     &.show-mobile-menu {
@@ -132,6 +132,8 @@ nav {
   .icon {
     font-size: 1.5em;
     line-height: 0.8rem;
+    display: none;
+    @include respond(small) { display: inline; }
   }
 
   div {

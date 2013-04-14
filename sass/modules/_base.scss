@@ -13,7 +13,7 @@ $border-solid-large: 4px solid $border-colour;
 $body-font-color: #333;
 
 // nav heights
-$mobile-nav-height: 240px;
+$mobile-nav-height: remCalc(330px);
 $small-nav-height: 36px;
 $med-nav-height: 44px;
 $large-nav-height: 49px;
