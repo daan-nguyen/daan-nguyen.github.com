@@ -34,5 +34,29 @@ i {
     @include entypo(icon);
     content: '\2295';
   }
+  &.icon-paperclip:before {
+    @include entypo(icon);
+    content: '\1F4CE';
+  }
+  &.icon-paperplane:before {
+    @include entypo(icon);
+    content: '\1F53F';
+  }
+  &.icon-phone:before {
+    @include entypo(icon);
+    content: '\1F4DE';
+  }
+  &.icon-github:before {
+    @include entypo(social);
+    content: '\F300';
+  }
+  &.icon-linkedin:before {
+    @include entypo(social);
+    content: '\F318';
+  }
+  &.icon-facebook:before {
+    @include entypo(social);
+    content: '\F30C';
+  }
 }
 

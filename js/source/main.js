@@ -1,6 +1,6 @@
 "use strict";
 
-(function(window) {
+(function(window, $) {
   var my = window.dnSite = {};
   var $win = $(window),
       $headerImg = $('#main-header img');
@@ -101,7 +101,7 @@
     }
   };
 
-})(window);
+})(window, jQuery);
 
 $(document).ready(function() {
   dnSite.bannerLoader();
