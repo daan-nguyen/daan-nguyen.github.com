@@ -44,8 +44,6 @@
     }
 
     $('html,body').animate({scrollTop: $o.offset().top - pxOffset}, 1000);
-
-
   });
 
   // event binds
@@ -89,6 +87,11 @@
   var checkSectionHeaders = function() {
     var winHeight = $(window).height(),
         winScroll = $(window).scrollTop();
+
+    if (winScroll + winHeight > $('#main-footer').offset().top) {
+      trackEvent('Content Viewed', 'Page Bottom');
+      return;
+    }
 
     $('#main-content section').each(function() {
       var $t = $(this),
