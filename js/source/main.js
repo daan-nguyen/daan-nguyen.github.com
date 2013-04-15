@@ -48,7 +48,7 @@
 
   });
 
-  // even binds
+  // event binds
 
   // mobile menu button
   $('#mobile-menu').click(function() {
@@ -58,6 +58,11 @@
   // resume link clicked
   $('.resume-link').click(function() {
     trackEvent('Resume','Download');
+  });
+
+  // generic link track
+  $('.track-link').click(function() {
+    trackEvent('Link Clicked', $(this).text().toLowerCase());
   });
 
   // scroll event checker
