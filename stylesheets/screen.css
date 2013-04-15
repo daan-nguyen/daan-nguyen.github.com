@@ -1447,8 +1447,50 @@ nav div {
     border-top: 0;
   }
 }
-/* line 151, ../sass/screen.scss */
-nav div #mobile-menu {
+/* line 150, ../sass/screen.scss */
+nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 48em) {
+  /* line 150, ../sass/screen.scss */
+  nav ul {
+    width: auto;
+  }
+}
+/* line 158, ../sass/screen.scss */
+nav ul li {
+  display: block;
+}
+@media only screen and (min-width: 48em) {
+  /* line 158, ../sass/screen.scss */
+  nav ul li {
+    display: inline-block;
+  }
+}
+/* line 163, ../sass/screen.scss */
+nav ul li a {
+  padding: 7px 15px;
+  display: block;
+}
+@media only screen and (min-width: 48em) {
+  /* line 163, ../sass/screen.scss */
+  nav ul li a {
+    border-left: 1px dotted #333333;
+    border-bottom: 0;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 163, ../sass/screen.scss */
+  nav ul li a {
+    border-left: 2px dotted #333333;
+  }
+}
+
+/* line 178, ../sass/screen.scss */
+#mobile-menu {
   font-size: 2.5em;
   height: 2.625rem;
   float: right;
@@ -1457,60 +1499,19 @@ nav div #mobile-menu {
   -moz-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
-/* line 158, ../sass/screen.scss */
-nav div #mobile-menu.show-mobile-menu {
+/* line 185, ../sass/screen.scss */
+#mobile-menu.show-mobile-menu {
   -webkit-transform: rotate(-405deg);
   -moz-transform: rotate(-405deg);
   -ms-transform: rotate(-405deg);
   transform: rotate(-405deg);
 }
-/* line 161, ../sass/screen.scss */
-nav div #mobile-menu i {
+/* line 188, ../sass/screen.scss */
+#mobile-menu i {
   margin-top: -1.9375rem;
 }
-/* line 167, ../sass/screen.scss */
-nav ul {
-  float: right;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-@media only screen and (min-width: 48em) {
-  /* line 167, ../sass/screen.scss */
-  nav ul {
-    width: auto;
-  }
-}
-/* line 175, ../sass/screen.scss */
-nav ul li {
-  display: block;
-}
-@media only screen and (min-width: 48em) {
-  /* line 175, ../sass/screen.scss */
-  nav ul li {
-    display: inline-block;
-  }
-}
-/* line 180, ../sass/screen.scss */
-nav ul li a {
-  padding: 7px 15px;
-  display: block;
-}
-@media only screen and (min-width: 48em) {
-  /* line 180, ../sass/screen.scss */
-  nav ul li a {
-    border-left: 1px dotted #333333;
-    border-bottom: 0;
-  }
-}
-@media only screen and (min-width: 80em) {
-  /* line 180, ../sass/screen.scss */
-  nav ul li a {
-    border-left: 2px dotted #333333;
-  }
-}
 
-/* line 199, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 section {
   width: 100%;
   margin-left: auto;
@@ -1533,24 +1534,24 @@ section:after {
   clear: both;
 }
 @media only screen and (min-width: 48em) {
-  /* line 199, ../sass/screen.scss */
+  /* line 198, ../sass/screen.scss */
   section {
     max-width: 37.5rem;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 199, ../sass/screen.scss */
+  /* line 198, ../sass/screen.scss */
   section {
     max-width: 46.875rem;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 199, ../sass/screen.scss */
+  /* line 198, ../sass/screen.scss */
   section {
     max-width: 56.25rem;
   }
 }
-/* line 212, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 section header {
   height: auto;
   position: absolute;
@@ -1568,7 +1569,7 @@ section header {
   -moz-transition: bottom 1s ease-out;
   transition: bottom 1s ease-out;
 }
-/* line 222, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 section header h2 {
   line-height: 1em;
   text-align: cener;
@@ -1578,16 +1579,16 @@ section header h2 {
   -moz-transition: opacity 1.5s ease-out;
   transition: opacity 1.5s ease-out;
 }
-/* line 233, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 section article {
   margin-left: 2.5em;
 }
-/* line 236, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 section .icon {
   font-size: 1.3em;
 }
 
-/* line 241, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .divider {
   height: 1px;
   margin: 0 auto;
@@ -1595,29 +1596,38 @@ section .icon {
   border-top: 1px dotted #333333;
 }
 @media only screen and (min-width: 80em) {
-  /* line 241, ../sass/screen.scss */
+  /* line 240, ../sass/screen.scss */
   .divider {
     border-top: 2px dotted #333333;
   }
 }
 
-/* line 249, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 #main-footer {
   position: relative;
   margin-top: 2em;
+  padding: 20px;
   background: url(../images/shattered.png);
-  color: #fff;
-  font-size: 1em;
+  color: #333;
+  font-size: 0.6em;
   text-align: center;
   height: 7em;
 }
+/* line 259, ../sass/screen.scss */
+#main-footer a {
+  color: #333;
+}
 
-/* line 262, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .retina #main-footer {
   background: url(../images/shattered_@2X.png);
 }
 
-/* line 271, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 .win #mobile-menu i {
   margin-top: -2.4375rem;
+}
+/* line 279, ../sass/screen.scss */
+.win nav .icon {
+  line-height: 0.4rem;
 }

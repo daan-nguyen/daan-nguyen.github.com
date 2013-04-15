@@ -1,0 +1,63 @@
+@media only screen and (min-width: 768px) {
+  /* line 6, ../sass/lt-ie9.scss */
+  .lt-ie9 body {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  /* line 6, ../sass/lt-ie9.scss */
+  .lt-ie9 body {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  /* line 6, ../sass/lt-ie9.scss */
+  .lt-ie9 body {
+    font-size: 30px;
+  }
+}
+/* line 14, ../sass/lt-ie9.scss */
+.lt-ie9 nav .nav-email {
+  display: none;
+}
+/* line 19, ../sass/lt-ie9.scss */
+.lt-ie9 nav ul li {
+  display: block;
+  float: left;
+}
+/* line 28, ../sass/lt-ie9.scss */
+.lt-ie9 section {
+  padding: 15px;
+  max-width: 500px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 28, ../sass/lt-ie9.scss */
+  .lt-ie9 section {
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  /* line 28, ../sass/lt-ie9.scss */
+  .lt-ie9 section {
+    max-width: 750px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  /* line 28, ../sass/lt-ie9.scss */
+  .lt-ie9 section {
+    max-width: 900px;
+  }
+}
+/* line 36, ../sass/lt-ie9.scss */
+.lt-ie9 section header {
+  position: static;
+}
+/* line 40, ../sass/lt-ie9.scss */
+.lt-ie9 section article {
+  margin: 0;
+}
+
+/* line 53, ../sass/lt-ie9.scss */
+.ie7 #main-header h1 {
+  line-height: 1em;
+}

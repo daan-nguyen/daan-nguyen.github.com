@@ -1,0 +1,56 @@
+@import "modules/base";
+
+// lt ie9 styles
+.lt-ie9 {
+
+  body {
+    // default font-size is 16px = 1rem;
+    @include respond(small) { font-size: 20px; }
+    @include respond(medium) { font-size: 26px; }
+    @include respond(large) { font-size: 30px; }
+  }
+
+  nav {
+    .nav-email {
+      display: none;
+    }
+
+    ul {
+      li {
+        display: block;
+        float: left;
+      }
+    }
+  }
+
+  // fix headings on sections so they're not in weird places
+  // due to normally being rotated -90deg
+  section {
+    padding: 15px;
+
+    max-width: 500px;
+    @include respond(small) { max-width: 600px; }
+    @include respond(medium) { max-width: 750px; }
+    @include respond(large) { max-width: 900px; }
+
+    header {
+      position: static;
+    }
+
+    article {
+      margin: 0;
+    }
+  }
+}
+
+// ie 8 specific
+.ie8 {
+
+}
+
+// ie 8 specific
+.ie7 {
+  #main-header h1 {
+    line-height: 1em;
+  }
+}

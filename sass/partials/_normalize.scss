@@ -27,7 +27,7 @@ $h6-font-size: 0.67 * $base-font-size !default;
 // $legacy-support-for-ie6: true; // Override default set in Compass' Support partial.
 
 // Set this to true to add support for IE 7.
-// $legacy-support-for-ie7: true; // Override default set in Compass' Support partial.
+$legacy-support-for-ie7: true; // Override default set in Compass' Support partial.
 
 // The default font family.
 $base-font-family: sans-serif !default;
