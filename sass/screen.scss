@@ -250,6 +250,7 @@ section {
   position: relative;
   margin-top: 2em;
   padding: 20px;
+  background-size: 100px 100px; //ensure retina
   background: url(../images/wavegrid.png);
   color: #333;
   font-size: 0.6em;
