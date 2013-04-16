@@ -61,3 +61,43 @@
 .ie7 #main-header h1 {
   line-height: 1em;
 }
+
+/* line 59, ../sass/lt-ie9.scss */
+.ie6 #container {
+  width: 700px;
+  max-width: 700px;
+  border-left: 2px solid #333333;
+  border-right: 2px solid #333333;
+  padding: 0;
+}
+/* line 67, ../sass/lt-ie9.scss */
+.ie6 #main-header {
+  width: 730px;
+}
+/* line 69, ../sass/lt-ie9.scss */
+.ie6 #main-header h1 {
+  line-height: 1em;
+}
+/* line 73, ../sass/lt-ie9.scss */
+.ie6 nav {
+  width: 730px;
+  font-size: 20px;
+}
+/* line 76, ../sass/lt-ie9.scss */
+.ie6 nav.hide-nav {
+  top: 0;
+  margin-bottom: 0;
+}
+/* line 80, ../sass/lt-ie9.scss */
+.ie6 nav.show-nav {
+  top: 0;
+}
+/* line 83, ../sass/lt-ie9.scss */
+.ie6 nav div, .ie6 nav ul {
+  border-top: 0;
+  width: auto;
+}
+/* line 87, ../sass/lt-ie9.scss */
+.ie6 nav .nav-email, .ie6 nav .show-for-small {
+  display: none !important;
+}
