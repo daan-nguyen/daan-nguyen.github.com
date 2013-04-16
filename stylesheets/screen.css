@@ -1624,10 +1624,20 @@ section .icon {
 }
 
 /* line 275, ../sass/screen.scss */
+.win.ie9 #mobile-menu .show-for-small {
+  display: block !important;
+}
+@media only screen and (min-width: 48em) {
+  /* line 275, ../sass/screen.scss */
+  .win.ie9 #mobile-menu .show-for-small {
+    display: none !important;
+  }
+}
+/* line 280, ../sass/screen.scss */
 .win #mobile-menu i {
   margin-top: -2.4375rem;
 }
-/* line 279, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 .win nav .icon {
   line-height: 0.4rem;
 }

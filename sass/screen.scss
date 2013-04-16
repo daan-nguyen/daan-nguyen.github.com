@@ -272,6 +272,11 @@ section {
 // must be font height issue. Honestly probably better off
 // using sprites for these icons!!
 .win {
+  &.ie9 #mobile-menu .show-for-small {
+    display: block !important;
+    @include respond(small) { display: none !important; }
+  }
+
   #mobile-menu i {
     margin-top: remCalc(-39px);
   }
