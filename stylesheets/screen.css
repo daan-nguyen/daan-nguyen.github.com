@@ -250,7 +250,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em;
   line-height: 1.5em;
 }
@@ -1607,7 +1607,7 @@ section .icon {
   position: relative;
   margin-top: 2em;
   padding: 20px;
-  background: url(../images/shattered.png);
+  background: url(../images/wavegrid.png);
   color: #333;
   font-size: 0.6em;
   text-align: center;
@@ -1620,7 +1620,7 @@ section .icon {
 
 /* line 266, ../sass/screen.scss */
 .retina #main-footer {
-  background: url(../images/shattered_@2X.png);
+  background: url(../images/wavegrid_@2X.png);
 }
 
 /* line 275, ../sass/screen.scss */
