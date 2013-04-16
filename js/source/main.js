@@ -17,7 +17,12 @@
 
       // init full intro if pos at top
       if ($win.scrollTop() === 0) {
-        $('html,body').animate({scrollTop: $headerImg.offset().top + $headerImg.height() - $win.innerHeight()},
+        var imgOffset = $headerImg.offset().top + $headerImg.height() - $win.innerHeight();
+
+        // bit hacky but this compensates for iphone menu for now
+        if ($win.width() === 320) { imgOffset = imgOffset - 60; }
+
+        $('html,body').animate({scrollTop: imgOffset},
           1200, 'swing', function() {
             pageReady = true;
             $('#main-header h1').css('opacity', '1');
