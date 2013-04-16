@@ -1,6 +1,6 @@
 "use strict";
 
-(function(window, $, _gaq) {
+(function(window, $) {
   var my = window.dnSite = {};
   var $win = $(window),
       $headerImg = $('#main-header img');
@@ -129,7 +129,7 @@
     _gaq.push(['_trackEvent', category, action]);
   };
 
-})(window, jQuery, _gaq);
+})(window, jQuery);
 
 $(document).ready(function() {
   dnSite.bannerLoader();
