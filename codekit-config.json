@@ -413,18 +413,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/foundation\/components\/_section.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_section.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/stylesheets\/_section.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/sass\/partials\/_typography.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -434,6 +422,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/stylesheets\/_typography.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/sass\/foundation\/components\/_section.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_section.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/stylesheets\/_section.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -503,16 +503,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
     },
-    "\/images\/wavegrid_@2X.png" : {
+    "\/sass\/foundation\/components\/_dropdown-buttons.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/wavegrid_@2X.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/wavegrid_@2X.png",
-      "initialSize" : 1749,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_dropdown-buttons.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/stylesheets\/_dropdown-buttons.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/sass\/foundation\/components\/_block-grid.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -526,17 +527,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/foundation\/components\/_dropdown-buttons.scss" : {
+    "\/images\/wavegrid_@2X.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_dropdown-buttons.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/stylesheets\/_dropdown-buttons.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/images\/wavegrid_@2X.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/wavegrid_@2X.png",
+      "initialSize" : 1749,
+      "fileType" : 8192
     },
     "\/sass\/foundation\/components\/_grid.scss" : {
       "ignoreWasSetByUser" : 0,
