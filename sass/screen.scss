@@ -7,8 +7,8 @@
 @import "partials/normalize";
 
 // disable vendor support for minor browsers
-$experimental-support-for-opera:false;
-$experimental-support-for-khtml:false;
+// $experimental-support-for-opera:false;
+// $experimental-support-for-khtml:false;
 @import "compass/css3";
 
 // module imports
