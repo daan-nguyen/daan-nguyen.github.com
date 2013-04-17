@@ -24,6 +24,10 @@ $experimental-support-for-khtml:false;
 @import "partials/typography";
 @import "partials/iconography";
 
+.transparent {
+  opacity: 0;
+}
+
 %base-row {
   @include grid-row(nest-collapse);
   max-width: 100%;
@@ -39,25 +43,26 @@ $experimental-support-for-khtml:false;
   position: relative;
   z-index: 1;
 
-  opacity: 0;
   @include single-transition(opacity, 2.5s);
 
   #main-banner {
     // change header transition to use overflow
-    //padding: 0;
-    //overflow: hidden;
-    // height
-    //border-bottom: $border-solid-small;
-    //@include respond(medium) { border-bottom: $border-solid-large; }
+    padding: 0;
+    overflow: hidden;
+    height: 100px;
+    border-bottom: $border-solid-small;
+    @include respond(medium) { border-bottom: $border-solid-large; }
 
     img {
       width: 100%;
-      border-bottom: $border-solid-small;
-      @include respond(medium) { border-bottom: $border-solid-large; }
+      position: relative;
+      top: 0;
+      //border-bottom: $border-solid-small;
+      //@include respond(medium) { border-bottom: $border-solid-large; }
     }
   }
 
-  h1,h2 {
+  h1 {
     text-align: right;
     position: absolute;
     bottom: 0;
@@ -65,7 +70,7 @@ $experimental-support-for-khtml:false;
     width: 100%;
     color: #fff;
     line-height: 0.5em;
-    opacity: 0;
+    //opacity: 0;
     @include single-transition(opacity, 1.5s);
   }
 
@@ -223,7 +228,7 @@ section {
       line-height: 1em;
       text-align: cener;
       margin: 0;
-      opacity: 0;
+      //opacity: 0;
 
       @include single-transition(opacity, 1.5s);
     }

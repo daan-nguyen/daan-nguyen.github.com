@@ -3,86 +3,13 @@
 (function(window, $) {
   var my = window.dnSite = {};
   var $win = $(window),
-      $headerImg = $('#main-header img');
+      $banner = $('#main-banner'),
+      $bannerImg = $('img', $banner),
+      $header = $('#main-header'),
+      $headerH1 = $('h1', $header);
   var pageReady = false;
 
-  // bind fittext to header
-  $('#main-header h1').fitText(1.0, {minFontSize: '40px', maxFontSize: '180px'});
-
-  // banner img load loop
-  my.bannerLoader = function() {
-    if ($headerImg.get(0).complete) { //check for complete before starting transition
-
-      $('#main-header').css('opacity','1');
-
-      // init full intro if pos at top
-      if ($win.scrollTop() === 0) {
-        var imgOffset = $headerImg.offset().top + $headerImg.height() - $win.innerHeight();
-
-        // bit hacky but this compensates for iphone menu for now
-        if ($win.width() === 320) { imgOffset = imgOffset - 60; }
-
-        $('html,body').animate({scrollTop: imgOffset},
-          1200, 'swing', function() {
-            pageReady = true;
-            $('#main-header h1').css('opacity', '1');
-          });
-      } else {
-        pageReady = true;
-        $('#main-header h1').css('opacity', '1');
-        checkSectionHeaders();
-      }
-
-    } else { //delay, try again
-      setTimeout(my.bannerLoader, 100);
-    }
-  };
-
-  $('nav ul li a.nav-link').click(function(e) {
-    e.preventDefault();
-    var $o = $($(e.target).attr('href')),
-        pxOffset = 20;
-
-    if ($('nav').hasClass('show-mobile-menu')) {
-      pxOffset = 35;
-      toggleMobileMenu();
-    }
-
-    $('html,body').animate({scrollTop: $o.offset().top - pxOffset}, 1000);
-  });
-
-  // event binds
-
-  // mobile menu button
-  $('#mobile-menu').click(function() {
-    toggleMobileMenu();
-  });
-
-  // resume link clicked
-  $('.resume-link').click(function() {
-    trackEvent('Resume','Download');
-  });
-
-  // generic link track
-  $('.track-link').click(function() {
-    trackEvent('Link Clicked', $(this).text().toLowerCase());
-  });
-
-  // scroll event checker
-  $win.scroll(function() {
-    if (pageReady) {
-      checkSectionHeaders();
-      checkNav();
-    }
-  });
-
-  $win.resize(function() {
-    if (pageReady) {
-      checkSectionHeaders();
-      checkNav();
-    }
-  });
-
+  // util functions
   var toggleMobileMenu = function() {
     $('#mobile-menu').toggleClass('show-mobile-menu');
     $('nav').toggleClass('show-mobile-menu');
@@ -108,9 +35,9 @@
             $a = $('article', $t),
             hpos = $a.innerHeight() - $h.width() - 8;
 
-        if ($h2.css('opacity') !== '1') {
+        if ($h2.hasClass('transparent')) {
           $h.css('bottom', hpos +'px');
-          $h2.css('opacity', '1');
+          $h2.removeClass('transparent');
           trackEvent('Content Viewed', $h2.text());
         }
 
@@ -130,12 +57,110 @@
     }
   };
 
+  var setBannerHeight = function(width) {
+    // 900/1360 is the full image size
+    // we only want a viewport of this
+
+    var ratio = 900/1360; // ratio = w/h = r
+    var height = width/ratio; // h/w = 1/r, h = w/r
+    var winHeight = $win.height();
+
+    if (height > winHeight) {
+      height = winHeight;
+    }
+
+    $('#main-banner').height(height);
+  };
+
+  var setImageHeight = function() {
+    var imageHeight = $bannerImg.height(),
+        bannerHeight = $banner.height();
+
+    $bannerImg.css('top', -(imageHeight-bannerHeight));
+  };
+
   var trackEvent = function(category, action) {
     _gaq.push(['_trackEvent', category, action]);
   };
 
+  // banner img load loop
+  var bannerLoader = function() {
+    if ($bannerImg.get(0).complete) { //check for complete before starting transition
+      $header.removeClass('transparent');
+
+      var imgOffset = $bannerImg.height() - $banner.height();
+
+      $bannerImg.animate({top: -imgOffset},
+      3000, 'easeOutCubic', function() {
+        pageReady = true;
+        $headerH1.removeClass('transparent');
+      });
+
+      checkNav();
+      checkSectionHeaders();
+
+    } else { //delay, try again
+      setTimeout(bannerLoader, 100);
+    }
+  };
+
+  // event binds
+  var bindEvents = function() {
+    // event setups
+    $('nav ul li a.nav-link').click(function(e) {
+      e.preventDefault();
+      var $o = $($(e.target).attr('href')),
+          pxOffset = 20;
+
+      if ($('nav').hasClass('show-mobile-menu')) {
+        pxOffset = 35;
+        toggleMobileMenu();
+      }
+
+      $('html,body').animate({scrollTop: $o.offset().top - pxOffset}, 1500, 'easeInOutCubic');
+    });
+
+    // mobile menu button
+    $('#mobile-menu').click(function() {
+      toggleMobileMenu();
+    });
+
+    // resume link clicked
+    $('.resume-link').click(function() {
+      trackEvent('Resume','Download');
+    });
+
+    // generic link track
+    $('.track-link').click(function() {
+      trackEvent('Link Clicked', $(this).text().toLowerCase());
+    });
+
+    // scroll event checker
+    $win.scroll(function() {
+      if (pageReady) {
+        checkSectionHeaders();
+        checkNav();
+      }
+    });
+
+    $win.resize(function() {
+      if (pageReady) {
+        setBannerHeight($win.width());
+        setImageHeight();
+        checkSectionHeaders();
+        checkNav();
+      }
+    });
+  };
+
+  // main init function
+  my.init = function() {
+    $('#main-header h1').fitText(1.0, {minFontSize: '40px', maxFontSize: '180px'});
+    setBannerHeight($win.width());
+    bindEvents();
+    bannerLoader();
+  };
+
 })(window, jQuery);
 
-$(document).ready(function() {
-  dnSite.bannerLoader();
-});
+dnSite.init();

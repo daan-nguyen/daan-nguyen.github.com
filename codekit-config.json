@@ -118,18 +118,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/foundation\/components\/_orbit.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_orbit.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/stylesheets\/_orbit.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/sass\/foundation\/components\/_pagination.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -139,6 +127,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/stylesheets\/_pagination.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/sass\/foundation\/components\/_orbit.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_orbit.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/stylesheets\/_orbit.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -218,7 +218,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 1,
       "inputAbbreviatedPath" : "\/js\/source\/main.js",
-      "outputStyle" : 1,
+      "outputStyle" : 0,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/main.min.js",
       "fileType" : 64
@@ -365,6 +365,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/js\/source\/jquery.easing.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/source\/jquery.easing.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/source\/jquery.easing.min.js",
+      "fileType" : 64
+    },
     "\/sass\/foundation\/components\/_alert-boxes.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -377,18 +388,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/foundation\/components\/_magellan.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_magellan.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/stylesheets\/_magellan.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/sass\/partials\/_iconography.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -398,6 +397,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/stylesheets\/_iconography.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/sass\/foundation\/components\/_magellan.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_magellan.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/stylesheets\/_magellan.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -503,17 +514,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
     },
-    "\/sass\/foundation\/components\/_dropdown-buttons.scss" : {
+    "\/images\/wavegrid_@2X.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_dropdown-buttons.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/stylesheets\/_dropdown-buttons.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/images\/wavegrid_@2X.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/wavegrid_@2X.png",
+      "initialSize" : 1749,
+      "fileType" : 8192
     },
     "\/sass\/foundation\/components\/_block-grid.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -527,16 +537,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/images\/wavegrid_@2X.png" : {
+    "\/sass\/foundation\/components\/_dropdown-buttons.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/wavegrid_@2X.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/wavegrid_@2X.png",
-      "initialSize" : 1749,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/sass\/foundation\/components\/_dropdown-buttons.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/stylesheets\/_dropdown-buttons.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/sass\/foundation\/components\/_grid.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -636,6 +647,13 @@
       "type" : 0,
       "position" : 0,
       "linkedFileAbbreviatedPath" : "\/js\/source\/jquery.fittext.js",
+      "baseFileAbbreviatedPath" : "\/js\/source\/main.js",
+      "followForSyntaxChecking" : 1
+    },
+    {
+      "type" : 0,
+      "position" : 1,
+      "linkedFileAbbreviatedPath" : "\/js\/source\/jquery.easing.js",
       "baseFileAbbreviatedPath" : "\/js\/source\/main.js",
       "followForSyntaxChecking" : 1
     }
