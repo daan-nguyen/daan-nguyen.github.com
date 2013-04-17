@@ -136,9 +136,21 @@ nav {
 
   .icon {
     font-size: 1.5em;
-    line-height: 0.8rem;
-    display: none;
-    @include respond(small) { display: inline; }
+    line-height: 0.8em;
+    position: absolute;
+    top: 0;
+    right: 1.2rem;
+
+    @include respond(small) {
+      display: none;
+      position: inherit;
+      line-height: 0.8rem;
+    }
+  }
+  .nav-email .icon {
+    @include respond(small) {
+      display: inline;
+    }
   }
 
   div {
@@ -161,7 +173,7 @@ nav {
     @include respond(small) { width: auto; }
 
     li {
-
+      position: relative;
       display: block;
       @include respond(small) { display: inline-block; }
 

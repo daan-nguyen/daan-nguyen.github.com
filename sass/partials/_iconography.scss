@@ -58,5 +58,9 @@ i {
     @include entypo(social);
     content: '\F30C';
   }
+  &.icon-arrowright:before {
+    @include entypo(icon);
+    content: '\E762';
+  }
 }
 
