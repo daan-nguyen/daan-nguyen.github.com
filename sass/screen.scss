@@ -49,7 +49,7 @@ $experimental-support-for-khtml:false;
     // change header transition to use overflow
     padding: 0;
     overflow: hidden;
-    height: 100px;
+    height: 800px; // hold out space for FOUC
     border-bottom: $border-solid-small;
     @include respond(medium) { border-bottom: $border-solid-large; }
 
