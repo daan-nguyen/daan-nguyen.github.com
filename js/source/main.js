@@ -61,7 +61,7 @@
     // 900/1360 is the full image size
     // we only want a viewport of this
 
-    var ratio = 900/1360; // ratio = w/h = r
+    var ratio = 900/1200; // ratio = w/h = r
     var height = width/ratio; // h/w = 1/r, h = w/r
     var winHeight = $win.height();
 
