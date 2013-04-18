@@ -35,8 +35,8 @@
             $a = $('article', $t),
             hpos = $a.innerHeight() - $h.width() - 8;
 
+        $h.css('bottom', hpos +'px');
         if ($h2.hasClass('transparent')) {
-          $h.css('bottom', hpos +'px');
           $h2.removeClass('transparent');
           trackEvent('Content Viewed', $h2.text());
         }
