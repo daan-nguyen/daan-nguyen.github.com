@@ -1,0 +1,23 @@
+{
+  "name": "daan-nguyen.github.com",
+  "version": "2.0.0",
+  "homepage": "https://github.com/daan-nguyen/daan-nguyen.github.com",
+  "authors": [
+    "Dan Nguyen <daan.nguyen@gmail.com>"
+  ],
+  "description": "2014 Dan Nguyen",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#~5.0.3",
+    "normalize-css": "~3.0.0",
+    "jQuery": "~2.1.0"
+  }
+}
