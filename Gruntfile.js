@@ -72,13 +72,17 @@ module.exports = function(grunt) {
 
 
   // Cleaning task
-  grunt.registerTask('clean', 'Clean task.', function() {
+  grunt.registerTask('clean-build', 'Clean task.', function() {
 
     // Clean build dir
     grunt.file.expand(config.build.out + '*').forEach(function(file) {
       grunt.file.delete(file);
     });
-    // Clean css dir
+
+  });
+
+  grunt.registerTask('clean-out', 'Clean task.', function() {
+
     grunt.file.expand(config.css.out + '*').forEach(function(file) {
       grunt.file.delete(file);
     });
