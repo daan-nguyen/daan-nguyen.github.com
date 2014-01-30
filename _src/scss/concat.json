@@ -1,4 +1,4 @@
 [
-  "normalize.css",
-  "main.css"
+  "bower_components/normalize-css/normalize.css",
+  "_src/build/main.css"
 ]
