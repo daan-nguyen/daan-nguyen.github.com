@@ -29,10 +29,23 @@ module.exports = function(grunt) {
       dev: {
         options: {
           style: 'expanded',
+          lineNumbers: true
         },
         files: [{
           expand: true,
-          src: [config.css.src + '*.scss'],
+          src: config.css.src + 'main.scss',
+          dest: config.build.out,
+          ext: '.css',
+          flatten: true
+        }]
+      },
+      prod: {
+        options: {
+          style: 'compressed'
+        },
+        files: [{
+          expand: true,
+          src: config.css.src + 'main.scss',
           dest: config.build.out,
           ext: '.css',
           flatten: true
@@ -61,6 +74,18 @@ module.exports = function(grunt) {
         src: config.build.out + 'main.js',
         dest: config.js.out + 'main.min.js'
       }
+    },
+
+    copy: {
+      dev: {
+        files: [ // copies concat'd js file to .min.js for debugging
+          { expand: true,
+            src: [config.build.out + 'main.js'],
+            dest: config.js.out,
+            rename: function(dest, src) { return config.js.out + "main.min.js"; }
+          }
+        ]
+      },
     },
 
     // JSHint
@@ -93,7 +118,7 @@ module.exports = function(grunt) {
       },
       html: {
         files: ['./*.html'],
-        tasks: ['build']
+        tasks: ['dev']
       }
     }
 
@@ -128,6 +153,7 @@ module.exports = function(grunt) {
   });
 
   // Tasks list
-  grunt.registerTask('build', ['sass', 'jshint', 'concat', 'uglify']);
+  grunt.registerTask('dev', ['sass:dev', 'jshint', 'concat', 'copy:dev', 'clean-build']);
+  grunt.registerTask('prod', ['sass:prod', 'jshint', 'concat', 'uglify', 'clean-build']);
   grunt.registerTask('default', ['connect', 'watch']);
 };
