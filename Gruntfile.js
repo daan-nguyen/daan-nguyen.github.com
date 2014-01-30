@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     // SASS
     sass: {
       options: {
-        loadPath: ['bower_components/foundation/scss/foundation']
+        loadPath: ['bower_components/foundation/scss']
       },
       dev: {
         options: {
