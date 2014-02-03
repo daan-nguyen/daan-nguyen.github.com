@@ -2,19 +2,19 @@ module.exports = function(grunt) {
 
   // Config vars.
   var config = {
-    build: {},
-    css: {},
-    js: {}
+    build: {
+      out: '_src/build/'
+    },
+    css: {
+      src: '_src/scss/',
+      out: 'css/'
+    },
+    js: {
+      src: '_src/js/',
+      out: 'js/'
+    }
   };
-
-  config.build.out = '_src/build/';
-
-  config.css.src = '_src/scss/',
-  config.css.out = 'css/',
-  config.css.concat = require('./' + config.css.src + 'concat.json');
-
-  config.js.src = '_src/js/',
-  config.js.out = 'js/',
+  config.css.concat = require('./' + config.css.src + 'concat.json'),
   config.js.concat = require('./' + config.js.src + 'concat.json');
 
   // Project config.

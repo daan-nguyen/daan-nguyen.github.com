@@ -1,0 +1,34 @@
+body {
+  text-align: center;
+  color: #333;
+  width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 6em;
+  letter-spacing: -0.05em;
+
+  > .dark {
+    color: #333;
+  }
+
+  &.home {
+    color: #f7931e;
+  }
+}
+
+p {
+  font-family: "freight-text-pro", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5em;
+
+  &.leading {
+    font-weight: 500;
+    font-size: 1.7em;
+  }
+}
