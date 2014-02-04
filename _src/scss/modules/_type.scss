@@ -14,6 +14,7 @@
 h1 {
   @extend %header-font;
   font-size: 6em;
+  text-align: center;
 
   > .dark {
     color: #333;
