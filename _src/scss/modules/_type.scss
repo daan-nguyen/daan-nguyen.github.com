@@ -1,16 +1,19 @@
-body {
-  text-align: center;
-  color: #333;
-  width: 600px;
-  margin: auto;
-}
-
-h1 {
+%header-font {
   font-family: "futura-pt", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 6em;
   letter-spacing: -0.05em;
+}
+
+%paragraph-font {
+  font-family: "freight-text-pro", "Georgia";
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 {
+  @extend %header-font;
+  font-size: 6em;
 
   > .dark {
     color: #333;
@@ -22,13 +25,11 @@ h1 {
 }
 
 p {
-  font-family: "freight-text-pro", sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  @extend %paragraph-font;
   font-size: 1.5em;
 
   &.leading {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.7em;
   }
 }
