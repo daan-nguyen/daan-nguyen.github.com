@@ -21,35 +21,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // SASS
-    sass: {
+    // Compass
+    compass: {
       options: {
-        loadPath: ['bower_components/foundation/scss']
+        sassDir: config.css.src,
+        cssDir: config.build.out,
+        importPath: ['bower_components/foundation/scss']
       },
       dev: {
-        options: {
-          style: 'expanded',
-          lineNumbers: true
-        },
-        files: [{
-          expand: true,
-          src: config.css.src + 'main.scss',
-          dest: config.build.out,
-          ext: '.css',
-          flatten: true
-        }]
-      },
-      prod: {
-        options: {
-          style: 'compressed'
-        },
-        files: [{
-          expand: true,
-          src: config.css.src + 'main.scss',
-          dest: config.build.out,
-          ext: '.css',
-          flatten: true
-        }]
+        outputStyle: 'compact',
+        debugInfo: true
       }
     },
 
@@ -129,7 +110,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
