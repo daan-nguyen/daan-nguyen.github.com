@@ -31,6 +31,9 @@ module.exports = function(grunt) {
       dev: {
         outputStyle: 'compact',
         debugInfo: true
+      },
+      prod: {
+        outputStyle: 'compressed'
       }
     },
 
@@ -91,7 +94,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: [config.css.src + '**/*.scss'],
-        tasks: ['sass:dev', 'concat:css']
+        tasks: ['compass:dev', 'concat:css']
       },
       js: {
         files: [config.js.src + '**/*.js'],
@@ -134,7 +137,7 @@ module.exports = function(grunt) {
   });
 
   // Tasks list
-  grunt.registerTask('dev', ['sass:dev', 'jshint', 'concat', 'copy:dev', 'clean-build']);
-  grunt.registerTask('prod', ['sass:prod', 'jshint', 'concat', 'uglify', 'clean-build']);
+  grunt.registerTask('dev', ['compass:dev', 'jshint', 'concat', 'copy:dev', 'clean-build']);
+  grunt.registerTask('prod', ['compass:prod', 'jshint', 'concat', 'uglify', 'clean-build']);
   grunt.registerTask('default', ['connect', 'watch']);
 };
