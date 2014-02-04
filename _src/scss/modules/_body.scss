@@ -1,3 +1,13 @@
 body {
+  background: $body-bg;
   color: #333;
+}
+
+section {
+  width: 600px;
+  margin: auto;
+
+  > h1 {
+    margin: 30px;
+  }
 }

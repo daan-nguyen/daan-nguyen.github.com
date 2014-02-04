@@ -1,7 +1,3 @@
-$nav-height: 40px;
-$nav-face-bg: #f7f7f7;
-$nav-menu-bg: #333;
-
 header {
   position: relative;
   @include perspective(500px);
@@ -77,5 +73,20 @@ header {
 .nav-menu-list {
   > li {
     height: $nav-height;
+
+    > a {
+      @extend %header-font;
+      color: #fff;
+      text-decoration: none;
+      line-height: $nav-height;
+      height: $nav-height;
+      width: 100%;
+      display: block;
+
+      &:hover {
+        background: #333;
+        opacity: 0.3;
+      }
+    }
   }
 }

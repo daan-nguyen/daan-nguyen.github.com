@@ -2,7 +2,6 @@
   font-family: "futura-pt", sans-serif;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.05em;
 }
 
 %paragraph-font {
@@ -13,6 +12,7 @@
 
 h1 {
   @extend %header-font;
+  letter-spacing: -0.05em;
   font-size: 6em;
   text-align: center;
 
@@ -28,6 +28,7 @@ h1 {
 p {
   @extend %paragraph-font;
   font-size: 1.5em;
+  line-height: 1.45em;
 
   &.leading {
     font-weight: 600;
