@@ -1,3 +1,4 @@
 [
+  "bower_components/fastclick/lib/fastclick.js",
   "_src/js/main.js"
 ]

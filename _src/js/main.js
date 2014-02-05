@@ -5,4 +5,6 @@
     $(this).toggleClass('show');
   });
 
+  FastClick.attach(document.body);
+
 })();
