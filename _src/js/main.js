@@ -15,15 +15,16 @@
   // delegate event listener
   headerEl.addEventListener('click', function(event) {
     if (event.target.classList.contains('nav-toggle-bar') ||
+        event.target.classList.contains('nav-toggle') ||
         event.target.parentElement.classList.contains('nav-toggle')) {
       headerEl.classList.toggle('show');
     }
   });
 
   // hover event for when the mouse enters the menu area
-  menuEl.addEventListener('mouseenter', function(event) {
-    headerEl.classList.add('show');
-  }, false);
+  // menuEl.addEventListener('mouseenter', function(event) {
+  //   headerEl.classList.add('show');
+  // }, false);
 
   // block touch scroll when mobile menu is out
   headerEl.addEventListener('touchmove', function(event) {
