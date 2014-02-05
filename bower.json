@@ -18,6 +18,8 @@
   "dependencies": {
     "foundation": "zurb/bower-foundation#~5.0.3",
     "normalize-css": "~3.0.0",
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "fastclick": "~0.6.11",
+    "lodash": "~2.4.1"
   }
 }
