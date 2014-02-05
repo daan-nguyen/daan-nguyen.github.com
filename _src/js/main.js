@@ -8,6 +8,10 @@
     headerEl.classList.toggle('show');
   }, false);
 
+  headerEl.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+  }, false);
+
   // bind fastclick
   FastClick.attach(document.body);
 
