@@ -706,14 +706,26 @@ h1.experience {
 	color: #8cc63f;
 }
 
-/* line 41, ../scss/modules/_type.scss */
+/* line 39, ../scss/modules/_type.scss */
+
+h1.personal {
+	color: #3fa9f5;
+}
+
+/* line 42, ../scss/modules/_type.scss */
+
+h1.other {
+	color: #d4145a;
+}
+
+/* line 47, ../scss/modules/_type.scss */
 
 p {
 	font-size: 1em;
 	line-height: 1.45em;
 }
 
-/* line 56, ../scss/modules/_type.scss */
+/* line 62, ../scss/modules/_type.scss */
 
 p.leading {
 	font-weight: 600;
@@ -946,13 +958,13 @@ h1 {
 	font-size: 4em;
 }
 
-/* line 41, ../scss/modules/_type.scss */
+/* line 47, ../scss/modules/_type.scss */
 
 p {
 	font-size: 1.3em;
 }
 
-/* line 56, ../scss/modules/_type.scss */
+/* line 62, ../scss/modules/_type.scss */
 
 p.leading {
 	font-size: 1.5em;
@@ -1101,13 +1113,13 @@ h1 {
 	font-size: 6em;
 }
 
-/* line 41, ../scss/modules/_type.scss */
+/* line 47, ../scss/modules/_type.scss */
 
 p {
 	font-size: 1.5em;
 }
 
-/* line 56, ../scss/modules/_type.scss */
+/* line 62, ../scss/modules/_type.scss */
 
 p.leading {
 	font-size: 1.7em;
@@ -1137,13 +1149,13 @@ h1 {
 	font-size: 8em;
 }
 
-/* line 41, ../scss/modules/_type.scss */
+/* line 47, ../scss/modules/_type.scss */
 
 p {
 	font-size: 1.8em;
 }
 
-/* line 56, ../scss/modules/_type.scss */
+/* line 62, ../scss/modules/_type.scss */
 
 p.leading {
 	font-size: 2em;

@@ -36,6 +36,12 @@ h1 {
   &.experience {
     color: $color-experience;
   }
+  &.personal {
+    color: $color-personal;
+  }
+  &.other {
+    color: $color-other;
+  }
 }
 
 p {
