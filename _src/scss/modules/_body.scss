@@ -1,13 +1,21 @@
 body {
   background: $body-bg;
-  color: #333;
+  color: $body-color;
+  padding: 0 $body-padding;
+
+  @include respond($screen-sm) {
+    padding: 0 $body-padding*3;
+  }
 }
 
 section {
-  width: 600px;
+  width: 100%;
   margin: auto;
 
-  > h1 {
-    margin: 30px;
+  @include respond($screen-md) {
+    max-width: $body-md-width;
+  }
+  @include respond($screen-lg) {
+    max-width: $body-lg-width;
   }
 }

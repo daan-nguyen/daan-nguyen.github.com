@@ -1,9 +1,18 @@
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
   @include perspective(500px);
   width: 100%;
   height: $nav-height;
   background: $nav-face-bg;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  + * {
+    padding-top: $nav-height;
+  }
 }
 
 %nav-block {

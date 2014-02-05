@@ -13,25 +13,58 @@
 h1 {
   @extend %header-font;
   letter-spacing: -0.05em;
-  font-size: 6em;
+  font-size: 3em;
   text-align: center;
+
+  @include respond($screen-sm) {
+    font-size: 4em;
+  }
+  @include respond($screen-md) {
+    font-size: 6em;
+  }
+  @include respond($screen-lg) {
+    font-size: 8em;
+  }
 
   > .dark {
     color: #333;
   }
 
   &.home {
-    color: #f7931e;
+    color: $color-home;
+  }
+  &.experience {
+    color: $color-experience;
   }
 }
 
 p {
   @extend %paragraph-font;
-  font-size: 1.5em;
+  font-size: 1em;
   line-height: 1.45em;
+
+  @include respond($screen-sm) {
+    font-size: 1.3em;
+  }
+  @include respond($screen-md) {
+    font-size: 1.5em;
+  }
+  @include respond($screen-lg) {
+    font-size: 1.8em;
+  }
 
   &.leading {
     font-weight: 600;
-    font-size: 1.7em;
+    font-size: 1.2em;
+
+    @include respond($screen-sm) {
+      font-size: 1.5em;
+    }
+    @include respond($screen-md) {
+      font-size: 1.7em;
+    }
+    @include respond($screen-lg) {
+      font-size: 2em;
+    }
   }
 }
