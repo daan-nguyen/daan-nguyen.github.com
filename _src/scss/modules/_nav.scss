@@ -12,6 +12,18 @@ header {
   @include transform2d(translateX(100%));
   @include single-transition(all, 0.3s, ease);
 
+  @include respond($screen-sm) {
+    left: 0;
+    height: $nav-height;
+    background: $nav-face-bg;
+    @include transform2d(translateX(0));
+    @include perspective(500px);
+
+    + * {
+      padding-top: $nav-height;
+    }
+  }
+
   &.show {
     @include transform2d(translateX(0));
 
@@ -20,17 +32,6 @@ header {
       .nav-cube {
         @include transform3d(translateZ(-$nav-height/2) rotateX(-90deg));
       }
-    }
-  }
-
-  @include respond($screen-sm) {
-    left: 0;
-    height: $nav-height;
-    @include transform2d(translateX(0));
-    @include perspective(500px);
-
-    + * {
-      padding-top: $nav-height;
     }
   }
 }
@@ -150,29 +151,48 @@ header {
         height: $nav-height;
         font-size: 1em;
       }
+
+      @include respond($screen-md) {
+        font-size: 1.2em;
+      }
     }
   }
 }
 
-.nav-open {
+.nav-toggle {
   height: 50px;
   width: 50px;
   position: fixed;
   top: 0;
   right: 0;
-  padding-top: 12px;
   z-index: 2000;
+  padding-top: 12px;
+  cursor: pointer;
   @extend %no-select;
 
   @include respond($screen-sm) {
-    display: none;
+    // display: none;
+  }
+
+  &.close {
+    > .nav-toggle-bar:nth-of-type(1) {
+      @include transform2d(rotateZ(45deg));
+    }
+    > .nav-toggle-bar:nth-of-type(2) {
+      opacity: 0;
+    }
+    > .nav-toggle-bar:nth-of-type(3) {
+      @include transform2d(rotateZ(-45deg));
+    }
   }
 }
 
-.nav-open-bar {
+.nav-toggle-bar {
   width: 26px;
   height: 5px;
   background: $color-home;
   margin: 0 13px;
   margin-bottom: 4px;
+  @include transform-origin(0, 50%);
+  @include single-transition(all, 0.5s, ease);
 }

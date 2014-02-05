@@ -644,18 +644,30 @@ select {
 /* line 27, ../scss/modules/_base.scss */
 
 header,
-.nav-open {
+.nav-toggle {
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 }
 
+/* line 34, ../scss/modules/_base.scss */
+
+.hide-xs {
+	display: none;
+}
+
+/* line 44, ../scss/modules/_base.scss */
+
+.show-sm {
+	display: none;
+}
+
 /* line 1, ../scss/modules/_type.scss */
 
 h1,
 .nav-menu-list > li > a {
-	font-family: "futura-pt", sans-serif;
+	font-family: "futura-pt", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 }
@@ -726,7 +738,7 @@ header {
 	transition: all 0.3s ease;
 }
 
-/* line 15, ../scss/modules/_nav.scss */
+/* line 27, ../scss/modules/_nav.scss */
 
 header.show {
 	-webkit-transform: translateX(0);
@@ -736,7 +748,7 @@ header.show {
 	transform: translateX(0);
 }
 
-/* line 38, ../scss/modules/_nav.scss */
+/* line 39, ../scss/modules/_nav.scss */
 
 .nav-cube,
 .nav-menu,
@@ -748,27 +760,27 @@ header.show {
 	max-width: 900px;
 }
 
-/* line 46, ../scss/modules/_nav.scss */
+/* line 47, ../scss/modules/_nav.scss */
 
 .nav-cube {
 	position: relative;
 	margin: auto;
 }
 
-/* line 59, ../scss/modules/_nav.scss */
+/* line 60, ../scss/modules/_nav.scss */
 
 .nav-menu {
 	background: #333333;
 	left: 10px;
 }
 
-/* line 70, ../scss/modules/_nav.scss */
+/* line 71, ../scss/modules/_nav.scss */
 
 .nav-face {
 	width: 10px;
 }
 
-/* line 82, ../scss/modules/_nav.scss */
+/* line 83, ../scss/modules/_nav.scss */
 
 .nav-face-highlights,
 .nav-menu-list {
@@ -778,7 +790,7 @@ header.show {
 	margin-top: 50px;
 }
 
-/* line 93, ../scss/modules/_nav.scss */
+/* line 94, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li,
 .nav-menu-list > li {
@@ -787,80 +799,115 @@ header.show {
 	top: 0;
 }
 
-/* line 102, ../scss/modules/_nav.scss */
+/* line 103, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(1),
 .nav-menu-list > li:nth-of-type(1) {
 	background: #f7931e;
 }
 
-/* line 105, ../scss/modules/_nav.scss */
+/* line 106, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(2),
 .nav-menu-list > li:nth-of-type(2) {
 	background: #8cc63f;
 }
 
-/* line 108, ../scss/modules/_nav.scss */
+/* line 109, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(3),
 .nav-menu-list > li:nth-of-type(3) {
 	background: #3fa9f5;
 }
 
-/* line 111, ../scss/modules/_nav.scss */
+/* line 112, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(4),
 .nav-menu-list > li:nth-of-type(4) {
 	background: #d4145a;
 }
 
-/* line 118, ../scss/modules/_nav.scss */
+/* line 119, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li {
 	width: 10px;
-	height: 60px;
+	height: 75px;
 }
 
-/* line 128, ../scss/modules/_nav.scss */
+/* line 129, ../scss/modules/_nav.scss */
 
 .nav-menu-list {
 	left: 20px;
 	top: 0;
 }
 
-/* line 138, ../scss/modules/_nav.scss */
+/* line 139, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li > a {
 	color: #fff;
 	text-decoration: none;
 	width: 100%;
 	display: block;
-	line-height: 60px;
-	height: 60px;
+	line-height: 75px;
+	height: 75px;
 	font-size: 1.5em;
 }
 
-/* line 157, ../scss/modules/_nav.scss */
+/* line 162, ../scss/modules/_nav.scss */
 
-.nav-open {
+.nav-toggle {
 	height: 50px;
 	width: 50px;
 	position: fixed;
 	top: 0;
 	right: 0;
-	padding-top: 12px;
 	z-index: 2000;
+	padding-top: 12px;
+	cursor: pointer;
 }
 
-/* line 172, ../scss/modules/_nav.scss */
+/* line 178, ../scss/modules/_nav.scss */
 
-.nav-open-bar {
+.nav-toggle.close > .nav-toggle-bar:nth-of-type(1) {
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+
+/* line 181, ../scss/modules/_nav.scss */
+
+.nav-toggle.close > .nav-toggle-bar:nth-of-type(2) {
+	opacity: 0;
+}
+
+/* line 184, ../scss/modules/_nav.scss */
+
+.nav-toggle.close > .nav-toggle-bar:nth-of-type(3) {
+	-webkit-transform: rotateZ(-45deg);
+	-moz-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	-o-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+}
+
+/* line 190, ../scss/modules/_nav.scss */
+
+.nav-toggle-bar {
 	width: 26px;
 	height: 5px;
 	background: #f7931e;
 	margin: 0 13px;
 	margin-bottom: 4px;
+	-webkit-transform-origin: 0 50%;
+	-moz-transform-origin: 0 50%;
+	-ms-transform-origin: 0 50%;
+	-o-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 /* line 1, ../scss/modules/_body.scss */
@@ -881,6 +928,18 @@ section {
 
 @media only screen and (min-width: 481px) {
 
+/* line 38, ../scss/modules/_base.scss */
+
+.hide-sm {
+	display: none;
+}
+
+/* line 44, ../scss/modules/_base.scss */
+
+.show-sm {
+	display: block;
+}
+
 /* line 13, ../scss/modules/_type.scss */
 
 h1 {
@@ -899,31 +958,12 @@ p.leading {
 	font-size: 1.5em;
 }
 
-/* line 15, ../scss/modules/_nav.scss */
-
-header.show {
-	-webkit-transform: translateX(0);
-	-moz-transform: translateX(0);
-	-ms-transform: translateX(0);
-	-o-transform: translateX(0);
-	transform: translateX(0);
-}
-
-/* line 20, ../scss/modules/_nav.scss */
-
-header.show .nav-cube {
-	-webkit-transform: translateZ(-20px) rotateX(-90deg);
-	-moz-transform: translateZ(-20px) rotateX(-90deg);
-	-ms-transform: translateZ(-20px) rotateX(-90deg);
-	-o-transform: translateZ(-20px) rotateX(-90deg);
-	transform: translateZ(-20px) rotateX(-90deg);
-}
-
 /* line 3, ../scss/modules/_nav.scss */
 
 header {
 	left: 0;
-	height: 40px;
+	height: 50px;
+	background: white;
 	-webkit-transform: translateX(0);
 	-moz-transform: translateX(0);
 	-ms-transform: translateX(0);
@@ -936,13 +976,33 @@ header {
 	perspective: 500px;
 }
 
-/* line 32, ../scss/modules/_nav.scss */
+/* line 22, ../scss/modules/_nav.scss */
 
 header + * {
-	padding-top: 40px;
+	padding-top: 50px;
 }
 
-/* line 46, ../scss/modules/_nav.scss */
+/* line 27, ../scss/modules/_nav.scss */
+
+header.show {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+
+/* line 32, ../scss/modules/_nav.scss */
+
+header.show .nav-cube {
+	-webkit-transform: translateZ(-25px) rotateX(-90deg);
+	-moz-transform: translateZ(-25px) rotateX(-90deg);
+	-ms-transform: translateZ(-25px) rotateX(-90deg);
+	-o-transform: translateZ(-25px) rotateX(-90deg);
+	transform: translateZ(-25px) rotateX(-90deg);
+}
+
+/* line 47, ../scss/modules/_nav.scss */
 
 .nav-cube {
 	-webkit-transform-style: preserve-3d;
@@ -955,40 +1015,40 @@ header + * {
 	-ms-backface-visibility: hidden;
 	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
-	-webkit-transform: translateZ(-20px);
-	-moz-transform: translateZ(-20px);
-	-ms-transform: translateZ(-20px);
-	-o-transform: translateZ(-20px);
-	transform: translateZ(-20px);
+	-webkit-transform: translateZ(-25px);
+	-moz-transform: translateZ(-25px);
+	-ms-transform: translateZ(-25px);
+	-o-transform: translateZ(-25px);
+	transform: translateZ(-25px);
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 
-/* line 59, ../scss/modules/_nav.scss */
+/* line 60, ../scss/modules/_nav.scss */
 
 .nav-menu {
 	left: 0;
-	-webkit-transform: rotateX(90deg) translateZ(20px);
-	-moz-transform: rotateX(90deg) translateZ(20px);
-	-ms-transform: rotateX(90deg) translateZ(20px);
-	-o-transform: rotateX(90deg) translateZ(20px);
-	transform: rotateX(90deg) translateZ(20px);
+	-webkit-transform: rotateX(90deg) translateZ(25px);
+	-moz-transform: rotateX(90deg) translateZ(25px);
+	-ms-transform: rotateX(90deg) translateZ(25px);
+	-o-transform: rotateX(90deg) translateZ(25px);
+	transform: rotateX(90deg) translateZ(25px);
 }
 
-/* line 70, ../scss/modules/_nav.scss */
+/* line 71, ../scss/modules/_nav.scss */
 
 .nav-face {
 	background: white;
 	width: 100%;
-	-webkit-transform: translateZ(20px);
-	-moz-transform: translateZ(20px);
-	-ms-transform: translateZ(20px);
-	-o-transform: translateZ(20px);
-	transform: translateZ(20px);
+	-webkit-transform: translateZ(25px);
+	-moz-transform: translateZ(25px);
+	-ms-transform: translateZ(25px);
+	-o-transform: translateZ(25px);
+	transform: translateZ(25px);
 }
 
-/* line 82, ../scss/modules/_nav.scss */
+/* line 83, ../scss/modules/_nav.scss */
 
 .nav-face-highlights,
 .nav-menu-list {
@@ -996,39 +1056,33 @@ header + * {
 	margin-top: 0;
 }
 
-/* line 93, ../scss/modules/_nav.scss */
+/* line 94, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li,
 .nav-menu-list > li {
 	float: left;
 }
 
-/* line 118, ../scss/modules/_nav.scss */
+/* line 119, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li {
 	height: 10px;
 	width: 25%;
 }
 
-/* line 132, ../scss/modules/_nav.scss */
+/* line 133, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li {
-	height: 40px;
+	height: 50px;
 	width: 25%;
 }
 
-/* line 138, ../scss/modules/_nav.scss */
+/* line 139, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li > a {
-	line-height: 40px;
-	height: 40px;
+	line-height: 50px;
+	height: 50px;
 	font-size: 1em;
-}
-
-/* line 157, ../scss/modules/_nav.scss */
-
-.nav-open {
-	display: none;
 }
 
 /* line 7, ../scss/modules/_body.scss */
@@ -1057,6 +1111,12 @@ p {
 
 p.leading {
 	font-size: 1.7em;
+}
+
+/* line 139, ../scss/modules/_nav.scss */
+
+.nav-menu-list > li > a {
+	font-size: 1.2em;
 }
 
 /* line 7, ../scss/modules/_body.scss */

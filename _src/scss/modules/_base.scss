@@ -10,7 +10,7 @@ $body-padding: 20px;
 $body-md-width: 700px;
 $body-lg-width: 900px;
 
-$nav-height: 40px;
+$nav-height: 50px;
 $nav-face-bg: #fff;
 $nav-menu-bg: #333;
 
@@ -29,4 +29,21 @@ $screen-lg: 1441;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.hide-xs {
+  display: none;
+}
+
+.hide-sm {
+  @include respond($screen-sm) {
+    display: none;
+  }
+}
+
+.show-sm {
+  display: none;
+  @include respond($screen-sm) {
+    display: block;
+  }
 }
