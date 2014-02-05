@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-  $('.nav-cube').click(function() {
+  $('header').click(function() {
     $(this).toggleClass('show');
   });
 

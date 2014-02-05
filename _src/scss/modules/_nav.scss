@@ -1,52 +1,84 @@
+$sm-menu-offset: 10px;
+
 header {
   position: fixed;
   top: 0;
-  @include perspective(500px);
+  left: -$sm-menu-offset;
   width: 100%;
-  height: $nav-height;
-  background: $nav-face-bg;
+  height: 150%;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
 
-  + * {
-    padding-top: $nav-height;
+  @include transform2d(translateX(100%));
+  @include single-transition(all, 1s, ease);
+
+  &.show {
+    @include transform2d(translateX(0));
+
+    @include respond($screen-sm) {
+      @include transform2d(translateX(0));
+      .nav-cube {
+        @include transform3d(translateZ(-$nav-height/2) rotateX(-90deg));
+      }
+    }
+  }
+
+  @include respond($screen-sm) {
+    left: 0;
+    height: $nav-height;
+    @include transform2d(translateX(0));
+    @include perspective(500px);
+
+    + * {
+      padding-top: $nav-height;
+    }
   }
 }
 
 %nav-block {
   position: absolute;
+  text-align: center;
+  height: 100%;
   width: 100%;
   max-width: 900px;
-  height: 100%;
-  text-align: center;
 }
 
 .nav-cube {
   @extend %nav-block;
-  @include transform-style(preserve-3d);
-  @include backface-visibility(hidden);
-  @include transform3d(translateZ(-$nav-height/2));
-  @include single-transition(all, 1s, ease);
-
   position: relative;
   margin: auto;
-  &.show {
-    @include transform3d(translateZ(-$nav-height/2) rotateX(-90deg));
+
+  @include respond($screen-sm) {
+    @include transform-style(preserve-3d);
+    @include backface-visibility(hidden);
+    @include transform3d(translateZ(-$nav-height/2));
+    @include single-transition(all, 1s, ease);
   }
 }
 
 .nav-menu {
   @extend %nav-block;
   background: $nav-menu-bg;
-  @include transform3d(rotateX(90deg) translateZ($nav-height/2));
+  width: 100%;
+  left: $sm-menu-offset;
+
+  @include respond($screen-sm) {
+    left: 0;
+    @include transform3d(rotateX(90deg) translateZ($nav-height/2));
+  }
 }
 
 .nav-face {
   @extend %nav-block;
-  background: $nav-face-bg;
-  @include transform3d(translateZ($nav-height/2));
+
+  width: $sm-menu-offset;
+  @include respond($screen-sm) {
+    background: $nav-face-bg;
+    width: 100%;
+    @include transform3d(translateZ($nav-height/2));
+  }
 }
 
 .nav-face-highlights,
@@ -54,16 +86,19 @@ header {
   margin: auto;
   padding: 0;
   list-style: none;
-  width: 80%;
+
+  @include respond($screen-sm) {
+    width: 80%;
+  }
 
   > li {
-    height: 10px;
-    width: 25%;
     display: block;
-    float: left;
-    background: red;
     margin: 0;
     top: 0;
+
+    @include respond($screen-sm) {
+      float: left;
+    }
 
     &:nth-of-type(1) {
       background: $color-home;
@@ -80,9 +115,28 @@ header {
   }
 }
 
-.nav-menu-list {
+.nav-face-highlights {
   > li {
-    height: $nav-height;
+    width: 20px;
+    height: 40px;
+    @include respond($screen-sm) {
+      height: 10px;
+      width: 25%;
+    }
+  }
+}
+
+.nav-menu-list {
+  left: 20px;
+  top: 0;
+
+  > li {
+
+
+    @include respond($screen-sm) {
+      height: $nav-height;
+      width: 25%;
+    }
 
     > a {
       @extend %header-font;
