@@ -17,7 +17,8 @@ header {
 
 %nav-block {
   position: absolute;
-  width: 800px;
+  width: 100%;
+  max-width: 900px;
   height: 100%;
   text-align: center;
 }
@@ -50,14 +51,14 @@ header {
 
 .nav-face-highlights,
 .nav-menu-list {
-  margin: 0;
+  margin: auto;
   padding: 0;
   list-style: none;
-  padding-left: 100px;
+  width: 80%;
 
   > li {
     height: 10px;
-    width: 150px;
+    width: 25%;
     display: block;
     float: left;
     background: red;
