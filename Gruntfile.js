@@ -29,11 +29,14 @@ module.exports = function(grunt) {
         importPath: ['bower_components/foundation/scss']
       },
       dev: {
-        outputStyle: 'compact',
-        debugInfo: true
+        options: {
+          outputStyle: 'expanded',
+        }
       },
       prod: {
-        outputStyle: 'compressed'
+        options: {
+          outputStyle: 'compressed'
+        }
       }
     },
 
@@ -88,6 +91,23 @@ module.exports = function(grunt) {
       }
     },
 
+    // Combine media queries
+    cmq: {
+      options: {
+        log: true,
+      },
+      css: {
+        files: [
+          {
+            expand: true,
+            src: [config.build.out + 'main.css'],
+            dest: config.build.out,
+            flatten: true
+          }
+        ]
+      }
+    },
+
     // Watching
     watch: {
       options: {
@@ -95,11 +115,11 @@ module.exports = function(grunt) {
       },
       css: {
         files: [config.css.src + '**/*.scss'],
-        tasks: ['compass:dev', 'concat:css']
+        tasks: ['compass:dev', 'cmq', 'concat:css']
       },
       js: {
         files: [config.js.src + '**/*.js'],
-        tasks: ['jshint', 'concat:js', 'uglify']
+        tasks: ['jshint', 'concat:js', 'copy:dev']
       },
       html: {
         files: ['./*.html'],
@@ -117,6 +137,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-combine-media-queries');
 
 
   // Cleaning task
@@ -138,7 +159,7 @@ module.exports = function(grunt) {
   });
 
   // Tasks list
-  grunt.registerTask('dev', ['compass:dev', 'jshint', 'concat', 'copy:dev', 'clean-build']);
-  grunt.registerTask('prod', ['compass:prod', 'jshint', 'concat', 'uglify', 'clean-build']);
+  grunt.registerTask('dev', ['compass:dev', 'cmq', 'jshint', 'concat', 'copy:dev', 'clean-build']);
+  grunt.registerTask('prod', ['compass:prod', 'cmq', 'jshint', 'concat', 'uglify', 'clean-build']);
   grunt.registerTask('default', ['connect', 'watch']);
 };
