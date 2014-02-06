@@ -41,14 +41,16 @@
 
   // stop function
   var _stopScrollTo = function() {
-    _startTime = false;
     window.cancelAnimationFrame(_animationId);
+    _startTime = false;
+    _animationId = false;
   };
 
   smoothy.scrollTo = function(targetOffset) {
     var startOffset = window.pageYOffset;
     var deltaOffset = targetOffset - startOffset;
 
+    if (_animationId) _stopScrollTo();
     _animateScroll(startOffset, deltaOffset, _options.duration);
   };
 
