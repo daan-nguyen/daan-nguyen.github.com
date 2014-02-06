@@ -33,5 +33,6 @@
 
   // bind fastclick
   FastClick.attach(document.body);
+  smoothy.initAnchors();
 
 })();

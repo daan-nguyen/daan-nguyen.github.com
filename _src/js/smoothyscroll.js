@@ -1,40 +1,81 @@
-window.smoothyScroll = (function(window, document) {
-  var smoothy = {};
+(function(window, document) {
+  "use strict";
 
-  // ease in out cubic from:
+  var _smoothy = window.smoothy = {};
+
+  // easing formulas
   // http://www.gizma.com/easing/
-  var easeInOutCubic = function (t, b, c, d) {
-    t /= d/2;
-    if (t < 1) return c/2*t*t*t + b;
-    t -= 2;
-    return c/2*(t*t*t + 2) + b;
+  var _easing = {
+    easeInOutCubic: function (t, b, c, d) {
+                      t /= d/2;
+                      if (t < 1) return c/2*t*t*t + b;
+                      t -= 2;
+                      return c/2*(t*t*t + 2) + b;
+                    }
+  };
+
+  // default options
+  var _options = {
+    duration: 1500,
+    easing: _easing.easeInOutCubic,
+    headerOffset: 0
+  };
+
+  // animation functions
+  var _animationId;
+  var _startTime;
+
+  var _animateScroll = function(startOffset, deltaOffset, duration) {
+    var nowTime = (new Date()).getTime();
+    if (!_startTime) _startTime = nowTime;
+    var animationTime = nowTime - _startTime;
+
+    if (animationTime <= duration) {
+      _animationId = window.requestAnimationFrame(_animateScroll.bind(null, startOffset, deltaOffset, duration));
+    } else {
+      _stopScrollTo();
+    }
+
+    document.documentElement.scrollTop = _easing.easeInOutCubic(animationTime, startOffset, deltaOffset, duration);
   };
 
   // stop function
-  var stopScrollTo = function() {
-    startTime = false;
-    cancelAnimationFrame(animationId);
+  var _stopScrollTo = function() {
+    _startTime = false;
+    window.cancelAnimationFrame(_animationId);
   };
 
-  // requires request animation frame or polyfill
-  var animationId;
-  var startTime;
+  smoothy.scrollTo = function(targetOffset) {
+    var startOffset = window.pageYOffset;
+    var deltaOffset = targetOffset - startOffset;
 
-  smoothy.scrollTo = function(startOffset, deltaOffset, duration) {
-    var nowTime = (new Date()).getTime();
-    if (!startTime) startTime = nowTime;
-    var animationTime = nowTime - startTime;
+    _animateScroll(startOffset, deltaOffset, _options.duration);
+  };
 
-    if (animationTime <= duration) {
-      animationId = window.requestAnimationFrame(smoothy.scrollTo.bind(null, startOffset, deltaOffset, duration));
-    } else {
-      stopScrollTo();
+  smoothy.initOptions = function(options) {
+    for (var key in options) {
+      if (_options.hasOwnProperty(key) && options[key]) {
+        _options[key] = options[key];
+      }
     }
-
-    document.documentElement.scrollTop = easeInOutCubic(animationTime, startOffset, deltaOffset, duration);
   };
 
-  return smoothy;
+  smoothy.initAnchors = function(options) {
+    if (options) smoothy.initOptions(options);
+
+    document.body.addEventListener('click', function(event) {
+      if (event.target.tagName.toLowerCase() === 'a') {
+        var href = event.target.attributes.href.value;
+
+        if (href && href.indexOf('#') === 0 && href.substring(1).length > 0) {
+          event.preventDefault();
+
+          var targetEl = document.querySelector(href) || document.querySelector('a[name=' + href.substring(1) + ']');
+          smoothy.scrollTo(targetEl.offsetTop);
+
+        }
+      }
+    }, false);
+  };
 
 })(window, document);
-
