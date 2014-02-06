@@ -63,7 +63,12 @@
   };
 
   smoothy.initAnchors = function(options) {
+    // Set passed options
     if (options) smoothy.initOptions(options);
+
+    // Set header offset if there is a tagged element
+    var offsetEl = document.querySelector('.smoothy-offset');
+    _options.headerOffset = offsetEl.offsetHeight;
 
     document.body.addEventListener('click', function(event) {
       if (event.target.tagName.toLowerCase() === 'a') {
@@ -73,7 +78,7 @@
           event.preventDefault();
 
           var targetEl = document.querySelector(href) || document.querySelector('a[name=' + href.substring(1) + ']');
-          smoothy.scrollTo(targetEl.offsetTop);
+          smoothy.scrollTo(targetEl.offsetTop - _options.headerOffset);
 
         }
       }
