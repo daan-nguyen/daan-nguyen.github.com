@@ -2,9 +2,10 @@
 	'use strict';
 
   // mobile nav button
-  var mobileOpenNavEl = document.getElementsByClassName('nav-toggle hide-sm')[0];
+  var mobileOpenNavEl = document.getElementsByClassName('nav-toggle mobile')[0];
   var headerEl = document.getElementsByTagName('header')[0];
   var menuEl = document.getElementsByClassName('nav-cube')[0];
+  var highlightsEl = document.getElementsByClassName('nav-face-highlights')[0];
 
   // mobile menu toggle
   mobileOpenNavEl.addEventListener('click', function(event) {
@@ -21,8 +22,14 @@
     }
   });
 
-  // hover event for when the mouse enters the menu area
-  // menuEl.addEventListener('mouseenter', function(event) {
+  headerEl.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() === 'a' &&
+        event.target.parentElement.parentElement.classList.contains('nav-menu-list')) {
+      headerEl.classList.remove('show');
+    }
+  }, false);
+
+  // highlightsEl.addEventListener('mouseenter', function(event) {
   //   headerEl.classList.add('show');
   // }, false);
 
@@ -33,6 +40,6 @@
 
   // bind fastclick
   FastClick.attach(document.body);
-  smoothy.initAnchors();
+  smoothy.initAnchors({headerOffset: 80});
 
 })();

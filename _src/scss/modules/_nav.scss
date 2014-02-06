@@ -1,4 +1,5 @@
 $sm-menu-offset: 10px;
+$menu-breakpoint: $screen-md;
 
 header {
   position: fixed;
@@ -12,7 +13,7 @@ header {
   @include transform2d(translateX(100%));
   @include single-transition(all, 0.3s, ease);
 
-  @include respond($screen-sm) {
+  @include respond($menu-breakpoint) {
     left: 0;
     height: $nav-height;
     background: $nav-face-bg;
@@ -27,7 +28,7 @@ header {
   &.show {
     @include transform2d(translateX(0));
 
-    @include respond($screen-sm) {
+    @include respond($menu-breakpoint) {
       @include transform2d(translateX(0)); // zero out
       .nav-cube {
         @include transform3d(translateZ(-$nav-height/2) rotateX(-90deg));
@@ -42,6 +43,10 @@ header {
   height: 100%;
   width: 100%;
   max-width: 900px;
+
+  @include respond($screen-lg) {
+    max-width: 1200px;
+  }
 }
 
 .nav-cube {
@@ -49,7 +54,7 @@ header {
   position: relative;
   margin: auto;
 
-  @include respond($screen-sm) {
+  @include respond($menu-breakpoint) {
     @include transform-style(preserve-3d);
     @include backface-visibility(hidden);
     @include transform3d(translateZ(-$nav-height/2));
@@ -62,7 +67,7 @@ header {
   background: $nav-menu-bg;
   left: $sm-menu-offset;
 
-  @include respond($screen-sm) {
+  @include respond($menu-breakpoint) {
     left: 0;
     @include transform3d(rotateX(90deg) translateZ($nav-height/2));
   }
@@ -72,7 +77,7 @@ header {
   @extend %nav-block;
   width: $sm-menu-offset;
 
-  @include respond($screen-sm) {
+  @include respond($menu-breakpoint) {
     background: $nav-face-bg;
     width: 100%;
     @include transform3d(translateZ($nav-height/2));
@@ -86,7 +91,7 @@ header {
   list-style: none;
   margin-top: 50px;
 
-  @include respond($screen-sm) {
+  @include respond($menu-breakpoint) {
     width: 80%;
     margin-top: 0;
   }
@@ -96,7 +101,7 @@ header {
     margin: 0;
     top: 0;
 
-    @include respond($screen-sm) {
+    @include respond($menu-breakpoint) {
       float: left;
     }
 
@@ -116,10 +121,12 @@ header {
 }
 
 .nav-face-highlights {
+  height: $nav-height;
+
   > li {
     width: $sm-menu-offset;
     height: $nav-height * 1.5;
-    @include respond($screen-sm) {
+    @include respond($menu-breakpoint) {
       height: 10px;
       width: 25%;
     }
@@ -131,7 +138,7 @@ header {
   top: 0;
 
   > li {
-    @include respond($screen-sm) {
+    @include respond($menu-breakpoint) {
       height: $nav-height;
       width: 25%;
     }
@@ -146,13 +153,13 @@ header {
       height: $nav-height * 1.5;
       font-size: 1.5em;
 
-      @include respond($screen-sm) {
+      @include respond($menu-breakpoint) {
         line-height: $nav-height;
         height: $nav-height;
         font-size: 1em;
       }
 
-      @include respond($screen-md) {
+      @include respond($screen-lg) {
         font-size: 1.2em;
       }
     }
@@ -170,7 +177,7 @@ header {
   cursor: pointer;
   @extend %no-select;
 
-  @include respond($screen-sm) {
+  @include respond($menu-breakpoint) {
     // display: none;
   }
 

@@ -41,9 +41,22 @@ $screen-lg: 1441;
   }
 }
 
+.hide-md {
+  @include respond($screen-md) {
+    display: none;
+  }
+}
+
 .show-sm {
   display: none;
   @include respond($screen-sm) {
+    display: block;
+  }
+}
+
+.show-md {
+  display: none;
+  @include respond($screen-md) {
     display: block;
   }
 }

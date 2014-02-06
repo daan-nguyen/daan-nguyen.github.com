@@ -6,17 +6,37 @@
   // easing formulas
   // http://www.gizma.com/easing/
   var _easing = {
+    linear: function (t, b, c, d) {
+      return c*t/d + b;
+    },
     easeInOutCubic: function (t, b, c, d) {
-                      t /= d/2;
-                      if (t < 1) return c/2*t*t*t + b;
-                      t -= 2;
-                      return c/2*(t*t*t + 2) + b;
-                    }
+      t /= d/2;
+      if (t < 1) return c/2*t*t*t + b;
+      t -= 2;
+      return c/2*(t*t*t + 2) + b;
+    },
+    easeOutCubic: function (t, b, c, d) {
+      t /= d;
+      t--;
+      return c*(t*t*t + 1) + b;
+    },
+    easeInOutQuart: function (t, b, c, d) {
+      t /= d/2;
+      if (t < 1) return c/2*t*t*t*t + b;
+      t -= 2;
+      return -c/2 * (t*t*t*t - 2) + b;
+    },
+    easeInOutCirc: function (t, b, c, d) {
+      t /= d/2;
+      if (t < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
+      t -= 2;
+      return c/2 * (Math.sqrt(1 - t*t) + 1) + b;
+    }
   };
 
   // default options
   var _options = {
-    duration: 1500,
+    duration: 1200,
     easing: _easing.easeInOutCubic,
     headerOffset: 0
   };
@@ -36,7 +56,8 @@
       _stopScrollTo();
     }
 
-    document.documentElement.scrollTop = _easing.easeInOutCubic(animationTime, startOffset, deltaOffset, duration);
+    document.documentElement.scrollTop = _options.easing(animationTime, startOffset, deltaOffset, duration);
+    console.log(document.documentElement.scrollTop);
   };
 
   // stop function
@@ -63,12 +84,12 @@
   };
 
   smoothy.initAnchors = function(options) {
-    // Set passed options
-    if (options) smoothy.initOptions(options);
-
     // Set header offset if there is a tagged element
     var offsetEl = document.querySelector('.smoothy-offset');
-    _options.headerOffset = offsetEl.offsetHeight;
+    _options.headerOffset = (offsetEl) ? offsetEl.offsetHeight : 0;
+
+    // Set passed options
+    if (options) smoothy.initOptions(options);
 
     document.body.addEventListener('click', function(event) {
       if (event.target.tagName.toLowerCase() === 'a') {

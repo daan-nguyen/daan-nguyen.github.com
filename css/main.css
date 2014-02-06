@@ -657,9 +657,15 @@ header,
 	display: none;
 }
 
-/* line 44, ../scss/modules/_base.scss */
+/* line 50, ../scss/modules/_base.scss */
 
 .show-sm {
+	display: none;
+}
+
+/* line 57, ../scss/modules/_base.scss */
+
+.show-md {
 	display: none;
 }
 
@@ -732,7 +738,7 @@ p.leading {
 	font-size: 1.2em;
 }
 
-/* line 3, ../scss/modules/_nav.scss */
+/* line 4, ../scss/modules/_nav.scss */
 
 header {
 	position: fixed;
@@ -750,7 +756,7 @@ header {
 	transition: all 0.3s ease;
 }
 
-/* line 27, ../scss/modules/_nav.scss */
+/* line 28, ../scss/modules/_nav.scss */
 
 header.show {
 	-webkit-transform: translateX(0);
@@ -760,7 +766,7 @@ header.show {
 	transform: translateX(0);
 }
 
-/* line 39, ../scss/modules/_nav.scss */
+/* line 40, ../scss/modules/_nav.scss */
 
 .nav-cube,
 .nav-menu,
@@ -772,27 +778,27 @@ header.show {
 	max-width: 900px;
 }
 
-/* line 47, ../scss/modules/_nav.scss */
+/* line 52, ../scss/modules/_nav.scss */
 
 .nav-cube {
 	position: relative;
 	margin: auto;
 }
 
-/* line 60, ../scss/modules/_nav.scss */
+/* line 65, ../scss/modules/_nav.scss */
 
 .nav-menu {
 	background: #333333;
 	left: 10px;
 }
 
-/* line 71, ../scss/modules/_nav.scss */
+/* line 76, ../scss/modules/_nav.scss */
 
 .nav-face {
 	width: 10px;
 }
 
-/* line 83, ../scss/modules/_nav.scss */
+/* line 88, ../scss/modules/_nav.scss */
 
 .nav-face-highlights,
 .nav-menu-list {
@@ -802,7 +808,7 @@ header.show {
 	margin-top: 50px;
 }
 
-/* line 94, ../scss/modules/_nav.scss */
+/* line 99, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li,
 .nav-menu-list > li {
@@ -811,49 +817,55 @@ header.show {
 	top: 0;
 }
 
-/* line 103, ../scss/modules/_nav.scss */
+/* line 108, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(1),
 .nav-menu-list > li:nth-of-type(1) {
 	background: #f7931e;
 }
 
-/* line 106, ../scss/modules/_nav.scss */
+/* line 111, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(2),
 .nav-menu-list > li:nth-of-type(2) {
 	background: #8cc63f;
 }
 
-/* line 109, ../scss/modules/_nav.scss */
+/* line 114, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(3),
 .nav-menu-list > li:nth-of-type(3) {
 	background: #3fa9f5;
 }
 
-/* line 112, ../scss/modules/_nav.scss */
+/* line 117, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(4),
 .nav-menu-list > li:nth-of-type(4) {
 	background: #d4145a;
 }
 
-/* line 119, ../scss/modules/_nav.scss */
+/* line 123, ../scss/modules/_nav.scss */
+
+.nav-face-highlights {
+	height: 50px;
+}
+
+/* line 126, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li {
 	width: 10px;
 	height: 75px;
 }
 
-/* line 129, ../scss/modules/_nav.scss */
+/* line 136, ../scss/modules/_nav.scss */
 
 .nav-menu-list {
 	left: 20px;
 	top: 0;
 }
 
-/* line 139, ../scss/modules/_nav.scss */
+/* line 146, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li > a {
 	color: #fff;
@@ -865,7 +877,7 @@ header.show {
 	font-size: 1.5em;
 }
 
-/* line 162, ../scss/modules/_nav.scss */
+/* line 169, ../scss/modules/_nav.scss */
 
 .nav-toggle {
 	height: 50px;
@@ -878,7 +890,7 @@ header.show {
 	cursor: pointer;
 }
 
-/* line 178, ../scss/modules/_nav.scss */
+/* line 185, ../scss/modules/_nav.scss */
 
 .nav-toggle.close > .nav-toggle-bar:nth-of-type(1) {
 	-webkit-transform: rotateZ(45deg);
@@ -888,13 +900,13 @@ header.show {
 	transform: rotateZ(45deg);
 }
 
-/* line 181, ../scss/modules/_nav.scss */
+/* line 188, ../scss/modules/_nav.scss */
 
 .nav-toggle.close > .nav-toggle-bar:nth-of-type(2) {
 	opacity: 0;
 }
 
-/* line 184, ../scss/modules/_nav.scss */
+/* line 191, ../scss/modules/_nav.scss */
 
 .nav-toggle.close > .nav-toggle-bar:nth-of-type(3) {
 	-webkit-transform: rotateZ(-45deg);
@@ -904,7 +916,7 @@ header.show {
 	transform: rotateZ(-45deg);
 }
 
-/* line 190, ../scss/modules/_nav.scss */
+/* line 197, ../scss/modules/_nav.scss */
 
 .nav-toggle-bar {
 	width: 26px;
@@ -946,7 +958,7 @@ section {
 	display: none;
 }
 
-/* line 44, ../scss/modules/_base.scss */
+/* line 50, ../scss/modules/_base.scss */
 
 .show-sm {
 	display: block;
@@ -970,7 +982,47 @@ p.leading {
 	font-size: 1.5em;
 }
 
-/* line 3, ../scss/modules/_nav.scss */
+/* line 7, ../scss/modules/_body.scss */
+
+section {
+	margin: 0 60px;
+}
+
+}
+
+@media only screen and (min-width: 769px) {
+
+/* line 44, ../scss/modules/_base.scss */
+
+.hide-md {
+	display: none;
+}
+
+/* line 57, ../scss/modules/_base.scss */
+
+.show-md {
+	display: block;
+}
+
+/* line 13, ../scss/modules/_type.scss */
+
+h1 {
+	font-size: 6em;
+}
+
+/* line 47, ../scss/modules/_type.scss */
+
+p {
+	font-size: 1.5em;
+}
+
+/* line 62, ../scss/modules/_type.scss */
+
+p.leading {
+	font-size: 1.7em;
+}
+
+/* line 4, ../scss/modules/_nav.scss */
 
 header {
 	left: 0;
@@ -988,13 +1040,13 @@ header {
 	perspective: 500px;
 }
 
-/* line 22, ../scss/modules/_nav.scss */
+/* line 23, ../scss/modules/_nav.scss */
 
 header + * {
 	padding-top: 50px;
 }
 
-/* line 27, ../scss/modules/_nav.scss */
+/* line 28, ../scss/modules/_nav.scss */
 
 header.show {
 	-webkit-transform: translateX(0);
@@ -1004,7 +1056,7 @@ header.show {
 	transform: translateX(0);
 }
 
-/* line 32, ../scss/modules/_nav.scss */
+/* line 33, ../scss/modules/_nav.scss */
 
 header.show .nav-cube {
 	-webkit-transform: translateZ(-25px) rotateX(-90deg);
@@ -1014,7 +1066,7 @@ header.show .nav-cube {
 	transform: translateZ(-25px) rotateX(-90deg);
 }
 
-/* line 47, ../scss/modules/_nav.scss */
+/* line 52, ../scss/modules/_nav.scss */
 
 .nav-cube {
 	-webkit-transform-style: preserve-3d;
@@ -1037,7 +1089,7 @@ header.show .nav-cube {
 	transition: all 0.5s ease;
 }
 
-/* line 60, ../scss/modules/_nav.scss */
+/* line 65, ../scss/modules/_nav.scss */
 
 .nav-menu {
 	left: 0;
@@ -1048,7 +1100,7 @@ header.show .nav-cube {
 	transform: rotateX(90deg) translateZ(25px);
 }
 
-/* line 71, ../scss/modules/_nav.scss */
+/* line 76, ../scss/modules/_nav.scss */
 
 .nav-face {
 	background: white;
@@ -1060,7 +1112,7 @@ header.show .nav-cube {
 	transform: translateZ(25px);
 }
 
-/* line 83, ../scss/modules/_nav.scss */
+/* line 88, ../scss/modules/_nav.scss */
 
 .nav-face-highlights,
 .nav-menu-list {
@@ -1068,67 +1120,33 @@ header.show .nav-cube {
 	margin-top: 0;
 }
 
-/* line 94, ../scss/modules/_nav.scss */
+/* line 99, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li,
 .nav-menu-list > li {
 	float: left;
 }
 
-/* line 119, ../scss/modules/_nav.scss */
+/* line 126, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li {
 	height: 10px;
 	width: 25%;
 }
 
-/* line 133, ../scss/modules/_nav.scss */
+/* line 140, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li {
 	height: 50px;
 	width: 25%;
 }
 
-/* line 139, ../scss/modules/_nav.scss */
+/* line 146, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li > a {
 	line-height: 50px;
 	height: 50px;
 	font-size: 1em;
-}
-
-/* line 7, ../scss/modules/_body.scss */
-
-section {
-	margin: 0 60px;
-}
-
-}
-
-@media only screen and (min-width: 769px) {
-
-/* line 13, ../scss/modules/_type.scss */
-
-h1 {
-	font-size: 6em;
-}
-
-/* line 47, ../scss/modules/_type.scss */
-
-p {
-	font-size: 1.5em;
-}
-
-/* line 62, ../scss/modules/_type.scss */
-
-p.leading {
-	font-size: 1.7em;
-}
-
-/* line 139, ../scss/modules/_nav.scss */
-
-.nav-menu-list > li > a {
-	font-size: 1.2em;
 }
 
 /* line 7, ../scss/modules/_body.scss */
@@ -1159,6 +1177,20 @@ p {
 
 p.leading {
 	font-size: 2em;
+}
+
+/* line 40, ../scss/modules/_nav.scss */
+
+.nav-cube,
+.nav-menu,
+.nav-face {
+	max-width: 1200px;
+}
+
+/* line 146, ../scss/modules/_nav.scss */
+
+.nav-menu-list > li > a {
+	font-size: 1.2em;
 }
 
 /* line 7, ../scss/modules/_body.scss */
