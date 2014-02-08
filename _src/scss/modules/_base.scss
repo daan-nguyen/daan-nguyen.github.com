@@ -31,6 +31,17 @@ $screen-lg: 1441;
   user-select: none;
 }
 
+// nav mixin
+@mixin menu-item($color) {
+  background: $color;
+  > a:hover,
+    a:active,
+    a:focus {
+    background: lighten($color, 10%);
+  }
+}
+
+// display stuff
 .hide-xs {
   display: none;
 }

@@ -106,16 +106,16 @@ header {
     }
 
     &:nth-of-type(1) {
-      background: $color-home;
+      @include menu-item($color-home);
     }
     &:nth-of-type(2) {
-      background: $color-experience;
+      @include menu-item($color-experience);
     }
     &:nth-of-type(3) {
-      background: $color-personal;
+      @include menu-item($color-personal);
     }
     &:nth-of-type(4) {
-      background: $color-other;
+      @include menu-item($color-other);
     }
   }
 }
@@ -134,7 +134,6 @@ header {
 }
 
 .nav-menu-list {
-  left: 20px;
   top: 0;
 
   > li {
@@ -176,10 +175,6 @@ header {
   padding-top: 12px;
   cursor: pointer;
   @extend %no-select;
-
-  @include respond($menu-breakpoint) {
-    // display: none;
-  }
 
   &.close {
     > .nav-toggle-bar:nth-of-type(1) {
