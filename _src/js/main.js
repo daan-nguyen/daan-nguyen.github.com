@@ -1,19 +1,18 @@
-(function() {
+(function(window, document) {
 	'use strict';
 
-  // mobile nav button
   var mobileOpenNavEl = document.getElementsByClassName('nav-toggle mobile')[0];
   var headerEl = document.getElementsByTagName('header')[0];
   var menuEl = document.getElementsByClassName('nav-cube')[0];
   var highlightsEl = document.getElementsByClassName('nav-face-highlights')[0];
 
-  // mobile menu toggle
+  // Mobile menu toggle button
   mobileOpenNavEl.addEventListener('click', function(event) {
     headerEl.classList.toggle('show');
     mobileOpenNavEl.classList.toggle('close');
   }, false);
 
-  // delegate event listener
+  // Header delegate event to pick up show/close toggle
   headerEl.addEventListener('click', function(event) {
     if (event.target.classList.contains('nav-toggle-bar') ||
         event.target.classList.contains('nav-toggle') ||
@@ -22,12 +21,32 @@
     }
   });
 
+  // Hides menu after clicking a nav link
   headerEl.addEventListener('click', function(event) {
     if (event.target.tagName.toLowerCase() === 'a' &&
         event.target.parentElement.parentElement.classList.contains('nav-menu-list')) {
       headerEl.classList.remove('show');
     }
   }, false);
+
+  // Adds no-transition on resize event and ignores it whilst its
+  // still resizing
+  var isResizing;
+  var resizeEndTimer;
+  window.addEventListener('resize', function(event) {
+    if (!isResizing) {
+      headerEl.classList.add('no-transition');
+      isResizing = true;
+    }
+  }, false);
+  // Removes the no-transition class 100ms after resizing stops
+  window.addEventListener('resize', function(event) {
+    if (resizeEndTimer) clearTimeout(resizeEndTimer);
+    resizeEndTimer = setTimeout(function() {
+      headerEl.classList.remove('no-transition');
+      isResizing = false;
+    }, 100);
+  });
 
   // highlightsEl.addEventListener('mouseenter', function(event) {
   //   headerEl.classList.add('show');
@@ -38,8 +57,8 @@
     event.preventDefault();
   }, false);
 
-  // bind fastclick
+  // bind fastclick & smoothyscroll
   FastClick.attach(document.body);
   smoothy.initAnchors({headerOffset: 80});
 
-})();
+})(window, document);

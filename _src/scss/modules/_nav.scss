@@ -35,6 +35,14 @@ header {
       }
     }
   }
+
+  // turn off transitions
+  &.no-transition {
+    @include single-transition(none);
+    .nav-cube {
+      @include single-transition(none);
+    }
+  }
 }
 
 %nav-block {
