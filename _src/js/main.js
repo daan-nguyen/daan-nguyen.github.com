@@ -6,10 +6,14 @@
   var menuEl = document.getElementsByClassName('nav-cube')[0];
   var highlightsEl = document.getElementsByClassName('nav-face-highlights')[0];
 
-  // Mobile menu toggle button
-  mobileOpenNavEl.addEventListener('click', function(event) {
+  var toggleMenu = function() {
     headerEl.classList.toggle('show');
     mobileOpenNavEl.classList.toggle('close');
+  };
+
+  // Mobile menu toggle button
+  mobileOpenNavEl.addEventListener('click', function(event) {
+    toggleMenu();
   }, false);
 
   // Header delegate event to pick up show/close toggle
@@ -17,7 +21,7 @@
     if (event.target.classList.contains('nav-toggle-bar') ||
         event.target.classList.contains('nav-toggle') ||
         event.target.parentElement.classList.contains('nav-toggle')) {
-      headerEl.classList.toggle('show');
+      toggleMenu();
     }
   });
 
@@ -25,7 +29,7 @@
   headerEl.addEventListener('click', function(event) {
     if (event.target.tagName.toLowerCase() === 'a' &&
         event.target.parentElement.parentElement.classList.contains('nav-menu-list')) {
-      headerEl.classList.remove('show');
+      toggleMenu();
     }
   }, false);
 

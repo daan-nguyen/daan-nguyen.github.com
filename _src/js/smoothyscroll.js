@@ -56,8 +56,7 @@
       _stopScrollTo();
     }
 
-    document.documentElement.scrollTop = _options.easing(animationTime, startOffset, deltaOffset, duration);
-    console.log(document.documentElement.scrollTop);
+    document.getElementsByTagName('body')[0].scrollTop = _options.easing(animationTime, startOffset, deltaOffset, duration);
   };
 
   // stop function
