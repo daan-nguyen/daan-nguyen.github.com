@@ -56,7 +56,7 @@
       _stopScrollTo();
     }
 
-    document.getElementsByTagName('body')[0].scrollTop = _options.easing(animationTime, startOffset, deltaOffset, duration);
+    window.scrollTo(0, _options.easing(animationTime, startOffset, deltaOffset, duration));
   };
 
   // stop function
