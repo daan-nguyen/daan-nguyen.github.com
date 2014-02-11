@@ -422,226 +422,7 @@ th {
   padding: 0;
 }
 
-/* line 293, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-meta.foundation-mq-small {
-	font-family: "/only screen and (max-width: 40em)/";
-	width: 0em;
-}
-
-/* line 298, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-meta.foundation-mq-medium {
-	font-family: "/only screen and (min-width:40.063em)/";
-	width: 40.063em;
-}
-
-/* line 303, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-meta.foundation-mq-large {
-	font-family: "/only screen and (min-width:64.063em)/";
-	width: 64.063em;
-}
-
-/* line 308, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-meta.foundation-mq-xlarge {
-	font-family: "/only screen and (min-width:90.063em)/";
-	width: 90.063em;
-}
-
-/* line 313, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-meta.foundation-mq-xxlarge {
-	font-family: "/only screen and (min-width:120.063em)/";
-	width: 120.063em;
-}
-
-/* line 323, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-*,
-*:before,
-*:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-/* line 328, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-html,
-body {
-	font-size: 16px;
-}
-
-/* line 331, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-body {
-	background: white;
-	color: #222222;
-	padding: 0;
-	margin: 0;
-	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1;
-	position: relative;
-	cursor: default;
-}
-
-/* line 344, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-a:hover {
-	cursor: pointer;
-}
-
-/* line 349, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-img,
-object,
-embed {
-	max-width: 100%;
-	height: auto;
-}
-
-/* line 352, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-object,
-embed {
-	height: 100%;
-}
-
-/* line 353, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-img {
-	-ms-interpolation-mode: bicubic;
-}
-
-/* line 359, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-#map_canvas img,
-#map_canvas embed,
-#map_canvas object,
-.map_canvas img,
-.map_canvas embed,
-.map_canvas object {
-	max-width: none !important;
-}
-
-/* line 364, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.left {
-	float: left !important;
-}
-
-/* line 365, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.right {
-	float: right !important;
-}
-
-/* line 366, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.clearfix {
-	*zoom: 1;
-}
-
-/* line 159, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
-}
-
-/* line 160, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.clearfix:after {
-	clear: both;
-}
-
-/* line 367, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.text-left {
-	text-align: left !important;
-}
-
-/* line 368, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.text-right {
-	text-align: right !important;
-}
-
-/* line 369, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.text-center {
-	text-align: center !important;
-}
-
-/* line 370, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.text-justify {
-	text-align: justify !important;
-}
-
-/* line 371, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.hide {
-	display: none;
-}
-
-/* line 373, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.start {
-	float: left !important;
-}
-
-/* line 374, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.end {
-	float: right !important;
-}
-
-/* line 375, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.text-start {
-	text-align: left !important;
-}
-
-/* line 376, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.text-end {
-	text-align: right !important;
-}
-
-/* line 382, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-.antialiased {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-/* line 385, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-img {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-/* line 395, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-textarea {
-	height: auto;
-	min-height: 50px;
-}
-
-/* line 398, ../../bower_components/foundation/scss/foundation/components/_global.scss */
-
-select {
-	width: 100%;
-}
-
-/* line 27, ../scss/modules/_base.scss */
+/* line 29, ../scss/modules/_base.scss */
 
 header,
 .nav-toggle {
@@ -651,22 +432,32 @@ header,
 	user-select: none;
 }
 
-/* line 45, ../scss/modules/_base.scss */
+/* line 47, ../scss/modules/_base.scss */
 
 .hide-xs {
 	display: none;
 }
 
-/* line 61, ../scss/modules/_base.scss */
+/* line 63, ../scss/modules/_base.scss */
 
 .show-sm {
 	display: none;
 }
 
-/* line 68, ../scss/modules/_base.scss */
+/* line 70, ../scss/modules/_base.scss */
 
 .show-md {
 	display: none;
+}
+
+/* line 80, ../scss/modules/_base.scss */
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* line 1, ../scss/modules/_type.scss */
@@ -753,6 +544,7 @@ header {
 	transform: translateX(100%);
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 
@@ -769,17 +561,19 @@ header.show {
 /* line 40, ../scss/modules/_nav.scss */
 
 header.no-transition {
-	-webkit-transition: none 300ms ease-out;
-	-moz-transition: none 300ms ease-out;
-	transition: none 300ms ease-out;
+	-webkit-transition: none 1s;
+	-moz-transition: none 1s;
+	-o-transition: none 1s;
+	transition: none 1s;
 }
 
 /* line 42, ../scss/modules/_nav.scss */
 
 header.no-transition .nav-cube {
-	-webkit-transition: none 300ms ease-out;
-	-moz-transition: none 300ms ease-out;
-	transition: none 300ms ease-out;
+	-webkit-transition: none 1s;
+	-moz-transition: none 1s;
+	-o-transition: none 1s;
+	transition: none 1s;
 }
 
 /* line 48, ../scss/modules/_nav.scss */
@@ -840,7 +634,7 @@ header.no-transition .nav-cube {
 	background: #f7931e;
 }
 
-/* line 39, ../scss/modules/_base.scss */
+/* line 41, ../scss/modules/_base.scss */
 
 .nav-face-highlights > li:nth-of-type(1) > a:hover,
 .nav-face-highlights > li:nth-of-type(1) a:active,
@@ -858,7 +652,7 @@ header.no-transition .nav-cube {
 	background: #8cc63f;
 }
 
-/* line 39, ../scss/modules/_base.scss */
+/* line 41, ../scss/modules/_base.scss */
 
 .nav-face-highlights > li:nth-of-type(2) > a:hover,
 .nav-face-highlights > li:nth-of-type(2) a:active,
@@ -876,7 +670,7 @@ header.no-transition .nav-cube {
 	background: #3fa9f5;
 }
 
-/* line 39, ../scss/modules/_base.scss */
+/* line 41, ../scss/modules/_base.scss */
 
 .nav-face-highlights > li:nth-of-type(3) > a:hover,
 .nav-face-highlights > li:nth-of-type(3) a:active,
@@ -894,7 +688,7 @@ header.no-transition .nav-cube {
 	background: #d4145a;
 }
 
-/* line 39, ../scss/modules/_base.scss */
+/* line 41, ../scss/modules/_base.scss */
 
 .nav-face-highlights > li:nth-of-type(4) > a:hover,
 .nav-face-highlights > li:nth-of-type(4) a:active,
@@ -990,6 +784,7 @@ header.no-transition .nav-cube {
 	transform-origin: 0 50%;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 
@@ -1011,13 +806,13 @@ body {
 
 @media only screen and (min-width: 481px) {
 
-/* line 49, ../scss/modules/_base.scss */
+/* line 51, ../scss/modules/_base.scss */
 
 .hide-sm {
 	display: none;
 }
 
-/* line 61, ../scss/modules/_base.scss */
+/* line 63, ../scss/modules/_base.scss */
 
 .show-sm {
 	display: block;
@@ -1051,13 +846,13 @@ p.leading {
 
 @media only screen and (min-width: 769px) {
 
-/* line 55, ../scss/modules/_base.scss */
+/* line 57, ../scss/modules/_base.scss */
 
 .hide-md {
 	display: none;
 }
 
-/* line 68, ../scss/modules/_base.scss */
+/* line 70, ../scss/modules/_base.scss */
 
 .show-md {
 	display: block;
@@ -1145,6 +940,7 @@ header.show .nav-cube {
 	transform: translateZ(-25px);
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 

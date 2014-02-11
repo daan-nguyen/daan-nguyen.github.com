@@ -14,6 +14,8 @@ $nav-height: 50px;
 $nav-face-bg: #fff;
 $nav-menu-bg: #333;
 
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+
 // mq mixin
 @mixin respond($breakpoint) {
     @media only screen and (min-width: $breakpoint + px) { @content; }
@@ -70,4 +72,13 @@ $screen-lg: 1441;
   @include respond($screen-md) {
     display: block;
   }
+}
+
+// basics
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
