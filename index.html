@@ -70,31 +70,29 @@
 
           <p>Experience across both back and front-end web development ensures I’m well rounded and versatile enough to handle anything from translating PSDs into functional HTML/CSS, MV* javascript development, integrating with content management systems or building and debugging backend services.</p>
 
-          <p>Recently I’m proud to have been key to delivering the responsive, cross browser redesign of NAB Broker, an administration front-end utilising AngularJS and RESTful services for the NAB Flik mobile payments platform and NAB UI, an internal UI framework based on Bootstrap that has been extended to include NAB branding, custom components, and a pattern library to help our developers create responsive, consistent and compatible applications for our users.</p>
+          <p>Recently I’m proud to have been key to delivering the responsive, cross browser redesign of <a href="http://www.nabbroker.com.au">NAB Broker</a>, an administration front-end utilising AngularJS and RESTful services for the NAB Flik mobile payments platform and NAB UI and an internal UI framework based on Bootstrap that has been extended to include NAB branding, custom components, and a pattern library to help our developers create responsive, consistent and compatible applications for our users.</p>
 
-          <p>For more detail and past experience, please refer to my <a href="daan-nguyen-resume.pdf">resume</a> or <a href="">LinkedIn</a>.</p>
+          <p>For more detail and past experience, please refer to my <a href="daan-nguyen-resume.pdf">resume</a> or <a href="http://www.linkedin.com/profile/view?id=22683660">LinkedIn</a>.</p>
         </div>
       </section>
 
       <section id="personal">
-        <h1 class="personal">Let's Get Personal<span class="dark">.</span></h1>
+        <h1>Let's Get Personal<span class="dark">.</span></h1>
         <div class="content">
-          <p>Beyond my professional life I still really love technology. I enjoy keeping myself up to date with not only general tech, gadget and gaming news but also web development trends and practices. I’m subscribed to a number of digests (<a href="http://web-design-weekly.com">Web Design Weekly</a>, <a href="http://css-weekly.com">CSS Weekly</a>, <a href="http://javascriptweekly.com">Javascript Weekly</a>), recently attended my first <a href="http://melbjs.com">MelbJS</a> meetup and was lucky enough to attend <a href="http://webdirections.org/wds13/">Web Directions South 2013</a>.</p>
+          <p>Beyond my professional life I still really love technology. I enjoy keeping myself up to date with not only general tech, gadget and gaming news but also web development trends and practices. I’m subscribed to a number of digests (<a href="http://web-design-weekly.com">Web Design Weekly</a>, <a href="http://css-weekly.com">CSS Weekly</a>, <a href="http://javascriptweekly.com">Javascript Weekly</a>), enjoy <a href="https://news.ycombinator.com/">HackerNews</a>, recently attended my first <a href="http://melbjs.com">MelbJS</a> meetup and was lucky enough to attend <a href="http://webdirections.org/wds13/">Web Directions South 2013</a>.</p>
 
-          <p>In my spare time I enjoy a good movie, video games (though my reflexes aren’t what they used to be) reading <a href="http://longform.org">widely</a> and <a href="http://wikipedia.com">randomly</a> on anything interesting, following the NBA, <a href="http://reddit.com">internet memes</a>, cooking and travelling. Sometimes I’ll tinker with anything that may take my interest, like nodejs and socket.io or canvas and javascript animation to make a <a href="http://knowyourmeme.com/memes/forever-alone">forever alone</a> version of <a href="">pong</a>.</p>
+          <p>In my spare time I enjoy a good movie, video games (though my reflexes aren’t what they used to be) reading <a href="http://longform.org">widely</a> and <a href="http://wikipedia.com">randomly</a> on anything interesting, following the NBA, <a href="http://reddit.com">internet memes</a>, cooking and travelling. Sometimes I’ll tinker with anything that may take my interest, like nodejs and socket.io or canvas and javascript animation to make a <a href="http://knowyourmeme.com/memes/forever-alone">forever alone</a> version of <a href="http://daan-nguyen.github.io/pong/">pong</a> (got distracted).</p>
         </div>
       </section>
 
       <section id="other">
-        <h1 class="other">Other Tidbits<span class="dark">.</span></h1>
+        <h1>Other Tidbits<span class="dark">.</span></h1>
         <div class="content">
-          <p>Built from scratch using HTML5 + CSS3, it’s responsive, relatively cross-browser (farewell IE8 and lesser friends) and uses CSS3 transforms/transitions to maintain animation performance. Bower handles component management and Grunt is used as part of the build process to compile the SCSS (using SASS and Compass) along with some other tasks such as JSHinting, concatenation and minification.</p>
+          <p>Built from scratch using HTML5 + CSS3 and some Javascript, it’s responsive, relatively cross-browser (farewell IE8 and lesser friends) and uses CSS3 transforms/transitions to maintain animation performance. <a href="http://bower.io">Bower</a> handles component management, <a href="http://typekit.com">TypeKit</a> for webfonts and <a href="http://gruntjs.com">Grunt</a> is used as part of the build process to compile the SCSS (using <a href="http://sass-lang.com/">SASS</a> and <a href="http://compass-style.org/">Compass</a>) along with some other tasks such as JSHinting, concatenation and minification. </p>
 
-          <p>The ever ubiquitous jQuery has been removed as a dependency as it wasn’t entirely required for what little it was being used for. Instead I opted to use plain old Javascript to do what was necessary and forgo some past browser compatibility (as above).</p>
+          <p>For the Javascript I avoided jQuery since it was overkill, but a side effect was getting smooth scrolling for anchor links wasn't quite as straight forward as a simple animate call. After much google-fu, I never did quite land on a solution that felt right and ended up rolling my own code, <a href="https://github.com/daan-nguyen/smoothie-scrolljs">smoothie-scroll.js</a>. All source can be found on <a href="https://github.com/daan-nguyen/daan-nguyen.github.com">GitHub</a>.</p>
 
-          <p>However, a side effect of this was that performing smooth scrolling for anchor links wasn't quite as easy anymore. After much google-fu, I never did quite land on a solution that felt right and ended up rolling my own code, smoothyscroll.js.</p>
-
-          <p>NB: I later discovered Smooth Scroll which pretty closely fits my needs, except it relies on data tagging to act as a trigger which isn't quite what I was after anyway.</p>
+          <p>NB: I later discovered <a href="https://github.com/cferdinandi/smooth-scroll">Smooth Scroll</a> which pretty closely fits my needs, except it relies on data attributes to act as a trigger which isn't quite what I was after anyway.</p>
         </div>
       </section>
 
