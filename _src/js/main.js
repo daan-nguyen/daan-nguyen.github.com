@@ -59,15 +59,15 @@
       isScrolling = true;
 
       var sectionEls = document.getElementsByTagName('section');
-      var winOffset = (window.innerHeight || 
-                      document.documentElement.clientHeight || 
-                      document.getElementsByTagName('body')[0].clientHeight)/3;
+      var winOffset = (window.innerHeight ||
+                      document.documentElement.clientHeight ||
+                      document.getElementsByTagName('body')[0].clientHeight)/2;
       var pageTop = window.pageYOffset;
       var navToggleEls = document.getElementsByClassName('nav-toggle');
 
       for (var x = 0; x < sectionEls.length; x++) {
-        if (pageTop <= sectionEls[x].offsetTop  &&
-            sectionEls[x].offsetTop < (pageTop + winOffset)) {
+        var elTop = sectionEls[x].offsetTop + 100; // extra offset
+        if (pageTop <=   elTop && elTop < (pageTop + winOffset)) {
 
           for (var y = 0; y < navToggleEls.length; y++) {
             navToggleEls[y].classList.remove('section-experience');
@@ -83,7 +83,7 @@
       // set throttle
       setTimeout(function() {
         isScrolling = false;
-      }, 200);
+      }, 100);
     }
   }, false);
 
