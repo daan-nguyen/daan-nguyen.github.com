@@ -25,8 +25,7 @@ module.exports = function(grunt) {
     compass: {
       options: {
         sassDir: config.css.src,
-        cssDir: config.build.out,
-        importPath: ['bower_components/foundation/scss']
+        cssDir: config.build.out
       },
       dev: {
         options: {

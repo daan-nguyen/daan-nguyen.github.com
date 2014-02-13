@@ -22,25 +22,12 @@ h1 {
   @include respond($screen-md) {
     font-size: 6em;
   }
-  @include respond($screen-lg) {
+  @include respond($screen-xlg) {
     font-size: 8em;
   }
 
   > .dark {
     color: #333;
-  }
-
-  &.home {
-    color: $color-home;
-  }
-  &.experience {
-    color: $color-experience;
-  }
-  &.personal {
-    color: $color-personal;
-  }
-  &.other {
-    color: $color-other;
   }
 }
 
@@ -55,7 +42,7 @@ p {
   @include respond($screen-md) {
     font-size: 1.5em;
   }
-  @include respond($screen-lg) {
+  @include respond($screen-xlg) {
     font-size: 1.8em;
   }
 
@@ -69,7 +56,7 @@ p {
     @include respond($screen-md) {
       font-size: 1.7em;
     }
-    @include respond($screen-lg) {
+    @include respond($screen-xlg) {
       font-size: 2em;
     }
   }

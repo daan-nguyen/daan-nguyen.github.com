@@ -17,7 +17,30 @@ body {
     width: 100%;
     max-width: $body-md-width;
   }
-  @include respond($screen-lg) {
+  @include respond($screen-xlg) {
     max-width: $body-lg-width;
   }
 }
+
+footer {
+  margin-top: 80px;
+  height: 300px;
+  background: $footer-bg;
+}
+
+#home {
+  @include content-section($color-home);
+}
+
+#experience {
+  @include content-section($color-experience);
+}
+
+#personal {
+  @include content-section($color-personal);
+}
+
+#other {
+  @include content-section($color-other);
+}
+

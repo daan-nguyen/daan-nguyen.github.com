@@ -3,6 +3,7 @@ $color-home: #f7931e;
 $color-experience: #8cc63f;
 $color-personal: #3fa9f5;
 $color-other: #d4145a;
+$color-resume: #7F3280;
 
 $body-bg: #f7f7f7;
 $body-color: #333;
@@ -14,6 +15,8 @@ $nav-height: 50px;
 $nav-face-bg: #fff;
 $nav-menu-bg: #333;
 
+$footer-bg: $nav-menu-bg;
+
 $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
 
 // mq mixin
@@ -22,8 +25,9 @@ $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !
 }
 
 $screen-sm: 481;
-$screen-md: 769;
-$screen-lg: 1441;
+$screen-md: 767;
+$screen-lg: 1025;
+$screen-xlg: 1441;
 
 // random
 %no-select {
@@ -40,6 +44,25 @@ $screen-lg: 1441;
     a:active,
     a:focus {
     background: lighten($color, 10%);
+  }
+}
+
+// content sections mixin
+@mixin content-section($color) {
+  > h1 {
+    color: $color;
+  }
+
+  a {
+    color: $color;
+    text-decoration: none;
+    border-bottom: 1px dotted darken($color, 20%);
+  
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($color, 20%);
+    }
   }
 }
 
@@ -71,6 +94,14 @@ $screen-lg: 1441;
   display: none;
   @include respond($screen-md) {
     display: block;
+  }
+}
+
+// specific hide/show for cutting text in nav
+.show-text {
+  display: none;
+  @include respond(900) {
+    display: inline;
   }
 }
 

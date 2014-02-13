@@ -422,7 +422,7 @@ th {
   padding: 0;
 }
 
-/* line 29, ../scss/modules/_base.scss */
+/* line 33, ../scss/modules/_base.scss */
 
 header,
 .nav-toggle {
@@ -432,25 +432,31 @@ header,
 	user-select: none;
 }
 
-/* line 47, ../scss/modules/_base.scss */
+/* line 70, ../scss/modules/_base.scss */
 
 .hide-xs {
 	display: none;
 }
 
-/* line 63, ../scss/modules/_base.scss */
+/* line 86, ../scss/modules/_base.scss */
 
 .show-sm {
 	display: none;
 }
 
-/* line 70, ../scss/modules/_base.scss */
+/* line 93, ../scss/modules/_base.scss */
 
 .show-md {
 	display: none;
 }
 
-/* line 80, ../scss/modules/_base.scss */
+/* line 101, ../scss/modules/_base.scss */
+
+.show-text {
+	display: none;
+}
+
+/* line 111, ../scss/modules/_base.scss */
 
 *,
 *:before,
@@ -491,38 +497,14 @@ h1 > .dark {
 	color: #333;
 }
 
-/* line 33, ../scss/modules/_type.scss */
-
-h1.home {
-	color: #f7931e;
-}
-
-/* line 36, ../scss/modules/_type.scss */
-
-h1.experience {
-	color: #8cc63f;
-}
-
-/* line 39, ../scss/modules/_type.scss */
-
-h1.personal {
-	color: #3fa9f5;
-}
-
-/* line 42, ../scss/modules/_type.scss */
-
-h1.other {
-	color: #d4145a;
-}
-
-/* line 47, ../scss/modules/_type.scss */
+/* line 34, ../scss/modules/_type.scss */
 
 p {
 	font-size: 1em;
 	line-height: 1.45em;
 }
 
-/* line 62, ../scss/modules/_type.scss */
+/* line 49, ../scss/modules/_type.scss */
 
 p.leading {
 	font-weight: 600;
@@ -585,7 +567,7 @@ header.no-transition .nav-cube {
 	text-align: center;
 	height: 100%;
 	width: 100%;
-	max-width: 900px;
+	max-width: 1200px;
 }
 
 /* line 60, ../scss/modules/_nav.scss */
@@ -627,14 +609,14 @@ header.no-transition .nav-cube {
 	top: 0;
 }
 
-/* line 116, ../scss/modules/_nav.scss */
+/* line 117, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(1),
 .nav-menu-list > li:nth-of-type(1) {
 	background: #f7931e;
 }
 
-/* line 41, ../scss/modules/_base.scss */
+/* line 45, ../scss/modules/_base.scss */
 
 .nav-face-highlights > li:nth-of-type(1) > a:hover,
 .nav-face-highlights > li:nth-of-type(1) a:active,
@@ -645,14 +627,14 @@ header.no-transition .nav-cube {
 	background: #f9ab4f;
 }
 
-/* line 119, ../scss/modules/_nav.scss */
+/* line 120, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(2),
 .nav-menu-list > li:nth-of-type(2) {
 	background: #8cc63f;
 }
 
-/* line 41, ../scss/modules/_base.scss */
+/* line 45, ../scss/modules/_base.scss */
 
 .nav-face-highlights > li:nth-of-type(2) > a:hover,
 .nav-face-highlights > li:nth-of-type(2) a:active,
@@ -663,14 +645,14 @@ header.no-transition .nav-cube {
 	background: #a4d266;
 }
 
-/* line 122, ../scss/modules/_nav.scss */
+/* line 123, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(3),
 .nav-menu-list > li:nth-of-type(3) {
 	background: #3fa9f5;
 }
 
-/* line 41, ../scss/modules/_base.scss */
+/* line 45, ../scss/modules/_base.scss */
 
 .nav-face-highlights > li:nth-of-type(3) > a:hover,
 .nav-face-highlights > li:nth-of-type(3) a:active,
@@ -681,14 +663,14 @@ header.no-transition .nav-cube {
 	background: #6fbff8;
 }
 
-/* line 125, ../scss/modules/_nav.scss */
+/* line 126, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li:nth-of-type(4),
 .nav-menu-list > li:nth-of-type(4) {
 	background: #d4145a;
 }
 
-/* line 41, ../scss/modules/_base.scss */
+/* line 45, ../scss/modules/_base.scss */
 
 .nav-face-highlights > li:nth-of-type(4) > a:hover,
 .nav-face-highlights > li:nth-of-type(4) a:active,
@@ -699,26 +681,44 @@ header.no-transition .nav-cube {
 	background: #eb3074;
 }
 
-/* line 131, ../scss/modules/_nav.scss */
+/* line 129, ../scss/modules/_nav.scss */
+
+.nav-face-highlights > li:nth-of-type(5),
+.nav-menu-list > li:nth-of-type(5) {
+	background: #7f3280;
+}
+
+/* line 45, ../scss/modules/_base.scss */
+
+.nav-face-highlights > li:nth-of-type(5) > a:hover,
+.nav-face-highlights > li:nth-of-type(5) a:active,
+.nav-face-highlights > li:nth-of-type(5) a:focus,
+.nav-menu-list > li:nth-of-type(5) > a:hover,
+.nav-menu-list > li:nth-of-type(5) a:active,
+.nav-menu-list > li:nth-of-type(5) a:focus {
+	background: #a340a5;
+}
+
+/* line 135, ../scss/modules/_nav.scss */
 
 .nav-face-highlights {
 	height: 50px;
 }
 
-/* line 134, ../scss/modules/_nav.scss */
+/* line 138, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li {
 	width: 10px;
 	height: 75px;
 }
 
-/* line 144, ../scss/modules/_nav.scss */
+/* line 147, ../scss/modules/_nav.scss */
 
 .nav-menu-list {
 	top: 0;
 }
 
-/* line 153, ../scss/modules/_nav.scss */
+/* line 155, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li > a {
 	color: #fff;
@@ -730,7 +730,7 @@ header.no-transition .nav-cube {
 	font-size: 1.5em;
 }
 
-/* line 176, ../scss/modules/_nav.scss */
+/* line 178, ../scss/modules/_nav.scss */
 
 .nav-toggle {
 	height: 50px;
@@ -743,7 +743,7 @@ header.no-transition .nav-cube {
 	cursor: pointer;
 }
 
-/* line 188, ../scss/modules/_nav.scss */
+/* line 190, ../scss/modules/_nav.scss */
 
 .nav-toggle.close > .nav-toggle-bar:nth-of-type(1) {
 	-webkit-transform: rotateZ(45deg);
@@ -753,13 +753,13 @@ header.no-transition .nav-cube {
 	transform: rotateZ(45deg);
 }
 
-/* line 191, ../scss/modules/_nav.scss */
+/* line 193, ../scss/modules/_nav.scss */
 
 .nav-toggle.close > .nav-toggle-bar:nth-of-type(2) {
 	opacity: 0;
 }
 
-/* line 194, ../scss/modules/_nav.scss */
+/* line 196, ../scss/modules/_nav.scss */
 
 .nav-toggle.close > .nav-toggle-bar:nth-of-type(3) {
 	-webkit-transform: rotateZ(-45deg);
@@ -769,7 +769,7 @@ header.no-transition .nav-cube {
 	transform: rotateZ(-45deg);
 }
 
-/* line 200, ../scss/modules/_nav.scss */
+/* line 202, ../scss/modules/_nav.scss */
 
 .nav-toggle-bar {
 	width: 26px;
@@ -804,15 +804,111 @@ body {
 	margin-right: 30px;
 }
 
+/* line 25, ../scss/modules/_body.scss */
+
+footer {
+	margin-top: 80px;
+	height: 300px;
+	background: #333333;
+}
+
+/* line 52, ../scss/modules/_base.scss */
+
+#home > h1 {
+	color: #f7931e;
+}
+
+/* line 56, ../scss/modules/_base.scss */
+
+#home a {
+	color: #f7931e;
+	text-decoration: none;
+	border-bottom: 1px dotted #a95e06;
+}
+
+/* line 63, ../scss/modules/_base.scss */
+
+#home a:hover,
+#home a:focus,
+#home a:active {
+	color: #a95e06;
+}
+
+/* line 52, ../scss/modules/_base.scss */
+
+#experience > h1 {
+	color: #8cc63f;
+}
+
+/* line 56, ../scss/modules/_base.scss */
+
+#experience a {
+	color: #8cc63f;
+	text-decoration: none;
+	border-bottom: 1px dotted #567b24;
+}
+
+/* line 63, ../scss/modules/_base.scss */
+
+#experience a:hover,
+#experience a:focus,
+#experience a:active {
+	color: #567b24;
+}
+
+/* line 52, ../scss/modules/_base.scss */
+
+#personal > h1 {
+	color: #3fa9f5;
+}
+
+/* line 56, ../scss/modules/_base.scss */
+
+#personal a {
+	color: #3fa9f5;
+	text-decoration: none;
+	border-bottom: 1px dotted #0a76c4;
+}
+
+/* line 63, ../scss/modules/_base.scss */
+
+#personal a:hover,
+#personal a:focus,
+#personal a:active {
+	color: #0a76c4;
+}
+
+/* line 52, ../scss/modules/_base.scss */
+
+#other > h1 {
+	color: #d4145a;
+}
+
+/* line 56, ../scss/modules/_base.scss */
+
+#other a {
+	color: #d4145a;
+	text-decoration: none;
+	border-bottom: 1px dotted #770b32;
+}
+
+/* line 63, ../scss/modules/_base.scss */
+
+#other a:hover,
+#other a:focus,
+#other a:active {
+	color: #770b32;
+}
+
 @media only screen and (min-width: 481px) {
 
-/* line 51, ../scss/modules/_base.scss */
+/* line 74, ../scss/modules/_base.scss */
 
 .hide-sm {
 	display: none;
 }
 
-/* line 63, ../scss/modules/_base.scss */
+/* line 86, ../scss/modules/_base.scss */
 
 .show-sm {
 	display: block;
@@ -824,13 +920,13 @@ h1 {
 	font-size: 4em;
 }
 
-/* line 47, ../scss/modules/_type.scss */
+/* line 34, ../scss/modules/_type.scss */
 
 p {
 	font-size: 1.3em;
 }
 
-/* line 62, ../scss/modules/_type.scss */
+/* line 49, ../scss/modules/_type.scss */
 
 p.leading {
 	font-size: 1.5em;
@@ -844,15 +940,15 @@ p.leading {
 
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 767px) {
 
-/* line 57, ../scss/modules/_base.scss */
+/* line 80, ../scss/modules/_base.scss */
 
 .hide-md {
 	display: none;
 }
 
-/* line 70, ../scss/modules/_base.scss */
+/* line 93, ../scss/modules/_base.scss */
 
 .show-md {
 	display: block;
@@ -864,13 +960,13 @@ h1 {
 	font-size: 6em;
 }
 
-/* line 47, ../scss/modules/_type.scss */
+/* line 34, ../scss/modules/_type.scss */
 
 p {
 	font-size: 1.5em;
 }
 
-/* line 62, ../scss/modules/_type.scss */
+/* line 49, ../scss/modules/_type.scss */
 
 p.leading {
 	font-size: 1.7em;
@@ -980,23 +1076,22 @@ header.show .nav-cube {
 .nav-face-highlights > li,
 .nav-menu-list > li {
 	float: left;
+	width: 20%;
 }
 
-/* line 134, ../scss/modules/_nav.scss */
+/* line 138, ../scss/modules/_nav.scss */
 
 .nav-face-highlights > li {
 	height: 10px;
-	width: 25%;
 }
 
-/* line 147, ../scss/modules/_nav.scss */
+/* line 150, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li {
 	height: 50px;
-	width: 25%;
 }
 
-/* line 153, ../scss/modules/_nav.scss */
+/* line 155, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li > a {
 	line-height: 50px;
@@ -1014,6 +1109,16 @@ header.show .nav-cube {
 
 }
 
+@media only screen and (min-width: 900px) {
+
+/* line 101, ../scss/modules/_base.scss */
+
+.show-text {
+	display: inline;
+}
+
+}
+
 @media only screen and (min-width: 1441px) {
 
 /* line 13, ../scss/modules/_type.scss */
@@ -1022,13 +1127,13 @@ h1 {
 	font-size: 8em;
 }
 
-/* line 47, ../scss/modules/_type.scss */
+/* line 34, ../scss/modules/_type.scss */
 
 p {
 	font-size: 1.8em;
 }
 
-/* line 62, ../scss/modules/_type.scss */
+/* line 49, ../scss/modules/_type.scss */
 
 p.leading {
 	font-size: 2em;
@@ -1039,10 +1144,10 @@ p.leading {
 .nav-cube,
 .nav-menu,
 .nav-face {
-	max-width: 1200px;
+	max-width: 1500px;
 }
 
-/* line 153, ../scss/modules/_nav.scss */
+/* line 155, ../scss/modules/_nav.scss */
 
 .nav-menu-list > li > a {
 	font-size: 1.2em;

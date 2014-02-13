@@ -50,10 +50,10 @@ header {
   text-align: center;
   height: 100%;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
 
-  @include respond($screen-lg) {
-    max-width: 1200px;
+  @include respond($screen-xlg) {
+    max-width: 1500px;
   }
 }
 
@@ -111,6 +111,7 @@ header {
 
     @include respond($menu-breakpoint) {
       float: left;
+      width: 20%;
     }
 
     &:nth-of-type(1) {
@@ -125,6 +126,9 @@ header {
     &:nth-of-type(4) {
       @include menu-item($color-other);
     }
+    &:nth-of-type(5) {
+      @include menu-item($color-resume);
+    } 
   }
 }
 
@@ -136,7 +140,6 @@ header {
     height: $nav-height * 1.5;
     @include respond($menu-breakpoint) {
       height: 10px;
-      width: 25%;
     }
   }
 }
@@ -147,7 +150,6 @@ header {
   > li {
     @include respond($menu-breakpoint) {
       height: $nav-height;
-      width: 25%;
     }
 
     > a {
@@ -166,7 +168,7 @@ header {
         font-size: 1em;
       }
 
-      @include respond($screen-lg) {
+      @include respond($screen-xlg) {
         font-size: 1.2em;
       }
     }
