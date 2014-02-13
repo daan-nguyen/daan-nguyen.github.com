@@ -22,12 +22,6 @@ body {
   }
 }
 
-footer {
-  margin-top: 80px;
-  height: 300px;
-  background: $footer-bg;
-}
-
 #home {
   @include content-section($color-home);
 }
@@ -44,3 +38,49 @@ footer {
   @include content-section($color-other);
 }
 
+footer {
+  margin: 0;
+  margin-top: 80px;
+  padding: 20px;
+  background: $footer-bg;
+  color: $footer-color;
+  text-align: center;
+
+  @include respond($screen-md) {
+    padding: 40px;
+  }
+
+  a {
+    color: $footer-color;
+    text-decoration: none;
+    border-bottom: 1px dotted darken($footer-color, 10%);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($footer-color, 10%);
+    }
+  }
+}
+
+.footer-links {
+  @extend %paragraph-font;
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+
+  li {
+    display: inline-block;
+
+    &:after {
+      display: inline-block;
+      padding: 0 5px;
+      content: "|";
+      color: darken($footer-color, 50%);
+    }
+
+    &:last-of-type:after {
+      display: none;
+    }
+  }
+}

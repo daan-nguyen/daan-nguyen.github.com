@@ -16,6 +16,7 @@ $nav-face-bg: #fff;
 $nav-menu-bg: #333;
 
 $footer-bg: $nav-menu-bg;
+$footer-color: $body-bg;
 
 $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
 
@@ -64,7 +65,7 @@ $screen-xlg: 1441;
     color: $color;
     text-decoration: none;
     border-bottom: 1px dotted darken($color, 20%);
-  
+
     &:hover,
     &:focus,
     &:active {

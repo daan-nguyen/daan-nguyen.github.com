@@ -128,7 +128,7 @@ header {
     }
     &:nth-of-type(5) {
       @include menu-item($color-resume);
-    } 
+    }
   }
 }
 
@@ -137,7 +137,7 @@ header {
 
   > li {
     width: $sm-menu-offset;
-    height: $nav-height * 1.5;
+    height: $nav-height * 1.2;
     @include respond($menu-breakpoint) {
       height: 10px;
     }
@@ -158,8 +158,8 @@ header {
       text-decoration: none;
       width: 100%;
       display: block;
-      line-height: $nav-height * 1.5;
-      height: $nav-height * 1.5;
+      line-height: $nav-height * 1.2;
+      height: $nav-height * 1.2;
       font-size: 1.5em;
 
       @include respond($menu-breakpoint) {

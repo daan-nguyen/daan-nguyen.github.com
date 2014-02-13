@@ -31,6 +31,15 @@ h1 {
   }
 }
 
+h2 {
+  @extend %header-font;
+  margin: 0;
+
+  @include respond($screen-md) {
+    font-size: 2em;
+  }
+}
+
 p {
   @extend %paragraph-font;
   font-size: 1em;
