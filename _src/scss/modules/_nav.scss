@@ -197,6 +197,18 @@ header {
       @include transform2d(rotateZ(-45deg));
     }
   }
+  &.section-home {
+    @include nav-toggle-color($color-home)
+  }
+  &.section-experience {
+    @include nav-toggle-color($color-experience)
+  }
+  &.section-personal {
+    @include nav-toggle-color($color-personal)
+  }
+  &.section-other {
+    @include nav-toggle-color($color-other)
+  }
 }
 
 .nav-toggle-bar {

@@ -432,31 +432,31 @@ header,
 	user-select: none;
 }
 
-/* line 70, ../scss/modules/_base.scss */
+/* line 77, ../scss/modules/_base.scss */
 
 .hide-xs {
 	display: none;
 }
 
-/* line 86, ../scss/modules/_base.scss */
+/* line 93, ../scss/modules/_base.scss */
 
 .show-sm {
 	display: none;
 }
 
-/* line 93, ../scss/modules/_base.scss */
+/* line 100, ../scss/modules/_base.scss */
 
 .show-md {
 	display: none;
 }
 
-/* line 101, ../scss/modules/_base.scss */
+/* line 108, ../scss/modules/_base.scss */
 
 .show-text {
 	display: none;
 }
 
-/* line 111, ../scss/modules/_base.scss */
+/* line 118, ../scss/modules/_base.scss */
 
 *,
 *:before,
@@ -769,7 +769,31 @@ header.no-transition .nav-cube {
 	transform: rotateZ(-45deg);
 }
 
-/* line 202, ../scss/modules/_nav.scss */
+/* line 52, ../scss/modules/_base.scss */
+
+.nav-toggle.section-home > .nav-toggle-bar {
+	background: #f7931e;
+}
+
+/* line 52, ../scss/modules/_base.scss */
+
+.nav-toggle.section-experience > .nav-toggle-bar {
+	background: #8cc63f;
+}
+
+/* line 52, ../scss/modules/_base.scss */
+
+.nav-toggle.section-personal > .nav-toggle-bar {
+	background: #3fa9f5;
+}
+
+/* line 52, ../scss/modules/_base.scss */
+
+.nav-toggle.section-other > .nav-toggle-bar {
+	background: #d4145a;
+}
+
+/* line 214, ../scss/modules/_nav.scss */
 
 .nav-toggle-bar {
 	width: 26px;
@@ -812,13 +836,13 @@ footer {
 	background: #333333;
 }
 
-/* line 52, ../scss/modules/_base.scss */
+/* line 59, ../scss/modules/_base.scss */
 
 #home > h1 {
 	color: #f7931e;
 }
 
-/* line 56, ../scss/modules/_base.scss */
+/* line 63, ../scss/modules/_base.scss */
 
 #home a {
 	color: #f7931e;
@@ -826,7 +850,7 @@ footer {
 	border-bottom: 1px dotted #a95e06;
 }
 
-/* line 63, ../scss/modules/_base.scss */
+/* line 70, ../scss/modules/_base.scss */
 
 #home a:hover,
 #home a:focus,
@@ -834,13 +858,13 @@ footer {
 	color: #a95e06;
 }
 
-/* line 52, ../scss/modules/_base.scss */
+/* line 59, ../scss/modules/_base.scss */
 
 #experience > h1 {
 	color: #8cc63f;
 }
 
-/* line 56, ../scss/modules/_base.scss */
+/* line 63, ../scss/modules/_base.scss */
 
 #experience a {
 	color: #8cc63f;
@@ -848,7 +872,7 @@ footer {
 	border-bottom: 1px dotted #567b24;
 }
 
-/* line 63, ../scss/modules/_base.scss */
+/* line 70, ../scss/modules/_base.scss */
 
 #experience a:hover,
 #experience a:focus,
@@ -856,13 +880,13 @@ footer {
 	color: #567b24;
 }
 
-/* line 52, ../scss/modules/_base.scss */
+/* line 59, ../scss/modules/_base.scss */
 
 #personal > h1 {
 	color: #3fa9f5;
 }
 
-/* line 56, ../scss/modules/_base.scss */
+/* line 63, ../scss/modules/_base.scss */
 
 #personal a {
 	color: #3fa9f5;
@@ -870,7 +894,7 @@ footer {
 	border-bottom: 1px dotted #0a76c4;
 }
 
-/* line 63, ../scss/modules/_base.scss */
+/* line 70, ../scss/modules/_base.scss */
 
 #personal a:hover,
 #personal a:focus,
@@ -878,13 +902,13 @@ footer {
 	color: #0a76c4;
 }
 
-/* line 52, ../scss/modules/_base.scss */
+/* line 59, ../scss/modules/_base.scss */
 
 #other > h1 {
 	color: #d4145a;
 }
 
-/* line 56, ../scss/modules/_base.scss */
+/* line 63, ../scss/modules/_base.scss */
 
 #other a {
 	color: #d4145a;
@@ -892,7 +916,7 @@ footer {
 	border-bottom: 1px dotted #770b32;
 }
 
-/* line 63, ../scss/modules/_base.scss */
+/* line 70, ../scss/modules/_base.scss */
 
 #other a:hover,
 #other a:focus,
@@ -902,13 +926,13 @@ footer {
 
 @media only screen and (min-width: 481px) {
 
-/* line 74, ../scss/modules/_base.scss */
+/* line 81, ../scss/modules/_base.scss */
 
 .hide-sm {
 	display: none;
 }
 
-/* line 86, ../scss/modules/_base.scss */
+/* line 93, ../scss/modules/_base.scss */
 
 .show-sm {
 	display: block;
@@ -942,13 +966,13 @@ p.leading {
 
 @media only screen and (min-width: 767px) {
 
-/* line 80, ../scss/modules/_base.scss */
+/* line 87, ../scss/modules/_base.scss */
 
 .hide-md {
 	display: none;
 }
 
-/* line 93, ../scss/modules/_base.scss */
+/* line 100, ../scss/modules/_base.scss */
 
 .show-md {
 	display: block;
@@ -1111,7 +1135,7 @@ header.show .nav-cube {
 
 @media only screen and (min-width: 900px) {
 
-/* line 101, ../scss/modules/_base.scss */
+/* line 108, ../scss/modules/_base.scss */
 
 .show-text {
 	display: inline;

@@ -37,13 +37,20 @@ $screen-xlg: 1441;
   user-select: none;
 }
 
-// nav mixin
+// nav mixins
 @mixin menu-item($color) {
   background: $color;
   > a:hover,
     a:active,
     a:focus {
     background: lighten($color, 10%);
+  }
+}
+
+
+@mixin nav-toggle-color($color) {
+  > .nav-toggle-bar {
+    background: $color;
   }
 }
 
