@@ -83,7 +83,7 @@
       // set throttle
       setTimeout(function() {
         isScrolling = false;
-      }, 100);
+      }, 50);
     }
   }, false);
 

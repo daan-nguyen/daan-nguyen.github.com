@@ -54,7 +54,8 @@ module.exports = function(grunt) {
     // JS Minification
     uglify: {
       options: {
-        report: 'min'
+        report: 'min',
+        preserveComments: 'some'
       },
       build: {
         src: config.build.out + 'main.js',
