@@ -1,0 +1,21 @@
+// IE9/10 to get around preserve3d missing
+@include respond($menu-breakpoint) {
+  html[data-useragent*='MSIE 10.0'],
+  html[data-useragent*='MSIE 9.0'] {
+    header,
+    .nav-cube,
+    .nav-menu,
+    .nav-face {
+      @include transform3d(none);
+      display: block;
+    }
+
+    .nav-face {
+      display: none;
+    }
+
+    .nav-menu .nav-toggle {
+      display: none;
+    }
+  }
+}
