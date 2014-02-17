@@ -64,7 +64,6 @@ header {
 
   @include respond($menu-breakpoint) {
     @include transform-style(preserve-3d);
-    @include backface-visibility(hidden);
     @include transform3d(translateZ(-$nav-height/2));
     @include single-transition(all, 0.5s, ease);
   }
@@ -91,6 +90,28 @@ header {
     @include transform3d(translateZ($nav-height/2));
   }
 }
+
+// IE10 to get around preserve3d missing
+@include respond($menu-breakpoint) {
+  html[data-useragent*='MSIE 10.0'] {
+    header,
+    .nav-cube,
+    .nav-menu,
+    .nav-face {
+      @include transform3d(none);
+      display: block;
+    }
+
+    .nav-face {
+      display: none;
+    }
+
+    .nav-menu .nav-toggle {
+      display: none;
+    }
+  }
+}
+
 
 .nav-face-highlights,
 .nav-menu-list {

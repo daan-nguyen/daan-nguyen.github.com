@@ -8,7 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script type="text/javascript" src="//use.typekit.net/zmx6vdh.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript">
+          try{Typekit.load();}catch(e){}
+
+          // dirty ie10 detector hack since preserve3d doesn't exist.
+          // http://css-tricks.com/ie-10-specific-styles/
+          var doc = document.documentElement;
+          doc.setAttribute('data-useragent', navigator.userAgent);
+        </script>
+
         <link rel="stylesheet" href="css/main.css">
     </head>
 
