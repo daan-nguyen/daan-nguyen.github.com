@@ -23,17 +23,17 @@ module.exports = function(grunt) {
 
     // Compass
     compass: {
-      options: {
-        sassDir: config.css.src,
-        cssDir: config.build.out
-      },
       dev: {
         options: {
+          sassDir: config.css.src,
+          cssDir: config.build.out,
           outputStyle: 'expanded',
         }
       },
       prod: {
         options: {
+          sassDir: config.css.src,
+          cssDir: config.build.out,
           outputStyle: 'compressed'
         }
       }
