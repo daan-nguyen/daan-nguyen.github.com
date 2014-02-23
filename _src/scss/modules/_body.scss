@@ -96,9 +96,10 @@ footer {
   @extend %no-select;
   @include zigzag(top);
   @include zigzag(bottom);
-  // height: 100px;
+  height: 100px;
   padding-top: 20px;
 
+  @include single-transition(height 0.3s ease);
   @include respond($screen-sm) {
     padding-top: 0;
   }
@@ -175,14 +176,13 @@ footer {
 .showcase-slide {
   height: 100%;
   position: absolute;
-  visibility: hidden;
+  // visibility: hidden;
   @include transform-transition();
 
   // default hidden to right
   @include transform2d(translateX(100%));
 
   &.active {
-    position: relative;
     visibility: visible;
     @include transform2d(translateX(0));
   }

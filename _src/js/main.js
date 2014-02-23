@@ -74,6 +74,8 @@
                       document.getElementsByTagName('body')[0].clientHeight)/2;
       var pageTop = window.pageYOffset;
       var navToggleEls = document.getElementsByClassName('nav-toggle');
+      var showcase = document.getElementsByClassName('showcase')[0];
+      var slide = document.querySelector('.showcase-slide >  img');
 
       for (var x = 0; x < sectionEls.length; x++) {
         var elTop = sectionEls[x].offsetTop + 100; // extra offset
@@ -88,6 +90,10 @@
 
           break;
         }
+      }
+
+      if (pageTop <= showcase.offsetTop + 100 && showcase.offsetTop < (pageTop + winOffset)) {
+        showcase.style.height = slide.offsetHeight + 'px';
       }
 
       // set throttle
