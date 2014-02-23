@@ -11,6 +11,16 @@
     mobileOpenNavEl.classList.toggle('close');
   };
 
+  var childOfElement = function(targetElement, parentElementTag) {
+    while (targetElement !== document) {
+      if (targetElement.tagName.toLowerCase() === parentElementTag.toLowerCase()) {
+        return targetElement;
+      } else {
+        targetElement = targetElement.parentNode;
+      }
+    }
+  };
+
   // Mobile menu toggle button
   mobileOpenNavEl.addEventListener('click', function(event) {
     toggleMenu();
@@ -27,8 +37,8 @@
 
   // Hides menu after clicking a nav link
   headerEl.addEventListener('click', function(event) {
-    if (event.target.tagName.toLowerCase() === 'a' &&
-        event.target.parentElement.parentElement.classList.contains('nav-menu-list')) {
+    if (childOfElement(event.target, 'a') &&
+        childOfElement(event.target, 'ul')) {
       toggleMenu();
     }
   }, false);
@@ -94,6 +104,6 @@
 
   // bind fastclick & smoothyscroll
   FastClick.attach(document.body);
-  smoothy.initAnchors({headerOffset: 80});
+  smoothie.initAnchors({headerOffset: 80});
 
 })(window, document);
