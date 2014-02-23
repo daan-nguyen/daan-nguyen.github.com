@@ -41,13 +41,24 @@ body {
 footer {
   margin: 0;
   margin-top: 80px;
-  padding: 20px;
+  padding: 20px 0;
   background: $footer-bg;
   color: $footer-color;
   text-align: center;
+  position: relative;
+
+  &:before {
+    display: block;
+    content: ' ';
+    height: 18px;
+    background: url(../images/tear-down.gif);
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
   @include respond($screen-md) {
-    padding: 40px;
+    padding: 40px 0;
   }
 
   a {
@@ -83,4 +94,34 @@ footer {
       display: none;
     }
   }
+}
+
+%showcase-psuedo {
+  display: block;
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 18px;
+}
+
+.showcase {
+  background: #333;
+  height: 100px;
+  position: relative;
+
+  &:before {
+    @extend %showcase-psuedo;
+    background: url(../images/tear-down.gif);
+    top: 0;
+  }
+
+  &:after {
+    @extend %showcase-psuedo;
+    background: url(../images/tear-up-offset.gif);
+    bottom: 0;
+  }
+}
+
+.showcase-slide {
+  height: 100%;
 }

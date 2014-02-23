@@ -7,6 +7,7 @@ header {
   left: -$sm-menu-offset;
   width: 100%;
   height: 150%;
+  z-index: 1500;
   @extend %no-select;
 
   // mobile transition
