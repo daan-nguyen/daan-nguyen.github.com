@@ -48,7 +48,6 @@ $screen-xlg: 1441;
   }
 }
 
-
 @mixin nav-toggle-color($color) {
   > .nav-toggle-bar {
     background: $color;
@@ -61,7 +60,7 @@ $screen-xlg: 1441;
     color: $color;
   }
 
-  a {
+  .content a {
     color: $color;
     text-decoration: none;
     border-bottom: 1px dotted darken($color, 20%);
@@ -72,6 +71,70 @@ $screen-xlg: 1441;
       color: darken($color, 20%);
     }
   }
+}
+
+// zigzag pattern mixin
+%zigzag {
+  display: block;
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  z-index: 1490;
+}
+
+@mixin zigzag($position:top) {
+  @if $position == "top" {
+    &:before {
+      @extend %zigzag;
+      top: 0;
+      background: url(../images/zig.png);
+    }
+  } @else if $position == "bottom" {
+    &:after {
+      @extend %zigzag;
+      bottom: 0;
+      background: url(../images/zag.png);
+    }
+  }
+}
+
+// triangle mixin
+// https://forrst.com/posts/SASS_Triangle_Mixin-04j
+@mixin triangle($direction, $color, $size) {
+
+  @if $direction == "left" {
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    border-top: $size solid transparent;
+  }
+  @else if $direction == "right" {
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    border-top: $size solid transparent;
+  }
+  @else if $direction == "up" {
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  }
+  @else if $direction == "down" {
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+    border-top: $size solid $color;
+  }
+
+  height: 0;
+  width: 0;
+}
+
+// single transition for all transforms
+@mixin transform-transition($time:0.5s, $ease:ease) {
+  @include single-transition(-webkit-transform $time $ease);
+  @include single-transition(-moz-transform $time $ease);
+  @include single-transition(-o-transform $time $ease);
+  @include single-transition(transform $time $ease);
+
 }
 
 // display stuff
