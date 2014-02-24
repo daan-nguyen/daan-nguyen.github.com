@@ -43,6 +43,30 @@
     }
   }, false);
 
+  // Showcase expand/close
+  document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('showcase-expand')) {
+      event.preventDefault();
+
+      var showcase = document.getElementsByClassName('showcase')[0];
+      var expandControls = document.getElementsByClassName('showcase-expand');
+      var showcaseImg = document.querySelector('.showcase-slide > img');
+
+      // only going to be 2 of them.
+      expandControls[0].classList.toggle('down');
+      expandControls[1].classList.toggle('down');
+
+      if (!showcase.classList.contains('active')) {
+        showcase.classList.add('active');
+        showcase.style.height = showcaseImg.offsetHeight + 'px';
+      } else {
+        showcase.classList.remove('active');
+        showcase.style.height = null;
+      }
+    }
+  }, false);
+
+
   // Adds no-transition on resize event and ignores it whilst its
   // still resizing
   var isResizing;
@@ -74,8 +98,6 @@
                       document.getElementsByTagName('body')[0].clientHeight)/2;
       var pageTop = window.pageYOffset;
       var navToggleEls = document.getElementsByClassName('nav-toggle');
-      var showcase = document.getElementsByClassName('showcase')[0];
-      var slide = document.querySelector('.showcase-slide >  img');
 
       for (var x = 0; x < sectionEls.length; x++) {
         var elTop = sectionEls[x].offsetTop + 100; // extra offset
@@ -90,10 +112,6 @@
 
           break;
         }
-      }
-
-      if (pageTop <= showcase.offsetTop + 100 && showcase.offsetTop < (pageTop + winOffset)) {
-        showcase.style.height = slide.offsetHeight + 'px';
       }
 
       // set throttle

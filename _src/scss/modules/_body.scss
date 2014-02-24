@@ -96,12 +96,25 @@ footer {
   @extend %no-select;
   @include zigzag(top);
   @include zigzag(bottom);
-  height: 100px;
   padding-top: 20px;
-
+  height: 80px; // peaking out height for mobile
   @include single-transition(height 0.3s ease);
+
   @include respond($screen-sm) {
     padding-top: 0;
+    height: 100px;
+  }
+
+  @include respond($screen-md) {
+    height: 140px;
+  }
+
+  @include respond($screen-lg) {
+    height: 180px;
+  }
+
+  @include respond($screen-xlg) {
+    height: 240px;
   }
 }
 
@@ -111,6 +124,12 @@ footer {
   z-index: 1480;
   width: 100%;
   height: 50%;
+  opacity: 0;
+  @include transform-transition();
+}
+
+.showcase.active .showcase-controls {
+  opacity: 1;
 }
 
 %showcase-controls-nav {
@@ -122,6 +141,27 @@ footer {
 
   &:hover {
     opacity: 1;
+  }
+}
+
+%showcase-expand {
+  display: block;
+  margin: 20px auto;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.showcase-expand {
+  @extend %showcase-expand;
+  @include triangle(up, #333, 25px);
+  @include transform-transition();
+
+  &.down {
+    @include transform2d(rotateZ(180deg));
   }
 }
 

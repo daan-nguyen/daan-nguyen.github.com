@@ -869,8 +869,8 @@ footer a:active {
 	background: #8cc63f;
 	position: relative;
 	overflow: hidden;
-	height: 100px;
 	padding-top: 20px;
+	height: 80px;
 	-webkit-transition: height 0.3s ease,1s;
 	-moz-transition: height 0.3s ease,1s;
 	-o-transition: height 0.3s ease,1s;
@@ -893,6 +893,27 @@ footer a:active {
 	z-index: 1480;
 	width: 100%;
 	height: 50%;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.5s ease,1s;
+	-moz-transition: -webkit-transform 0.5s ease,1s;
+	-o-transition: -webkit-transform 0.5s ease,1s;
+	transition: -webkit-transform 0.5s ease,1s;
+	-webkit-transition: -moz-transform 0.5s ease,1s;
+	-moz-transition: -moz-transform 0.5s ease,1s;
+	-o-transition: -moz-transform 0.5s ease,1s;
+	transition: -moz-transform 0.5s ease,1s;
+	-webkit-transition: -o-transform 0.5s ease,1s;
+	-moz-transition: -o-transform 0.5s ease,1s;
+	-o-transition: -o-transform 0.5s ease,1s;
+	transition: -o-transform 0.5s ease,1s;
+	-webkit-transition: -webkit-transform 0.5s ease,1s;
+	-moz-transition: -moz-transform 0.5s ease,1s;
+	-o-transition: -o-transform 0.5s ease,1s;
+	transition: transform 0.5s ease,1s;
+}
+
+.showcase.active .showcase-controls {
+	opacity: 1;
 }
 
 .showcase-controls-left,
@@ -907,6 +928,49 @@ footer a:active {
 .showcase-controls-left:hover,
 .showcase-controls-right:hover {
 	opacity: 1;
+}
+
+.showcase-expand {
+	display: block;
+	margin: 20px auto;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.showcase-expand:hover {
+	opacity: 1;
+}
+
+.showcase-expand {
+	border-bottom: 25px solid #333;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 0;
+	-webkit-transition: -webkit-transform 0.5s ease,1s;
+	-moz-transition: -webkit-transform 0.5s ease,1s;
+	-o-transition: -webkit-transform 0.5s ease,1s;
+	transition: -webkit-transform 0.5s ease,1s;
+	-webkit-transition: -moz-transform 0.5s ease,1s;
+	-moz-transition: -moz-transform 0.5s ease,1s;
+	-o-transition: -moz-transform 0.5s ease,1s;
+	transition: -moz-transform 0.5s ease,1s;
+	-webkit-transition: -o-transform 0.5s ease,1s;
+	-moz-transition: -o-transform 0.5s ease,1s;
+	-o-transition: -o-transform 0.5s ease,1s;
+	transition: -o-transform 0.5s ease,1s;
+	-webkit-transition: -webkit-transform 0.5s ease,1s;
+	-moz-transition: -moz-transform 0.5s ease,1s;
+	-o-transition: -o-transform 0.5s ease,1s;
+	transition: transform 0.5s ease,1s;
+}
+
+.showcase-expand.down {
+	-webkit-transform: rotateZ(180deg);
+	-moz-transform: rotateZ(180deg);
+	-ms-transform: rotateZ(180deg);
+	-o-transform: rotateZ(180deg);
+	transform: rotateZ(180deg);
 }
 
 .showcase-controls-left {
@@ -1041,6 +1105,7 @@ p.leading {
 
 .showcase {
 	padding-top: 0;
+	height: 100px;
 }
 
 .showcase-controls-left {
@@ -1187,6 +1252,10 @@ footer {
 	padding: 40px 0;
 }
 
+.showcase {
+	height: 140px;
+}
+
 html[data-useragent*='MSIE 10.0'] header,
 html[data-useragent*='MSIE 10.0'] .nav-cube,
 html[data-useragent*='MSIE 10.0'] .nav-menu,
@@ -1223,6 +1292,14 @@ html[data-useragent*='MSIE 9.0'] .nav-menu .nav-toggle {
 
 }
 
+@media only screen and (min-width: 1025px) {
+
+.showcase {
+	height: 180px;
+}
+
+}
+
 @media only screen and (min-width: 1441px) {
 
 h1 {
@@ -1249,6 +1326,10 @@ p.leading {
 
 .content {
 	max-width: 900px;
+}
+
+.showcase {
+	height: 240px;
 }
 
 }
