@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie10 lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie10 lt-ie9" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-js" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta property="og:title" content="When Great Minds Don’t Think Alikee">
+    <meta property="og:description" content="My Shared Article desc">
+    <meta property="og:url" content="www.telstra.com.au">
+    <meta property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg">
+    <script>
+      if (localStorage && localStorage.forceDesktop === 'true') {
+        document.write('<meta name="viewport" content="width=1024, initial-scale=0.5, maximum-scale=1.0, minimum-scale=0.2, user-scalable=yes">');
+      } else {
+        document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0.7, user-scalable=yes">')
+      }
+    </script>
+    <title>Forms</title>
+    <script>
+      var tcom = tcom || {};
+      tcom.baseUrl = '//v.author.uat.tcom.corp.telstra.com/content/tcom/';
+      tcom.isAuthor = false;
+      tcom.runmodes = [];
+    </script>
+
+
+    <script type="text/javascript">
+      /* Based on https://github.com/filamentgroup/loadCSS */
+      var fontPath = '/tcom-core/css/fonts/font-{0}.css';
+      var ua = navigator.userAgent;
+      // android webkit browser, non-chrome
+      if(ua.indexOf('Android') > -1 && ua.indexOf('like Gecko') > -1 && ua.indexOf('Chrome') === -1 ){
+        fontPath = fontPath.replace('{0}', 'ttf');
+      }
+      else if(document.documentElement.className.indexOf('lt-ie9') > -1){
+        fontPath = fontPath.replace('{0}', 'eot');
+      }
+      else {
+        fontPath = fontPath.replace('{0}', 'woff');
+      }
+      var injectref = document.getElementsByTagName('script')[0];
+      function loadCSS(href){
+        var fontslink = document.createElement('link');
+        fontslink.rel = 'stylesheet';
+        fontslink.href= href;
+        if(injectref && injectref.parentNode) {
+          injectref.parentNode.insertBefore(fontslink, injectref);
+        } else {
+          // uncommon, but oldIE timing
+          window.setTimeout(function() { loadCSS(href); }, 15);
+        }
+      }
+      loadCSS(fontPath);
+    </script>
+
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet" media="all">
+    <link href="./css/styles-responsive.css" rel="stylesheet" media="all">
+    <!--[if lte IE 9]>
+      <link href="css/styles-responsive-ie.css" rel="stylesheet" media="all">
+    <![endif]-->
+    <link href="./css/styles-print.css" rel="stylesheet" media="print">
+
+
+    
+
+    <script src="./js/modernizr.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="./js/respond.js"></script>
+    <![endif]-->
+
+    <!-- Prettify includes, only for doco -->
+    <link href="./local-only/prettify.css" rel="stylesheet">
+    <script src="./local-only/prettify.js"></script>
+    <script>
+      window.onload = function() {
+        prettyPrint();
+      };
+    </script>
+
+  </head>
+
+  <body role="document" class="base-blue ">
+    <span id="spectrum" class="" style="  "></span>
+
+    
+
+	<header  >
+		<!--[if lt IE 8]>
+		<div id="browser-warning">
+		  <div class="container">
+		    <i class="td-icon-sm icon-information text-light"></i>
+		    <div class="pull-left text-light">
+		      <p>&nbsp;</p>
+		      <p>It looks like you are using Internet Explorer 7.</p>
+		      <p>telstra.com.au may not display correctly and some of the features may be unavailable to you.<br>If you are not using this version, please check that <a href="http://windows.microsoft.com/en-US/internet-explorer/use-compatibility-view#ie=ie-10-win-7" target="_blank">compatibility mode</a> is turned off, otherwise you may need to <a href="http://windows.microsoft.com/en-au/internet-explorer/download-ie" target="_blank">update your browser</a>.</p>
+		    </div>
+		  </div>
+		</div>
+		<![endif]-->
+		
+		<!-- Fixed navbar -->
+		<div id="global-nav" class="navbar navbar-inverse offcanvas" role="navigation">
+		  <div class="container">
+		    <div class="navbar-collapse collapse">
+		      <ul class="nav navbar-nav" id="global-nav-menu">
+		        <li><a href="#">Telstra.com</a></li>
+		        <li class="active"><a href="#">Personal</a></li>
+		        <li><a href="#">Small Business</a></li>
+		        <li><a href="#">Business &amp; Enterprise</a></li>
+		        <li><a href="#">Health</a></li>
+		        <li><a href="#">Sport &amp; Entertainment</a></li>
+		      </ul>
+		      <!-- Login Tile -->
+		      <div id="login-placeholder"></div>
+		    </div><!--/.nav-collapse -->
+		  </div>
+		</div>
+	
+	  <!-- desktop nav -->
+	  <div id="primary-nav" class="navbar visible-lg" role="navigation">
+	    <div class="container">
+	      <div class="navbar-collapse collapse">
+	        <ul class="nav navbar-nav navbar-left">
+	          <li class="active">
+	          <a href="#" title="" class="site-title">
+	           <span class="site-logo">&nbsp;</span>
+	          </a>
+	  
+	          <a href="#" title="" class="site-title">
+	            <span class="site-title">Forms</span>
+	          </a>
+	          </li>
+	        </ul>
+	  
+	        
+	        <form class="navbar-form navbar-right" role="search" action="//telstra.com.au/search/simple-search/index.htm" method="GET" id="searchDesktop">
+	        
+	          <div class="form-group search-telstra" >
+	        
+	            <input data-search-input-desktop type="text" class="form-control search-telstra-input" placeholder="Search Telstra.com" name="inpSearch" autocomplete="off">
+	            <input type="hidden" name="requestSiteId" value="corporate-homepage">
+	            <input type="hidden" name="searchFormSubmited" value="Yes">
+	            <button class="search-telstra-btn" type="submit"><i class="td-icon icon-ui-search"></i></button>
+	            
+	            <!--
+	            <div class="search-header">Popular keywords</div>
+	            <a class="search-item" href="#">...</a>
+	            ...
+	        
+	            <div class="search-header">Our Suggestions</div>
+	            <a href="#" class="search-item-lg">
+	            <div><img src="" alt=""></div>
+	            <h6>...</h6>
+	            <p>...</p>
+	            </a>
+	            ...
+	            -->
+	          </div>
+	        
+	        </form>        <ul id="mega-menu" class="nav navbar-nav navbar-right navbar-linear">
+	            <li><a href="/tcom-core/index.html">Index</a></li>
+	          </ul>
+	      </div>
+	    </div>
+	  </div>
+	  <!-- mobile nav -->
+		
+		<div class="site-header" role="navigation">
+		  <div class="container">
+		    <button type="button" class="nav-toggle" data-nav-id="nav">
+		      <span class="menu">Menu</span>
+		
+		      <div class="icon">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </div>
+		    </button>
+		    <a href="https://www.telstra.com.au/" class="site-logo"><span class="vh">Telstra.com</span></a>
+		
+		    <ul class="site-actions">
+		      <li>
+		        
+		        
+		        <button data-popover-id="site-search" class="btn-search btn square search-toggle fn_popover"><i class="td-icon icon-ui-search"></i><span class="vh">Open search panel</span></button>
+		        
+		        <div id="site-search" class="feature-popover site-search" data-popover-focusto="#telstra-search" data-popover-position="search" data-popover-animate="slide-right">
+		          <div class="popover-content">
+		            <form class="telstra-search" role="search" action="https://telstra.com.au/search/simple-search/index.htm" method="GET">
+		              <input type="text" id="telstra-search" title="telstra-search" name="inpSearch" placeholder="Search Telstra.com" autocomplete="off" spellcheck="false" dir="auto" data-search-input-mobile />
+		        
+		              <input type="hidden" name="requestSiteId" value="corporate-homepage" />
+		              <input type="hidden" name="searchFormSubmited" value="Yes" />
+		        
+		              <button type="submit" class="btn-search btn square">
+		                <i class="td-icon icon-ui-search"></i>
+		                <span class="vh">Submit Search</span>
+		              </button>
+		        
+		              <button class="popover-close btn square">
+		                <i class="td-icon icon-ui-cross"></i>
+		                <span class="vh">Close Search</span>
+		              </button>
+		            </form>
+		          </div>
+		        </div>
+		      </li>
+		    </ul>
+		  </div>
+		</div>
+	
+	</header>
+	
+	
+	<div id="page-header" class="container offcanvas">
+	  <div id="header" class="row header transparent">
+	    <div class="page-title col-md-7">
+	      <h1><a href="">FORMS</a></h1>
+	    </div>
+	
+	    <div class="page-toolbar col-md-5 visible-lg">
+	        <!-- contact us button -->
+	        <div class="btn-group page-toolbar-contact contact-share">
+	          <button type="button" class="btn primary dropdown-toggle icon-support" data-toggle="dropdown">
+	            Contact us
+	          </button>
+	          <ul class="dropdown-menu dropdown-menu-right">
+	            <li><a href="http://crowdsupport.telstra.com.au/">CrowdSupport</a></li>
+	            <li><a href="http://support.telstra.com.au/t5/Support/ct-p/Support">Support</a></li>
+	            <li><a href="https://www.facebook.com/Telstra24x7">Facebook</a></li>
+	            <li><a href="https://twitter.com/telstra">Twitter</a></li>
+	            <li><a href="https://www.telstra.com.au/contact-us">View all</a></li>
+	          </ul>
+	        </div>
+	        <!-- /contact us button -->
+	
+	        <!-- share button -->
+	        <div class="btn-group page-toolbar-share contact-share">
+	          <button type="button" class="btn primary dropdown-toggle" data-toggle="dropdown">
+	            Share
+	          </button>
+	          <ul class="dropdown-menu dropdown-menu-right">
+	            <li><a data-popup data-width="500" data-height="500" rel="nofollow"
+	                   href="https://twitter.com/share?url=[page url]&amp;text=[page title]&amp;via=Telstra.com.au" >Twitter</a></li>
+	            <li><a data-popup data-width="500" data-height="500" rel="nofollow"
+	                   href="https://www.facebook.com/sharer.php?u=[page url]&amp;t=[page title]" >Facebook</a></li>
+	            <li><a href="mailto:?subject=[page title]&amp;body=[page url]" rel="nofollow">Email</a></li>
+	            <li><a href="#" data-toggle="modal" data-target="#shareSMS" rel="nofollow">SMS</a></li>
+	          </ul>
+	        </div>
+	        <!-- /share button -->
+	    </div>
+	  </div>
+	</div>
+	<div id="shareSMS" class="modal fade printable share-sms" tabindex="-1" role="dialog" aria-labelledby="shareSMSLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-medium"> 
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+	        <h4 class="modal-title" id="shareSMSLabel">SMS this link</h4>
+	      </div>
+	      <div class="modal-body">
+	
+	        <form>
+	          <p>Enter a phone number and we'll SMS a link to this page.</p>
+	          <div class="row form-group">
+	            <label class="col-md-12 control-label" for="mobileNumber">Mobile number:</label>
+	            <div class="col col-md-4">
+	              <input type="text" id="mobileNumber" name="mobileNumber" class="form-control">
+	            </div>
+	            <div class="col col-md-8 sms-error-msg small" role="alert" aria-live="assertive">
+	              <p>Please enter a valid Australian mobile number</p>
+	            </div>
+	          </div>
+	
+	          <button type="submit" class="btn do-business" title="Send the link">Send the link</button>&nbsp;
+	          <button type="reset" class="btn secondary" data-dismiss="modal" title="No thanks">No thanks</button>
+	        </form>
+	
+	        <div class="result" tabindex="-1">
+	          <p>The link has been sent.</p>
+	          <button type="button" class="btn secondary" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+  
+  <!-- START #nav -->
+  <div id="nav" class="offscreen-nav fn_scrollbar" role="navigation" tabindex="-1" data-scrollbar-x="false">
+  	<nav>
+  		<div class="nav-inner">
+  			<span class="site-logo is-light is-small"><span class="vh">Telstra.com</span></span>
+  
+        <ul class="offscreen-nav-primary">
+  					<li class="is-active is-expanded">
+  						<a href="/personal" class="nav-lvl-1  has-children">
+  							
+  							Personal
+  						</a>
+  
+  							
+  							<!-- START navigation children -->
+  							<div class="children">
+  								<ul>
+  										<li>
+  											<a href="#" class="has-children">
+  												<i class="td-icon icon-mobile"></i>
+  												Mobile Phones
+  											</a>
+  							
+  												
+  												<!-- START navigation children -->
+  												<div class="children">
+  													<ul>
+  															<li>
+  																<a href="#">
+  																	
+  																	Mobiles on a plan
+  																</a>
+  												
+  															</li>
+  															<li>
+  																<a href="#" class="has-children">
+  																	
+  																	Plans and rates
+  																</a>
+  												
+  																	
+  																	<!-- START navigation children -->
+  																	<div class="children">
+  																		<ul>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Mobile Accelerate Data Share Plans
+  																					</a>
+  																	
+  																				</li>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Data packs
+  																					</a>
+  																	
+  																				</li>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Calling overseas from Australia
+  																					</a>
+  																	
+  																				</li>
+  																				<li class="is-active">
+  																					<a href="#">
+  																						
+  																						New Phone Feeling
+  																					</a>
+  																	
+  																				</li>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						StayConnected
+  																					</a>
+  																	
+  																				</li>
+  																		</ul>
+  																	</div>
+  																	<!-- END navigation children -->
+  															</li>
+  															<li>
+  																<a href="#" class="has-children">
+  																	
+  																	Pre-Paid mobiles
+  																</a>
+  												
+  																	
+  																	<!-- START navigation children -->
+  																	<div class="children">
+  																		<ul>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Mobiles &amp; Starter Kits
+  																					</a>
+  																	
+  																				</li>
+  																				<li>
+  																					<a href="#" class="has-children">
+  																						
+  																						Offers &amp; rates
+  																					</a>
+  																	
+  																						
+  																						<!-- START navigation children -->
+  																						<div class="children">
+  																							<ul>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											Plus packs
+  																										</a>
+  																						
+  																									</li>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											BlackBerry
+  																										</a>
+  																						
+  																									</li>
+  																							</ul>
+  																						</div>
+  																						<!-- END navigation children -->
+  																				</li>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Extras
+  																					</a>
+  																	
+  																				</li>
+  																		</ul>
+  																	</div>
+  																	<!-- END navigation children -->
+  															</li>
+  															<li>
+  																<a href="#">
+  																	
+  																	Wearables
+  																</a>
+  												
+  															</li>
+  															<li>
+  																<a href="#">
+  																	
+  																	Extras
+  																</a>
+  												
+  															</li>
+  															<li>
+  																<a href="#">
+  																	
+  																	Coverage &amp; networks
+  																</a>
+  												
+  															</li>
+  															<li>
+  																<a href="#" class="has-children">
+  																	
+  																	International Roaming
+  																</a>
+  												
+  																	
+  																	<!-- START navigation children -->
+  																	<div class="children">
+  																		<ul>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Availability &amp; pricing
+  																					</a>
+  																	
+  																				</li>
+  																		</ul>
+  																	</div>
+  																	<!-- END navigation children -->
+  															</li>
+  													</ul>
+  												</div>
+  												<!-- END navigation children -->
+  										</li>
+  										<li>
+  											<a href="#">
+  												<i class="td-icon icon-tablet"></i>
+  												Tablets
+  											</a>
+  							
+  										</li>
+  										<li class="is-active">
+  											<a href="#" class="has-children">
+  												<i class="td-icon icon-internet"></i>
+  												Broadband
+  											</a>
+  							
+  												
+  												<!-- START navigation children -->
+  												<div class="children">
+  													<ul>
+  															<li>
+  																<a href="#" class="has-children">
+  																	
+  																	Home broadband
+  																</a>
+  												
+  																	
+  																	<!-- START navigation children -->
+  																	<div class="children">
+  																		<ul>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Satellite
+  																					</a>
+  																	
+  																				</li>
+  																				<li>
+  																					<a href="#" class="has-children">
+  																						
+  																						NBN
+  																					</a>
+  																	
+  																						
+  																						<!-- START navigation children -->
+  																						<div class="children">
+  																							<ul>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											NBN Advantages
+  																										</a>
+  																						
+  																									</li>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											NBN Rollout
+  																										</a>
+  																						
+  																									</li>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											NBN Plans
+  																										</a>
+  																						
+  																									</li>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											NBN Bundles
+  																										</a>
+  																						
+  																									</li>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											How to Connect
+  																										</a>
+  																						
+  																									</li>
+  																							</ul>
+  																						</div>
+  																						<!-- END navigation children -->
+  																				</li>
+  																		</ul>
+  																	</div>
+  																	<!-- END navigation children -->
+  															</li>
+  															<li>
+  																<a href="#">
+  																	
+  																	Mobile broadband
+  																</a>
+  												
+  															</li>
+  															<li>
+  																<a href="#">
+  																	
+  																	Extras
+  																</a>
+  												
+  															</li>
+  															<li>
+  																<a href="#">
+  																	
+  																	Telstra Wi-Fi
+  																</a>
+  												
+  															</li>
+  													</ul>
+  												</div>
+  												<!-- END navigation children -->
+  										</li>
+  										<li>
+  											<a href="#">
+  												<i class="td-icon icon-phone"></i>
+  												Home phone
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												<i class="td-icon icon-foxtel"></i>
+  												Entertainment
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												<i class="td-icon icon-tv"></i>
+  												Connected home
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												<i class="td-icon icon-bundle"></i>
+  												Bundles
+  											</a>
+  							
+  										</li>
+  								</ul>
+  							</div>
+  							<!-- END navigation children -->
+  					</li>
+  					<li class="">
+  						<a href="/support" class="nav-lvl-1  has-children">
+  							
+  							Support
+  						</a>
+  
+  							
+  							<!-- START navigation children -->
+  							<div class="children">
+  								<ul>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#" class="has-children">
+  												
+  												Level 2
+  											</a>
+  							
+  												
+  												<!-- START navigation children -->
+  												<div class="children">
+  													<ul>
+  															<li>
+  																<a href="#">
+  																	
+  																	Level 3
+  																</a>
+  												
+  															</li>
+  															<li>
+  																<a href="#" class="has-children">
+  																	
+  																	Level 3
+  																</a>
+  												
+  																	
+  																	<!-- START navigation children -->
+  																	<div class="children">
+  																		<ul>
+  																				<li>
+  																					<a href="#" class="has-children">
+  																						
+  																						Level 4
+  																					</a>
+  																	
+  																						
+  																						<!-- START navigation children -->
+  																						<div class="children">
+  																							<ul>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											Level 5
+  																										</a>
+  																						
+  																									</li>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											Level 5
+  																										</a>
+  																						
+  																									</li>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											Level 5
+  																										</a>
+  																						
+  																									</li>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											Level 5
+  																										</a>
+  																						
+  																									</li>
+  																									<li>
+  																										<a href="#">
+  																											
+  																											Level 5
+  																										</a>
+  																						
+  																									</li>
+  																							</ul>
+  																						</div>
+  																						<!-- END navigation children -->
+  																				</li>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Level 4
+  																					</a>
+  																	
+  																				</li>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Level 4
+  																					</a>
+  																	
+  																				</li>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Level 4
+  																					</a>
+  																	
+  																				</li>
+  																				<li>
+  																					<a href="#">
+  																						
+  																						Level 4
+  																					</a>
+  																	
+  																				</li>
+  																		</ul>
+  																	</div>
+  																	<!-- END navigation children -->
+  															</li>
+  															<li>
+  																<a href="#">
+  																	
+  																	Level 3
+  																</a>
+  												
+  															</li>
+  															<li>
+  																<a href="#">
+  																	
+  																	Level 3
+  																</a>
+  												
+  															</li>
+  															<li>
+  																<a href="#">
+  																	
+  																	Level 3
+  																</a>
+  												
+  															</li>
+  													</ul>
+  												</div>
+  												<!-- END navigation children -->
+  										</li>
+  								</ul>
+  							</div>
+  							<!-- END navigation children -->
+  					</li>
+  					<li class="">
+  						<a href="/my-account" class="nav-lvl-1  has-children">
+  							
+  							My Account
+  						</a>
+  
+  							
+  							<!-- START navigation children -->
+  							<div class="children">
+  								<ul>
+  										<li>
+  											<a href="#" class="has-children">
+  												
+  												Level 2
+  											</a>
+  							
+  												
+  												<!-- START navigation children -->
+  												<div class="children">
+  													<ul>
+  															<li>
+  																<a href="#">
+  																	
+  																	Level 3
+  																</a>
+  												
+  															</li>
+  													</ul>
+  												</div>
+  												<!-- END navigation children -->
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  										<li>
+  											<a href="#">
+  												
+  												Level 2
+  											</a>
+  							
+  										</li>
+  								</ul>
+  							</div>
+  							<!-- END navigation children -->
+  					</li>
+  			</ul>
+  
+  			<ul class="offscreen-nav-global">
+  										
+  					<li>
+  						<a href="http://www.telstra.com.au/small-business/">Small Business</a>
+  					</li>
+  					
+  					<li>
+  						<a href="http://www.telstra.com.au/business-enterprise/">Business &amp; Enterprise</a>
+  					</li>
+  					
+  					<li>
+  						<a href="http://www.telstra.com.au/personal/telstra-health/">Health</a>
+  					</li>
+  					
+  					<li>
+  						<a href="https://www.telstra.com.au/tv-movies-music">Sport &amp; Entertainment</a>
+  					</li>
+  			</ul>
+  
+  			<button type="button" class="nav-close"><span class="vh">Close navigation</span></button>
+  		</div>
+  	</nav>
+  </div>
+  <!-- END #nav -->
+
+  <div class="main-content-wrapper offcanvas">
+    <div class="container main-content" role="main" style="min-height:500px;">
+		  
+
+<div class="standard row title">
+  <div class="col-sm-12"><h2>Form components</h2></div>
+</div>
+<div class="standard row content">
+  <div class="col col-100-c0">
+    <div class="col-wrapper">
+			<div class="alert alert-danger" role="alert">This is work in progress and does not represent approved styles from UX/Design</div>
+
+			<h4>Label</h4>
+			<label>Email address</label>
+			<xmp class="prettyprint"><label>Email address</label></xmp>  
+
+			<h4>Text input</h4>
+			<input type="text" class="form-control" placeholder="Text input">
+			<xmp class="prettyprint"><input type="text" class="form-control" placeholder="Text input"></xmp>  
+
+			<h4>Text input with label</h4>
+			<div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+		  </div>		
+<xmp class="prettyprint"><div class="form-group">
+ <label for="exampleInputEmail1">Email address</label>
+ <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+</div></xmp>  
+
+			<h4>Text area</h4>
+			<textarea class="form-control" rows="3"></textarea>
+			<xmp class="prettyprint"><textarea class="form-control" rows="3"></textarea></xmp>  
+
+			<h4>Checkboxes</h4>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Option one
+			  </label>
+			</div>
+			<div class="checkbox disabled">
+			  <label>
+			    <input type="checkbox" value="" disabled>
+			    Option two is disabled
+			  </label>
+			</div>
+<xmp class="prettyprint"><div class="checkbox">
+	<label>
+		<input type="checkbox" value="">
+		Option one
+	</label>
+</div>
+<div class="checkbox disabled">
+	<label>
+		<input type="checkbox" value="" disabled>
+		Option two is disabled
+	</label>
+</div></xmp>
+
+			<h4>Select drop down</h4>
+			<select class="form-control">
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			</select>
+<xmp class="prettyprint"><select class="form-control">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select></xmp>  
+
+
+		</div>
+	</div>
+</div>
+	  </div>
+
+    <div role="footer" class="footer">
+		  
+		  <div class="footer-crumb hidden-sm hidden-xs">
+		    <div class="container">
+		      <div class="system_generated_classes standard row content col-100 default">
+		        <div class="col first col-100-c0">
+		          <div class="crumb-wrapper col-wrapper">
+		            <div class="breadcrumb clearfix">
+		              <div class="itemscope alpha">
+		                <a href="/">
+		                  <span>Telstra Home</span>
+		                </a>
+		                <span class="delimiter">&gt;</span>
+		              </div>
+		              <div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="itemscope">
+		                <a itemprop="url" href="/personal/">
+		                  <span itemprop="title">Personal</span>
+		                </a>
+		                <span class="delimiter">&gt;</span>
+		              </div>
+		              <div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="itemscope">
+		                <a itemprop="url" href="/mobile-phones/index.htm">
+		                  <span itemprop="title">Mobile Phones</span>
+		                </a>
+		                <span class="delimiter">&gt;</span>
+		              </div>
+		              <div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="itemscope">
+		                <a itemprop="url" href="/mobile-phones/mobiles-on-a-plan/index.htm">
+		                  <span itemprop="title">Mobiles on a Plan</span>
+		                </a>
+		                <span class="delimiter">&gt;</span>
+		              </div>
+		              <div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="itemscope current-page">
+		                <a itemprop="url" href="/mobile-phones/mobiles-on-a-plan/samsung-galaxy-s5/">
+		                  <span itemprop="title">Samsung GALAXY S5</span>
+		                </a>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  
+		  <div id="scrollup">
+		    <div class="container">
+		      <div class="scrollup-outer">
+		        <div class="scrollup">Back to top</div>
+		      </div>
+		    </div>
+		  </div>
+		  
+		  <div class="footer-links container">
+		    <div class="system_generated_classes holderjs standard  row content col-25-25-25-25 default">
+		      <div class="col col-25-25-25-25-c0 first">
+		        <div class="col-wrapper">
+		          <h2 class="sr-only">Connect with Telstra on social media</h2>
+		          <ul class="social-icons">
+		            <li><a href="//www.facebook.com/Telstra24x7" aria-label="Facebook"><span class="social-icon facebook"></span></a></li>
+		            <li><a href="//twitter.com/telstra" aria-label="Twitter"><span class="social-icon twitter"></span></a></li>
+		            <li><a href="//www.youtube.com/user/TelstraCorp" aria-label="YouTube"><span class="social-icon youtube"></span></a></li>
+		            <li><a href="//plus.google.com/+Telstra" aria-label="Google+"><span class="social-icon google"></span></a></li>
+		          </ul>
+		  
+		          <script>
+		            if (localStorage && localStorage.forceDesktop === 'true') {
+		              document.write('<div class="responsive-switch hidden-xs"><i class="td-icon icon-mobile-on-plan text-light"></i> Switch to mobile view</div>');
+		            }
+		          </script>
+		        </div>
+		      </div>
+		      <div class="col col-25-25-25-25-c1">
+		        <div class="col-wrapper">
+		         <ul>
+		            <li><a href="//www.telstra.com.au/sitemap" class="header">Telstra.com sitemap</a></li>
+		            <li><a href="//www.telstra.com.au/help/contact-us">Contact us</a></li>
+		            <li><a href="//www.telstra.com.au/store-locator">Find a Telstra Business Centre</a></li>
+		            <li><a href="//careers.telstra.com">Careers</a></li>
+		            <li><a href="//www.telstra.com.au/partners-and-causes/">Partners and Causes</a></li>
+		          </ul>
+		        </div>
+		      </div>
+		      <div class="col col-25-25-25-25-c2">
+		        <div class="col-wrapper">
+		          <ul>
+		            <li><a href="//www.telstra.com.au/aboutus" class="header">About us</a></li>
+		            <li><a href="//www.telstrawholesale.com.au">Telstra Wholesale</a></li>
+		            <li><a href="//www.telstraglobal.com">Telstra Global</a></li>
+		            <li><a href="//www.telstra.com.au/personal/digital-story">Telstra Digital</a></li>
+		          </ul>
+		        </div>
+		      </div>
+		      <div class="clearfix hidden-lg"></div>
+		      <div class="col col-25-25-25-25-c3 last">
+		        <div class="col-wrapper">
+		          <ul>
+		            <li><a href="//telstra.com.au/consumer-advice" class="header">Consumer advice</a></li>
+		            <li><a href="//www.telstra.com.au/help/critical-information-summaries">Critical Information Summaries</a></li>
+		            <li><a href="//www.telstra.com.au/terms-of-use">Terms of use</a></li>
+		            <li><a href="//www.telstra.com.au/privacy/privacy-statement">Privacy</a></li>
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+		  
+		    <div class="visible-xs responsive-switch"><i class="td-icon icon-desk text-light"></i> Switch to the desktop view</div>
+		  </div>
+	  </div>
+  </div>
+
+
+    <script src="./js/jquery.js"></script>
+    <!-- local only -->
+    <script src="./local-only/holder.js"></script>
+    <!-- end local only -->
+    <script src="./js/vendor.debug.js"></script>
+    <script src="./js/global.debug.js"></script>
+
+    
+
+
+  </body>
+</html>

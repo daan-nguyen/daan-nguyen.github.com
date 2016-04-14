@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie10 lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie10 lt-ie9" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-js" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <script>
+      if (localStorage && localStorage.forceDesktop === 'true') {
+        document.write('<meta name="viewport" content="width=1024, initial-scale=0.5, maximum-scale=1.0, minimum-scale=0.2, user-scalable=yes">');
+      } else {
+        document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0.7, user-scalable=yes">')
+      }
+    </script>
+    <title>tcom-core</title>
+    <script>
+      var tcom = tcom || {};
+      tcom.baseUrl = '//v.author.uat.tcom.corp.telstra.com/content/tcom/';
+      tcom.isAuthor = false;
+      tcom.runmodes = [];
+    </script>
+
+
+    <script type="text/javascript">
+      /* Based on https://github.com/filamentgroup/loadCSS */
+      var fontPath = '/tcom-core/css/fonts/font-{0}.css';
+      var ua = navigator.userAgent;
+      // android webkit browser, non-chrome
+      if(ua.indexOf('Android') > -1 && ua.indexOf('like Gecko') > -1 && ua.indexOf('Chrome') === -1 ){
+        fontPath = fontPath.replace('{0}', 'ttf');
+      }
+      else if(document.documentElement.className.indexOf('lt-ie9') > -1){
+        fontPath = fontPath.replace('{0}', 'eot');
+      }
+      else {
+        fontPath = fontPath.replace('{0}', 'woff');
+      }
+      var injectref = document.getElementsByTagName('script')[0];
+      function loadCSS(href){
+        var fontslink = document.createElement('link');
+        fontslink.rel = 'stylesheet';
+        fontslink.href= href;
+        if(injectref && injectref.parentNode) {
+          injectref.parentNode.insertBefore(fontslink, injectref);
+        } else {
+          // uncommon, but oldIE timing
+          window.setTimeout(function() { loadCSS(href); }, 15);
+        }
+      }
+      loadCSS(fontPath);
+    </script>
+
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet" media="all">
+    <link href="./css/styles-responsive.css" rel="stylesheet" media="all">
+    <!--[if lte IE 9]>
+      <link href="css/styles-responsive-ie.css" rel="stylesheet" media="all">
+    <![endif]-->
+    <link href="./css/styles-print.css" rel="stylesheet" media="print">
+
+
+    
+
+    <script src="./js/modernizr.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="./js/respond.js"></script>
+    <![endif]-->
+
+    <!-- Prettify includes, only for doco -->
+    <link href="./local-only/prettify.css" rel="stylesheet">
+    <script src="./local-only/prettify.js"></script>
+    <script>
+      window.onload = function() {
+        prettyPrint();
+      };
+    </script>
+
+  </head>
+
+  <body role="document" class="base-blue ">
+    <span id="spectrum" class="" style="  "></span>
+
+    
+
+	<header  >
+		<!--[if lt IE 8]>
+		<div id="browser-warning">
+		  <div class="container">
+		    <i class="td-icon-sm icon-information text-light"></i>
+		    <div class="pull-left text-light">
+		      <p>&nbsp;</p>
+		      <p>It looks like you are using Internet Explorer 7.</p>
+		      <p>telstra.com.au may not display correctly and some of the features may be unavailable to you.<br>If you are not using this version, please check that <a href="http://windows.microsoft.com/en-US/internet-explorer/use-compatibility-view#ie=ie-10-win-7" target="_blank">compatibility mode</a> is turned off, otherwise you may need to <a href="http://windows.microsoft.com/en-au/internet-explorer/download-ie" target="_blank">update your browser</a>.</p>
+		    </div>
+		  </div>
+		</div>
+		<![endif]-->
+		
+		<!-- Fixed navbar -->
+		<div id="global-nav" class="navbar navbar-inverse offcanvas" role="navigation">
+		  <div class="container">
+		    <div class="navbar-collapse collapse">
+		      <ul class="nav navbar-nav" id="global-nav-menu">
+		        <li><a href="#">Telstra.com</a></li>
+		        <li class="active"><a href="#">Personal</a></li>
+		        <li><a href="#">Small Business</a></li>
+		        <li><a href="#">Business &amp; Enterprise</a></li>
+		        <li><a href="#">Health</a></li>
+		        <li><a href="#">Sport &amp; Entertainment</a></li>
+		      </ul>
+		      <!-- Login Tile -->
+		      <div id="login-placeholder"></div>
+		    </div><!--/.nav-collapse -->
+		  </div>
+		</div>
+	
+	  <!-- desktop nav -->
+	  <div id="primary-nav" class="navbar visible-lg" role="navigation">
+	    <div class="container">
+	      <div class="navbar-collapse collapse">
+	        <ul class="nav navbar-nav navbar-left">
+	          <li class="active">
+	          <a href="#" title="" class="site-title">
+	           <span class="site-logo">&nbsp;</span>
+	          </a>
+	  
+	          <a href="#" title="" class="site-title">
+	            <span class="site-title">tcom-core</span>
+	          </a>
+	          </li>
+	        </ul>
+	  
+	        
+	        <form class="navbar-form navbar-right" role="search" action="//telstra.com.au/search/simple-search/index.htm" method="GET" id="searchDesktop">
+	        
+	          <div class="form-group search-telstra" >
+	        
+	            <input data-search-input-desktop type="text" class="form-control search-telstra-input" placeholder="Search Telstra.com" name="inpSearch" autocomplete="off">
+	            <input type="hidden" name="requestSiteId" value="corporate-homepage">
+	            <input type="hidden" name="searchFormSubmited" value="Yes">
+	            <button class="search-telstra-btn" type="submit"><i class="td-icon icon-ui-search"></i></button>
+	            
+	            <!--
+	            <div class="search-header">Popular keywords</div>
+	            <a class="search-item" href="#">...</a>
+	            ...
+	        
+	            <div class="search-header">Our Suggestions</div>
+	            <a href="#" class="search-item-lg">
+	            <div><img src="" alt=""></div>
+	            <h6>...</h6>
+	            <p>...</p>
+	            </a>
+	            ...
+	            -->
+	          </div>
+	        
+	        </form>        <ul id="mega-menu" class="nav navbar-nav navbar-right navbar-linear">
+	            <li><a href="/tcom-core/index.html">Index</a></li>
+	          </ul>
+	      </div>
+	    </div>
+	  </div>
+	  <!-- mobile nav -->
+		
+		<div class="site-header" role="navigation">
+		  <div class="container">
+		    <button type="button" class="nav-toggle" data-nav-id="nav">
+		      <span class="menu">Menu</span>
+		
+		      <div class="icon">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </div>
+		    </button>
+		    <a href="https://www.telstra.com.au/" class="site-logo"><span class="vh">Telstra.com</span></a>
+		
+		    <ul class="site-actions">
+		      <li>
+		        
+		        
+		        <button data-popover-id="site-search" class="btn-search btn square search-toggle fn_popover"><i class="td-icon icon-ui-search"></i><span class="vh">Open search panel</span></button>
+		        
+		        <div id="site-search" class="feature-popover site-search" data-popover-focusto="#telstra-search" data-popover-position="search" data-popover-animate="slide-right">
+		          <div class="popover-content">
+		            <form class="telstra-search" role="search" action="https://telstra.com.au/search/simple-search/index.htm" method="GET">
+		              <input type="text" id="telstra-search" title="telstra-search" name="inpSearch" placeholder="Search Telstra.com" autocomplete="off" spellcheck="false" dir="auto" data-search-input-mobile />
+		        
+		              <input type="hidden" name="requestSiteId" value="corporate-homepage" />
+		              <input type="hidden" name="searchFormSubmited" value="Yes" />
+		        
+		              <button type="submit" class="btn-search btn square">
+		                <i class="td-icon icon-ui-search"></i>
+		                <span class="vh">Submit Search</span>
+		              </button>
+		        
+		              <button class="popover-close btn square">
+		                <i class="td-icon icon-ui-cross"></i>
+		                <span class="vh">Close Search</span>
+		              </button>
+		            </form>
+		          </div>
+		        </div>
+		      </li>
+		    </ul>
+		  </div>
+		</div>
+	
+	</header>
+	
+	
+	<div id="page-header" class="container offcanvas">
+	  <div id="header" class="row header transparent">
+	    <div class="page-title col-md-7">
+	      <h1><a href="">GIT SUBTREES</a></h1>
+	    </div>
+	
+	    <div class="page-toolbar col-md-5 visible-lg">
+	        <!-- contact us button -->
+	        <div class="btn-group page-toolbar-contact contact-share">
+	          <button type="button" class="btn primary dropdown-toggle icon-support" data-toggle="dropdown">
+	            Contact us
+	          </button>
+	          <ul class="dropdown-menu dropdown-menu-right">
+	            <li><a href="http://crowdsupport.telstra.com.au/">CrowdSupport</a></li>
+	            <li><a href="http://support.telstra.com.au/t5/Support/ct-p/Support">Support</a></li>
+	            <li><a href="https://www.facebook.com/Telstra24x7">Facebook</a></li>
+	            <li><a href="https://twitter.com/telstra">Twitter</a></li>
+	            <li><a href="https://www.telstra.com.au/contact-us">View all</a></li>
+	          </ul>
+	        </div>
+	        <!-- /contact us button -->
+	
+	        <!-- share button -->
+	        <div class="btn-group page-toolbar-share contact-share">
+	          <button type="button" class="btn primary dropdown-toggle" data-toggle="dropdown">
+	            Share
+	          </button>
+	          <ul class="dropdown-menu dropdown-menu-right">
+	            <li><a data-popup data-width="500" data-height="500" rel="nofollow"
+	                   href="https://twitter.com/share?url=[page url]&amp;text=[page title]&amp;via=Telstra.com.au" >Twitter</a></li>
+	            <li><a data-popup data-width="500" data-height="500" rel="nofollow"
+	                   href="https://www.facebook.com/sharer.php?u=[page url]&amp;t=[page title]" >Facebook</a></li>
+	            <li><a href="mailto:?subject=[page title]&amp;body=[page url]" rel="nofollow">Email</a></li>
+	            <li><a href="#" data-toggle="modal" data-target="#shareSMS" rel="nofollow">SMS</a></li>
+	          </ul>
+	        </div>
+	        <!-- /share button -->
+	    </div>
+	  </div>
+	</div>
+	<div id="shareSMS" class="modal fade printable share-sms" tabindex="-1" role="dialog" aria-labelledby="shareSMSLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-medium"> 
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+	        <h4 class="modal-title" id="shareSMSLabel">SMS this link</h4>
+	      </div>
+	      <div class="modal-body">
+	
+	        <form>
+	          <p>Enter a phone number and we'll SMS a link to this page.</p>
+	          <div class="row form-group">
+	            <label class="col-md-12 control-label" for="mobileNumber">Mobile number:</label>
+	            <div class="col col-md-4">
+	              <input type="text" id="mobileNumber" name="mobileNumber" class="form-control">
+	            </div>
+	            <div class="col col-md-8 sms-error-msg small" role="alert" aria-live="assertive">
+	              <p>Please enter a valid Australian mobile number</p>
+	            </div>
+	          </div>
+	
+	          <button type="submit" class="btn do-business" title="Send the link">Send the link</button>&nbsp;
+	          <button type="reset" class="btn secondary" data-dismiss="modal" title="No thanks">No thanks</button>
+	        </form>
+	
+	        <div class="result" tabindex="-1">
+	          <p>The link has been sent.</p>
+	          <button type="button" class="btn secondary" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+  
+  <!-- START #nav -->
+  <div id="nav" class="offscreen-nav fn_scrollbar" role="navigation" tabindex="-1" data-scrollbar-x="false">
+  	<nav>
+  		<div class="nav-inner">
+  			<span class="site-logo is-light is-small"><span class="vh">Telstra.com</span></span>
+  
+        <ul class="offscreen-nav-primary">
+  			</ul>
+  
+  			<ul class="offscreen-nav-global">
+  			</ul>
+  
+  			<button type="button" class="nav-close"><span class="vh">Close navigation</span></button>
+  		</div>
+  	</nav>
+  </div>
+  <!-- END #nav -->
+
+  <div class="main-content-wrapper offcanvas">
+    <div class="container main-content" role="main" style="min-height:500px;">
+		  
+<div class="standard row content col-100">
+  <div class="col col-100-c0 first last">
+    <div class="col-wrapper" id="base">
+      <p><code>subtrees</code> are similar to the concept of <code>submodules</code>, whereby a child repository (<code>tcom-core</code>) is pulled into a parent (<code>tcom-aem-multi</code>).
+      However, unlike <code>submodules</code> - which store a SHA commit reference - <code>subtrees</code> take a literal snapshot of the files and store them within the parent. Imagine it as
+      effectively copy and pasting the child into the parent repository.</p>
+
+      <p>For practical purposes, this can be treated as just another folder. The benefits of the <code>subtrees</code> are: </p>
+      <ul>
+        <li>Easier to understand, there is a lot of misunderstanding regarding how <code>submodules</code> work.</li>
+        <li>Easier to manage, as the <code>subtree</code> is simply a file folder, making modifications within it is the same as modifying any other file. Changes on multiple branches don't cause reference conflicts and
+        changes can be backported to <code>tcom-core</code> as required in a separately managed process.</li>
+        <li>Isolated, as the files are snapshotted into the parent - changes within the folder are isolated to <code>tcom-aem-multi</code> and do no affect <code>tcom-core</code>. However, as the subtree is still linked to <code>tcom-core</code>
+          it is possible to <code>push</code> and <code>pull</code> updates to <code>tcom-core</code>.</li>
+      </ul>
+
+      <p>More can be found regarding subtrees <a href="https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/">here</a> and
+      <a href="http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/">here</a>.</p>
+
+      <p>Refer to <a href="integrating.html">Integration</a> for more information.</p>
+
+      <ul class="content-link-list">
+        <li><a href="#add">Adding a subtree</a></li>
+        <li><a href="#update">Updating a subtree</a></li>
+        <li><a href="#subtreetips">Subtree Tips</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="standard row content col-100">
+  <div class="col col-100-c0 first last">
+    <div class="col-wrapper" id="subtreesetup">
+      <p class="panel-heading">Adding a subtree</p>
+
+      <div class="alert alert-warning">
+        <p>A remote called <code>tcom-core</code> is assumed, refer to the <a href="#subtreetips">Subtree Tips</a> section.</p>
+      </div>
+
+      <p>To add <code>tcom-core</code> as a <code>subtree</code> within your repository, the following command can be used from your repository root:</p>
+
+<xmp class="prettyprint">C:\repository-root
+> git subtree add --prefix=[path] [remote] [branch/tag] --squash</xmp>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th style="width: 200px">Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>--prefix=[path]</code></td>
+            <td>The path where <code>tcom-core</code> should be added as a <code>subtree</code>. Eg <code>src/tcom-core</code>.</td>
+          </tr>
+          <tr>
+            <td><code>[remote]</code></td>
+            <td>Remote branch url or the name of a local remote repository. If you have added the remote as per above, it will be called <code>tcom-core</code>.</td>
+          </tr>
+          <tr>
+            <td><code>[branch/tag]</code></td>
+            <td>Name of the branch or tag to pull.</td>
+          </tr>
+          <tr>
+            <td><code>--squash</code></td>
+            <td>Squashes all commit messages into a single commit, keeps multiple commits from <code>tcom-core</code> from polluting the parent repository.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The command would be the following for adding a <code>subtree</code> to <code>src/tcom-core</code> from the <code>tcom-core</code> remote and
+       <code>master</code> branch.</p>
+<xmp class="prettyprint">C:\repository-root
+> git subtree add --prefix=src/tcom-core tcom-core master --squash</xmp>
+
+    </div>
+  </div>
+</div>
+
+<div class="standard row content col-100">
+  <div class="col col-100-c0 first last">
+    <div class="col-wrapper" id="update">
+      <h2 class="panel-heading">Updating a subtree</h2>
+      <div class="alert alert-warning">
+        <p>A remote called <code>tcom-core</code> is assumed, refer to the <a href="#subtreetips">Subtree Tips</a> section.</p>
+      </div>
+      <p>Changes can be pulled from the original <code>subtree</code> repository with the following. Note the paramters are the same as adding, except we've
+        replaced <code>add</code> with <code>pull</code>.
+      </p>
+<xmp class="prettyprint">C:\repository-root
+> git subtree pull --prefix=src/tcom-core tcom-core master --squash</xmp>
+    </div>
+  </div>
+</div>
+
+<div class="standard row content col-100">
+  <div class="col col-100-c0 first last">
+    <div class="col-wrapper" id="subtreetips">
+      <h2 class="panel-heading">Subtree Tips</h2>
+
+      <p>Some useful notes with regards to working with a <code>subtree</code>.</p>
+
+      <p class="content-heading">Add as remote</p>
+      <p>It is useful to setup the reference to the <code>tcom-core</code> repository as a remote within your local <code>tcom-aem-multi</code> repository. This will allow you to refer
+      to the repository by name instead of by url reference, which is required when issuing <code>git subtree</code> commands. Run the following to be able to setup a remote called
+      <code>tcom-core</code>:</p>
+
+      <xmp class="prettyprint">> git remote add tcom-core ssh://git@git02.ae.sda.corp.telstra.com/tel/tcom-core.git</xmp>
+      <p><span class="strong">NB:</span> This example uses <code>ssh</code>, however your access to stash might be setup as <code>https</code>. If that is the case, you can retrieve the correct
+       url by going to <a href="https://git02.ae.sda.corp.telstra.com/projects/TEL/repos/tcom-core/browse">tcom-core on stash</a> and clicking on 'Clone'.</p>
+
+       <p>To verify it has been setup, running <code>git remote -v</code> should show the following:</p>
+<xmp class="prettyprint">> git remote -v
+origin  ssh://git@git02.ae.sda.corp.telstra.com/tel/tcom-aem-multi.git (fetch)
+origin  ssh://git@git02.ae.sda.corp.telstra.com/tel/tcom-aem-multi.git (push)
+tcom-core       ssh://git@git02.ae.sda.corp.telstra.com/tel/tcom-core.git (fetch)
+tcom-core       ssh://git@git02.ae.sda.corp.telstra.com/tel/tcom-core.git (push)
+</xmp>
+
+      <hr>
+
+      <p class="content-heading">Issue commands from root</p>
+
+      <p><code>git subtree</code> commands only function from the repository root. In this case, that means from the <code>tcom-aem-multi</code> directory.</p>
+      <p>For example, a <code>git subtree pull</code> command. </p>
+<xmp class="prettyprint">C:\tcom-aem-multi
+> git subtree pull --prefix=tcom-aem-frontend/src/tcom-core tcom-core master --squash</xmp>
+
+    </div>
+  </div>
+</div>
+	  </div>
+
+    <div role="footer" class="footer">
+		  
+		  <div class="footer-crumb hidden-sm hidden-xs">
+		    <div class="container">
+		      <div class="system_generated_classes standard row content col-100 default">
+		        <div class="col first col-100-c0">
+		          <div class="crumb-wrapper col-wrapper">
+		            <div class="breadcrumb clearfix">
+		              <div class="itemscope alpha">
+		                <a href="/">
+		                  <span>Telstra Home</span>
+		                </a>
+		                <span class="delimiter">&gt;</span>
+		              </div>
+		              <div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="itemscope">
+		                <a itemprop="url" href="/personal/">
+		                  <span itemprop="title">Personal</span>
+		                </a>
+		                <span class="delimiter">&gt;</span>
+		              </div>
+		              <div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="itemscope">
+		                <a itemprop="url" href="/mobile-phones/index.htm">
+		                  <span itemprop="title">Mobile Phones</span>
+		                </a>
+		                <span class="delimiter">&gt;</span>
+		              </div>
+		              <div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="itemscope">
+		                <a itemprop="url" href="/mobile-phones/mobiles-on-a-plan/index.htm">
+		                  <span itemprop="title">Mobiles on a Plan</span>
+		                </a>
+		                <span class="delimiter">&gt;</span>
+		              </div>
+		              <div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="itemscope current-page">
+		                <a itemprop="url" href="/mobile-phones/mobiles-on-a-plan/samsung-galaxy-s5/">
+		                  <span itemprop="title">Samsung GALAXY S5</span>
+		                </a>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  
+		  <div id="scrollup">
+		    <div class="container">
+		      <div class="scrollup-outer">
+		        <div class="scrollup">Back to top</div>
+		      </div>
+		    </div>
+		  </div>
+		  
+		  <div class="footer-links container">
+		    <div class="system_generated_classes holderjs standard  row content col-25-25-25-25 default">
+		      <div class="col col-25-25-25-25-c0 first">
+		        <div class="col-wrapper">
+		          <h2 class="sr-only">Connect with Telstra on social media</h2>
+		          <ul class="social-icons">
+		            <li><a href="//www.facebook.com/Telstra24x7" aria-label="Facebook"><span class="social-icon facebook"></span></a></li>
+		            <li><a href="//twitter.com/telstra" aria-label="Twitter"><span class="social-icon twitter"></span></a></li>
+		            <li><a href="//www.youtube.com/user/TelstraCorp" aria-label="YouTube"><span class="social-icon youtube"></span></a></li>
+		            <li><a href="//plus.google.com/+Telstra" aria-label="Google+"><span class="social-icon google"></span></a></li>
+		          </ul>
+		  
+		          <script>
+		            if (localStorage && localStorage.forceDesktop === 'true') {
+		              document.write('<div class="responsive-switch hidden-xs"><i class="td-icon icon-mobile-on-plan text-light"></i> Switch to mobile view</div>');
+		            }
+		          </script>
+		        </div>
+		      </div>
+		      <div class="col col-25-25-25-25-c1">
+		        <div class="col-wrapper">
+		         <ul>
+		            <li><a href="//www.telstra.com.au/sitemap" class="header">Telstra.com sitemap</a></li>
+		            <li><a href="//www.telstra.com.au/help/contact-us">Contact us</a></li>
+		            <li><a href="//www.telstra.com.au/store-locator">Find a Telstra Business Centre</a></li>
+		            <li><a href="//careers.telstra.com">Careers</a></li>
+		            <li><a href="//www.telstra.com.au/partners-and-causes/">Partners and Causes</a></li>
+		          </ul>
+		        </div>
+		      </div>
+		      <div class="col col-25-25-25-25-c2">
+		        <div class="col-wrapper">
+		          <ul>
+		            <li><a href="//www.telstra.com.au/aboutus" class="header">About us</a></li>
+		            <li><a href="//www.telstrawholesale.com.au">Telstra Wholesale</a></li>
+		            <li><a href="//www.telstraglobal.com">Telstra Global</a></li>
+		            <li><a href="//www.telstra.com.au/personal/digital-story">Telstra Digital</a></li>
+		          </ul>
+		        </div>
+		      </div>
+		      <div class="clearfix hidden-lg"></div>
+		      <div class="col col-25-25-25-25-c3 last">
+		        <div class="col-wrapper">
+		          <ul>
+		            <li><a href="//telstra.com.au/consumer-advice" class="header">Consumer advice</a></li>
+		            <li><a href="//www.telstra.com.au/help/critical-information-summaries">Critical Information Summaries</a></li>
+		            <li><a href="//www.telstra.com.au/terms-of-use">Terms of use</a></li>
+		            <li><a href="//www.telstra.com.au/privacy/privacy-statement">Privacy</a></li>
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+		  
+		    <div class="visible-xs responsive-switch"><i class="td-icon icon-desk text-light"></i> Switch to the desktop view</div>
+		  </div>
+	  </div>
+  </div>
+
+
+    <script src="./js/jquery.js"></script>
+    <!-- local only -->
+    <script src="./local-only/holder.js"></script>
+    <!-- end local only -->
+    <script src="./js/vendor.debug.js"></script>
+    <script src="./js/global.debug.js"></script>
+
+    
+
+
+  </body>
+</html>
