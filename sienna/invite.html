@@ -4,11 +4,12 @@
 		<meta name="robots" content="noindex">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Sienna's 1st birthday!</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 		<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Slab" rel="stylesheet">
 		<style>
 			html {
 				font-size: 10px;
+				overflow-x: hidden;
 			}
 
 			body {
@@ -21,10 +22,15 @@
 			.ground {
 				background-color: rgb(153, 226, 101);
 				height: 1000px;
-				width: 100%;
+				width: 100vw;
 				position: absolute;
 				/*top: 600px;*/
 				top: 500px;
+			}
+
+			.world {
+				position: relative;
+				min-height: 500px;
 			}
 
 			.serif {
@@ -44,12 +50,22 @@
 
 			@keyframes walkin {
 				0% { transform: translateX(0px); }
-				100% { transform: translateX(-500px); }
+				100% { transform: translateX(-300px); }
 			}
 
 			@keyframes walkinSmall {
 				0% { transform: translateX(0px); }
-				100% { transform: translateX(-200px); }
+				100% { transform: translateX(-150px); }
+			}
+
+			@keyframes walkinMedium {
+				0% { transform: translateX(0px); }
+				100% { transform: translateX(-400px); }
+			}
+
+			@keyframes walkinLarge {
+				0% { transform: translateX(0px); }
+				100% { transform: translateX(-600px); }
 			}
 
 			.unicorn {
@@ -78,6 +94,7 @@
 			.clouds {
 				position: relative;
 				top: -10px;
+				left: -50px;
 			}
 
 			.cloud {
@@ -115,8 +132,8 @@
 			}
 
 			.c4 {
-				top: 60px;
-				left: 350px;
+				top: 40px;
+				left: 330px;
 			}
 
 			.c5 {
@@ -140,7 +157,7 @@
 				margin: 0;
 				line-height: 1.4;
 				font-size: 1.5em;
-				color: #dedede;
+				color: rgb(255, 191, 113);
 			}
 
 			.head {
@@ -158,9 +175,27 @@
 				color: rgb(255, 191, 113);
 			}
 
-			@media (min-width: 769px) {
+			.rainbow {
+				position: absolute;
+				background: url(rainbowpath.svg) no-repeat 0 0;
+				background-size: cover;
+				width: 960px;
+				height: 560px;
+				left: 20vw;
+				top: 20px;
+			}
+
+			@media (min-width: 481px) {
 				.ground {
 					top: 600px;
+				}
+
+				.world {
+					min-height: 600px;
+				}
+
+				.rainbow {
+					top: 116px;
 				}
 
 				.unicorn {
@@ -220,17 +255,31 @@
 					left: 1050px;
 				}
 
-			.text-content {
-				position: relative;
-				top: 250px;
-				left: 25vw;
-			}
+				.text-content {
+					top: 250px;
+					left: 20px;
+				}
 			}
 
-			@media (min-width: 1400px) {
+			@media (min-width: 767px) {
+				html {
+					font-size: 100%;
+				}
+
+				.unicorn {
+					animation: walkinMedium 5s forwards;
+				}
+			}
+
+			@media (min-width: 1025px) {
+				.unicorn {
+					animation: walkinLarge 5s forwards;
+				}
+			}
+
+			@media (min-width: 1200px) {
 				.world {
-					position: relative;
-					width: 1400px;
+					width: 1200px;
 					margin: 0 auto;
 				}
 			}
@@ -238,7 +287,9 @@
 		</style>
 	</head>
 	<body>
-		<div class="ground"></div>
+		<div class="ground">
+
+		</div>
 
 		<div class="world">
 			<div class="clouds">
@@ -250,6 +301,8 @@
 				<div class="cloud cloud-big c6"></div>
 			</div>
 
+			<div class="rainbow"></div>
+
 			<div class="unicorn">
 				<div class="unicorn__body"></div>
 			</div>
@@ -257,8 +310,11 @@
 			<div class="text-content">
 				<p class="subhead">You've been invited to</p>
 				<h1 class="head">SIENNA'S 1<sup>st</sup><br />BIRTHDAY !!!</h1>
-				<p class="where">Sunday, January 22nd<br />2PM @ Murumbeena Reserve</p>
+				<p class="where">2pm, Sunday 22nd January<br />Murumbeena Park</p>
 			</div>
+		</div>
+		<div class="world text-content" style="top: 100px;">
+			<p>hello</p>
 		</div>
 
 
