@@ -4,12 +4,11 @@
 		<meta name="robots" content="noindex">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Sienna's 1st birthday!</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Slab" rel="stylesheet">
 		<style>
 			html {
 				font-size: 10px;
-				overflow-x: hidden;
 			}
 
 			body {
@@ -19,9 +18,22 @@
 				color: #fff;
 			}
 
+			.no-overflow {
+				overflow-x: hidden;
+				height: 1600px;
+			}
+
+			a,
+			a:hover,
+			a:focus,
+			a:visited,
+			a:active {
+				color: #fff;
+			}
+
 			.ground {
 				background-color: rgb(153, 226, 101);
-				height: 1000px;
+				height: 1100px;
 				width: 100vw;
 				position: absolute;
 				/*top: 600px;*/
@@ -30,7 +42,14 @@
 
 			.world {
 				position: relative;
-				min-height: 500px;
+				height: 500px;
+				margin: 0;
+				overflow: visible;
+			}
+
+			.body-world {
+				position: relative;
+				top: 50px;
 			}
 
 			.serif {
@@ -149,7 +168,7 @@
 			.text-content {
 				position: relative;
 				top: 150px;
-				left: 5vw;
+				padding: 0 5vw;
 			}
 
 			.subhead {
@@ -175,6 +194,14 @@
 				color: rgb(255, 191, 113);
 			}
 
+			.bodytext {
+				font-family: 'Roboto Slab', serif;
+				margin: 0;
+				line-height: 1.4;
+				font-size: 2em;
+				margin-bottom: 1.5em;
+			}
+
 			.rainbow {
 				position: absolute;
 				background: url(rainbowpath.svg) no-repeat 0 0;
@@ -183,6 +210,17 @@
 				height: 560px;
 				left: 20vw;
 				top: 20px;
+			}
+
+			.sienna {
+				background: url(sienna.jpg) no-repeat 0 0;
+				background-size: cover;
+				position: relative;
+				border-radius: 150px;
+				height: 200px;
+				width: 200px;
+				margin: 0 auto;
+				margin-bottom: 20px;
 			}
 
 			@media (min-width: 481px) {
@@ -257,7 +295,7 @@
 
 				.text-content {
 					top: 250px;
-					left: 20px;
+					padding: 0 20px;
 				}
 			}
 
@@ -287,38 +325,47 @@
 		</style>
 	</head>
 	<body>
-		<div class="ground">
-
-		</div>
-
-		<div class="world">
-			<div class="clouds">
-				<div class="cloud c1"></div>
-				<div class="cloud cloud-big c2"></div>
-				<div class="cloud cloud-small c3"></div>
-				<div class="cloud c4"></div>
-				<div class="cloud cloud-small c5"></div>
-				<div class="cloud cloud-big c6"></div>
+		<div class="no-overflow">
+			<div class="ground">
 			</div>
 
-			<div class="rainbow"></div>
+			<div class="world">
+				<div class="clouds">
+					<div class="cloud c1"></div>
+					<div class="cloud cloud-big c2"></div>
+					<div class="cloud cloud-small c3"></div>
+					<div class="cloud c4"></div>
+					<div class="cloud cloud-small c5"></div>
+					<div class="cloud cloud-big c6"></div>
+				</div>
 
-			<div class="unicorn">
-				<div class="unicorn__body"></div>
+				<div class="rainbow"></div>
+
+				<div class="unicorn">
+					<div class="unicorn__body"></div>
+				</div>
+
+				<div class="text-content">
+					<p class="subhead">You've been invited to</p>
+					<h1 class="head">SIENNA'S 1<sup>st</sup><br />BIRTHDAY !!!</h1>
+					<p class="where">2pm, Sunday 22nd January<br />Murumbeena Park</p>
+				</div>
 			</div>
+			<div class="body-world">
+				<div class="sienna"></div>
+				<div class="text-content" style="top: 0;">
+					<p class="bodytext">Sienna is turning 1! It's been a fun, sometimes long and sleepless (almost) 12 months getting here.
+						We'd love for you to come and join us in celebrating Sienna's 1<sup>st</sup> birthday!
+					</p>
+					<p class="bodytext"><strong>When:</strong> Sunday 22<sup>nd</sup> January @ 2pm</p>
+					<p class="bodytext"><strong>Where:</strong> Joey Rotunda at the Murumbeena Park Playspace near Kangaroo Rd &amp;
+						Spark St in Murumbeena.
+					</p>
+					<p class="bodytext">Please refer to the map below or the <a href="https://www.google.com.au/maps/@-37.8974538,145.0718118,18.82z">Google Maps Link</a>.</p>
+					<div style="text-align: center"><img src="map.jpg" alt="" style="width: 100%; max-width: 400px;"></div>
 
-			<div class="text-content">
-				<p class="subhead">You've been invited to</p>
-				<h1 class="head">SIENNA'S 1<sup>st</sup><br />BIRTHDAY !!!</h1>
-				<p class="where">2pm, Sunday 22nd January<br />Murumbeena Park</p>
+				</div>
 			</div>
 		</div>
-		<div class="world text-content" style="top: 100px;">
-			<p>hello</p>
-		</div>
-
-
-
-
 	</body>
 </html>
